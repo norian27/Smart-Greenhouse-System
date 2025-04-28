@@ -1,0 +1,66 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+migrations.0030\+\_\+alter\+\_\+sensorunit\+\_\+sensor\+\_\+type\+\_\+sensorthreshold.\+Migration Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1migrations_1_10030__alter__sensorunit__sensor__type__sensorthreshold_1_1_migration}{}\label{classsmart__greenhouse__app_1_1migrations_1_10030__alter__sensorunit__sensor__type__sensorthreshold_1_1_migration}\index{smart\_greenhouse\_app.migrations.0030\_alter\_sensorunit\_sensor\_type\_sensorthreshold.Migration@{smart\_greenhouse\_app.migrations.0030\_alter\_sensorunit\_sensor\_type\_sensorthreshold.Migration}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+migrations.0030\+\_\+alter\+\_\+sensorunit\+\_\+sensor\+\_\+type\+\_\+sensorthreshold.\+Migration\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.958042cm]{classsmart__greenhouse__app_1_1migrations_1_10030__alter__sensorunit__sensor__type__sensorthreshold_1_1_migration}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classsmart__greenhouse__app_1_1migrations_1_10030__alter__sensorunit__sensor__type__sensorthreshold_1_1_migration_a26b28b536a402b4e0e20ab0bfbf53b56}{dependencies}}
+\item 
+list \mbox{\hyperlink{classsmart__greenhouse__app_1_1migrations_1_10030__alter__sensorunit__sensor__type__sensorthreshold_1_1_migration_a8d150366b2b3937727c2d873fabaf35c}{operations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1migrations_1_10030__alter__sensorunit__sensor__type__sensorthreshold_1_1_migration_a26b28b536a402b4e0e20ab0bfbf53b56}\label{classsmart__greenhouse__app_1_1migrations_1_10030__alter__sensorunit__sensor__type__sensorthreshold_1_1_migration_a26b28b536a402b4e0e20ab0bfbf53b56} 
+\index{smart\_greenhouse\_app.migrations.0030\_alter\_sensorunit\_sensor\_type\_sensorthreshold.Migration@{smart\_greenhouse\_app.migrations.0030\_alter\_sensorunit\_sensor\_type\_sensorthreshold.Migration}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!smart\_greenhouse\_app.migrations.0030\_alter\_sensorunit\_sensor\_type\_sensorthreshold.Migration@{smart\_greenhouse\_app.migrations.0030\_alter\_sensorunit\_sensor\_type\_sensorthreshold.Migration}}
+\doxysubsubsection{\texorpdfstring{dependencies}{dependencies}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+migrations.\+0030\+\_\+alter\+\_\+sensorunit\+\_\+sensor\+\_\+type\+\_\+sensorthreshold.\+Migration.\+dependencies\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'smart\_greenhouse\_app'},\ \textcolor{stringliteral}{'0029\_remove\_sensorunit\_additional\_data'}),}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+\Hypertarget{classsmart__greenhouse__app_1_1migrations_1_10030__alter__sensorunit__sensor__type__sensorthreshold_1_1_migration_a8d150366b2b3937727c2d873fabaf35c}\label{classsmart__greenhouse__app_1_1migrations_1_10030__alter__sensorunit__sensor__type__sensorthreshold_1_1_migration_a8d150366b2b3937727c2d873fabaf35c} 
+\index{smart\_greenhouse\_app.migrations.0030\_alter\_sensorunit\_sensor\_type\_sensorthreshold.Migration@{smart\_greenhouse\_app.migrations.0030\_alter\_sensorunit\_sensor\_type\_sensorthreshold.Migration}!operations@{operations}}
+\index{operations@{operations}!smart\_greenhouse\_app.migrations.0030\_alter\_sensorunit\_sensor\_type\_sensorthreshold.Migration@{smart\_greenhouse\_app.migrations.0030\_alter\_sensorunit\_sensor\_type\_sensorthreshold.Migration}}
+\doxysubsubsection{\texorpdfstring{operations}{operations}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+migrations.\+0030\+\_\+alter\+\_\+sensorunit\+\_\+sensor\+\_\+type\+\_\+sensorthreshold.\+Migration.\+operations\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.AlterField(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ model\_name=\textcolor{stringliteral}{'sensorunit'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'sensor\_type'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ field=models.CharField(blank=\textcolor{keyword}{True},\ help\_text=\textcolor{stringliteral}{'Dynamic\ sensor\ type\ based\ on\ data\ keys.'},\ max\_length=255),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.CreateModel(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'SensorThreshold'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ fields=[}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'id'},\ models.BigAutoField(auto\_created=\textcolor{keyword}{True},\ primary\_key=\textcolor{keyword}{True},\ serialize=\textcolor{keyword}{False},\ verbose\_name=\textcolor{stringliteral}{'ID'})),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'key'},\ models.CharField(help\_text=\textcolor{stringliteral}{'Data\ key\ (e.g.,\ temperature,\ humidity).'},\ max\_length=50)),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'threshold\_low'},\ models.FloatField(default=0.0,\ help\_text=\textcolor{stringliteral}{'Lower\ threshold.'})),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'threshold\_high'},\ models.FloatField(default=100.0,\ help\_text=\textcolor{stringliteral}{'Upper\ threshold.'})),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'sensor'},\ models.ForeignKey(on\_delete=django.db.models.deletion.CASCADE,\ related\_name=\textcolor{stringliteral}{'thresholds'},\ to=\textcolor{stringliteral}{'smart\_greenhouse\_app.sensorunit'})),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ options=\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'unique\_together'}:\ \{(\textcolor{stringliteral}{'sensor'},\ \textcolor{stringliteral}{'key'})\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/migrations/\mbox{\hyperlink{0030__alter__sensorunit__sensor__type__sensorthreshold_8py}{0030\+\_\+alter\+\_\+sensorunit\+\_\+sensor\+\_\+type\+\_\+sensorthreshold.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,381 @@
+\doxysection{mqtt\+\_\+communication Namespace Reference}
+\hypertarget{namespacemqtt__communication}{}\label{namespacemqtt__communication}\index{mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a03f3f1c2c59e3d7b8799e58257a29de8}{graceful\+\_\+shutdown}} (signum, frame)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a9f951a8a289e1bc884a9e80897943e2d}{on\+\_\+connect}} (client, userdata, flags, rc)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_adb33b195d122ede3756cd3cb0089bd04}{on\+\_\+message}} (client, userdata, msg)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a08c26941fb306464a1f4d0b9bf83cb73}{handle\+\_\+environmental\+\_\+system}} (unique\+\_\+id, data)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_adaa1033d399bbe0ceb9827189047640c}{publish\+\_\+control\+\_\+command}} (env\+\_\+system, action)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a21a2ebe923117b1c9efc3dcedd16e53b}{handle\+\_\+check\+\_\+request}} (unique\+\_\+id, client)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_af05cf0ae920439c13baf9356d9a913f6}{handle\+\_\+registration}} (unique\+\_\+id)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a64d5cb445c8e98f0a1efa935c722ec9b}{handle\+\_\+sensor\+\_\+data}} (unique\+\_\+id, data)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a46d91dac946dbf5d66c6cb2464cfb2fa}{publish\+\_\+sensor\+\_\+settings}} (sensor)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a1d542146028bee9d31591d3753b8abad}{handle\+\_\+settings\+\_\+request}} (unique\+\_\+id, client)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a74b11705c6901621a6362a3542daf66b}{level}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a57bb9361a8f2f10719fbf174d505689c}{format}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a14d74242087b5c4bb0b09cf3770df1a5}{stream}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_ade4e9974cbb52018e3dd114800956597}{force}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_ad203670c4eac7916c79a26bda33749f3}{logger}} = logging.\+get\+Logger("{}smart\+\_\+greenhouse"{})
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a2bda5b704ce0498c16258fd6446016a5}{handler}} = logging.\+Stream\+Handler(sys.\+stdout)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a4f9b7f1c0ed53664a11823c02c9f7bbb}{propagate}}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_a5ddcc67d8b04ab98e8e85bb3a0a1153f}{MQTT\+\_\+\+HOST}} = \textquotesingle{}10.\+42.\+0.\+1\textquotesingle{}
+\item 
+int \mbox{\hyperlink{namespacemqtt__communication_aaecf2ccb6312d8e4895485f00937c167}{MQTT\+\_\+\+PORT}} = 8883
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_a8b9e5315253339aa547b743e85f419a1}{SENSOR\+\_\+\+DATA\+\_\+\+TOPIC}} = \textquotesingle{}sensor/data/\#\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_a4c3fd97568d363d4eff6d357d5aef06f}{SENSOR\+\_\+\+REGISTER\+\_\+\+TOPIC}} = \textquotesingle{}sensor/register/\#\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_a358319eb5a4672697c16032a5a0bdc16}{SENSOR\+\_\+\+SETTINGS\+\_\+\+TOPIC}} = \textquotesingle{}sensor/settings/request/\#\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_ae2d9e6ad7b7109fb4179d4687226881d}{SENSOR\+\_\+\+CHECK\+\_\+\+TOPIC}} = \textquotesingle{}sensor/check/\#\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_ae6fdd323b4e9ee8c3e0062b67672c06b}{SYSTEM\+\_\+\+CONTROL\+\_\+\+COMMAND}} = \textquotesingle{}system/control/command/\#\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_ad1418a6aaa8083950d816ff4083ffaef}{SYSTEM\+\_\+\+CONTROL\+\_\+\+RESPONSE}} = \textquotesingle{}system/control/response/\#\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_a1d219e1c3890f8784591a410aa02acd4}{ca\+\_\+path}} = "{}/etc/mosquitto/certs/ca.\+crt"{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_afb60fb281688e3697dfad362a5e5a262}{certfile\+\_\+path}} = "{}/etc/mosquitto/certs/client.\+crt"{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_a3b59a9a67fc7a95aac19b9fffe017d82}{keyfile\+\_\+path}} = "{}/etc/mosquitto/certs/client.\+key"{}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a76c8ce74e1eff8f71b2ee84e20685ad1}{client}} = mqtt.\+Client()
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_ac9cad31497d77df9bf8118862487ca39}{ca\+\_\+certs}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a8a15d755a1a95fcec91a552b1b4a50cb}{certfile}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a97233af3673466750a1f6d8780d07bf0}{keyfile}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_ae5448408cf28f203c87318dbe771e850}{tls\+\_\+version}}
+\item 
+dict \mbox{\hyperlink{namespacemqtt__communication_aaa9670047b4d76630336f0f9e5bfc104}{pending\+\_\+confirmations}} = \{\}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_ac1de5f53eb03ad9d5679511012e3243e}{on\+\_\+connect}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_aed992da148c19ec67ab7522704e9d2d1}{on\+\_\+message}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}MQTT Interaction script for smart_greenhouse.
+
+This script sets up MQTT client connections and handles incoming MQTT messages related to sensor data, environmental system control, registration,
+and settings adjustments. It uses the paho-mqtt client library to interact with an MQTT broker and processes messages
+according to their topics.
+
+This script is set up to run as a standalone component that interacts with the Django models to perform necessary actions
+based on the data received from MQTT topics.
+
+Dependencies:
+- paho-mqtt: For MQTT client functionalities.
+- Django: For ORM operations to interact with the database.
+- SSL: For secured MQTT connections.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacemqtt__communication_a03f3f1c2c59e3d7b8799e58257a29de8}\label{namespacemqtt__communication_a03f3f1c2c59e3d7b8799e58257a29de8} 
+\index{mqtt\_communication@{mqtt\_communication}!graceful\_shutdown@{graceful\_shutdown}}
+\index{graceful\_shutdown@{graceful\_shutdown}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{graceful\_shutdown()}{graceful\_shutdown()}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+graceful\+\_\+shutdown (\begin{DoxyParamCaption}\item[{}]{signum,  }\item[{}]{frame }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles graceful shutdown of the MQTT client on receiving termination signals.
+
+Parameters:
+    signum (int): The signal number.
+    frame: Current stack frame.
+\end{DoxyVerb}
+ \Hypertarget{namespacemqtt__communication_a21a2ebe923117b1c9efc3dcedd16e53b}\label{namespacemqtt__communication_a21a2ebe923117b1c9efc3dcedd16e53b} 
+\index{mqtt\_communication@{mqtt\_communication}!handle\_check\_request@{handle\_check\_request}}
+\index{handle\_check\_request@{handle\_check\_request}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{handle\_check\_request()}{handle\_check\_request()}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+handle\+\_\+check\+\_\+request (\begin{DoxyParamCaption}\item[{}]{unique\+\_\+id,  }\item[{}]{client }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles check requests to verify if a sensor is registered in the system.
+
+Parameters:
+    unique_id (str): The unique identifier of the sensor.
+    client (mqtt.Client): The MQTT client instance to publish the response.
+\end{DoxyVerb}
+ \Hypertarget{namespacemqtt__communication_a08c26941fb306464a1f4d0b9bf83cb73}\label{namespacemqtt__communication_a08c26941fb306464a1f4d0b9bf83cb73} 
+\index{mqtt\_communication@{mqtt\_communication}!handle\_environmental\_system@{handle\_environmental\_system}}
+\index{handle\_environmental\_system@{handle\_environmental\_system}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{handle\_environmental\_system()}{handle\_environmental\_system()}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+handle\+\_\+environmental\+\_\+system (\begin{DoxyParamCaption}\item[{}]{unique\+\_\+id,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles updates to an environmental system based on received MQTT control responses.
+
+Parameters:
+    unique_id (str): The unique identifier of the environmental system.
+    data (dict): The response payload containing status information.
+\end{DoxyVerb}
+ \Hypertarget{namespacemqtt__communication_af05cf0ae920439c13baf9356d9a913f6}\label{namespacemqtt__communication_af05cf0ae920439c13baf9356d9a913f6} 
+\index{mqtt\_communication@{mqtt\_communication}!handle\_registration@{handle\_registration}}
+\index{handle\_registration@{handle\_registration}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{handle\_registration()}{handle\_registration()}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+handle\+\_\+registration (\begin{DoxyParamCaption}\item[{}]{unique\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles the registration of a new sensor or acknowledges an existing registration request.
+
+Parameters:
+    unique_id (str): The unique identifier of the sensor.
+\end{DoxyVerb}
+ \Hypertarget{namespacemqtt__communication_a64d5cb445c8e98f0a1efa935c722ec9b}\label{namespacemqtt__communication_a64d5cb445c8e98f0a1efa935c722ec9b} 
+\index{mqtt\_communication@{mqtt\_communication}!handle\_sensor\_data@{handle\_sensor\_data}}
+\index{handle\_sensor\_data@{handle\_sensor\_data}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{handle\_sensor\_data()}{handle\_sensor\_data()}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+handle\+\_\+sensor\+\_\+data (\begin{DoxyParamCaption}\item[{}]{unique\+\_\+id,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles incoming sensor data by updating or creating sensor records in the database.
+
+Parameters:
+    unique_id (str): The unique identifier of the sensor.
+    data (dict): The sensor data to be recorded.
+\end{DoxyVerb}
+ \Hypertarget{namespacemqtt__communication_a1d542146028bee9d31591d3753b8abad}\label{namespacemqtt__communication_a1d542146028bee9d31591d3753b8abad} 
+\index{mqtt\_communication@{mqtt\_communication}!handle\_settings\_request@{handle\_settings\_request}}
+\index{handle\_settings\_request@{handle\_settings\_request}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{handle\_settings\_request()}{handle\_settings\_request()}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+handle\+\_\+settings\+\_\+request (\begin{DoxyParamCaption}\item[{}]{unique\+\_\+id,  }\item[{}]{client }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles requests for sensor settings and publishes them to the appropriate MQTT topic.
+
+Parameters:
+    unique_id (str): The unique identifier of the sensor.
+    client (mqtt.Client): The MQTT client instance to publish the settings.
+\end{DoxyVerb}
+ \Hypertarget{namespacemqtt__communication_a9f951a8a289e1bc884a9e80897943e2d}\label{namespacemqtt__communication_a9f951a8a289e1bc884a9e80897943e2d} 
+\index{mqtt\_communication@{mqtt\_communication}!on\_connect@{on\_connect}}
+\index{on\_connect@{on\_connect}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{on\_connect()}{on\_connect()}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+on\+\_\+connect (\begin{DoxyParamCaption}\item[{}]{client,  }\item[{}]{userdata,  }\item[{}]{flags,  }\item[{}]{rc }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles the event triggered upon connecting with the MQTT broker.
+Subscribes to necessary topics to receive sensor data and other information.
+
+Parameters:
+    client (mqtt.Client): The client instance for this callback.
+    userdata: The private user data as set in Client() or user_data_set().
+    flags: Response flags sent by the broker.
+    rc (int): The connection result.
+\end{DoxyVerb}
+ \Hypertarget{namespacemqtt__communication_adb33b195d122ede3756cd3cb0089bd04}\label{namespacemqtt__communication_adb33b195d122ede3756cd3cb0089bd04} 
+\index{mqtt\_communication@{mqtt\_communication}!on\_message@{on\_message}}
+\index{on\_message@{on\_message}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{on\_message()}{on\_message()}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+on\+\_\+message (\begin{DoxyParamCaption}\item[{}]{client,  }\item[{}]{userdata,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Callback for when a PUBLISH message is received from the server.
+
+Parameters:
+    client (mqtt.Client): The client instance for this callback.
+    userdata: The private user data as set in Client() or user_data_set().
+    msg (MQTTMessage): An instance of MQTTMessage, which is a class with members topic, payload, qos, retain.
+\end{DoxyVerb}
+ \Hypertarget{namespacemqtt__communication_adaa1033d399bbe0ceb9827189047640c}\label{namespacemqtt__communication_adaa1033d399bbe0ceb9827189047640c} 
+\index{mqtt\_communication@{mqtt\_communication}!publish\_control\_command@{publish\_control\_command}}
+\index{publish\_control\_command@{publish\_control\_command}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{publish\_control\_command()}{publish\_control\_command()}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+publish\+\_\+control\+\_\+command (\begin{DoxyParamCaption}\item[{}]{env\+\_\+system,  }\item[{}]{action }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Publishes a control command to an environmental system via MQTT.
+
+Parameters:
+    env_system (EnvironmentalSystem): The environmental system instance.
+    action (str): The action to perform ('activate', 'deactivate', or 'reset').
+\end{DoxyVerb}
+ \Hypertarget{namespacemqtt__communication_a46d91dac946dbf5d66c6cb2464cfb2fa}\label{namespacemqtt__communication_a46d91dac946dbf5d66c6cb2464cfb2fa} 
+\index{mqtt\_communication@{mqtt\_communication}!publish\_sensor\_settings@{publish\_sensor\_settings}}
+\index{publish\_sensor\_settings@{publish\_sensor\_settings}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{publish\_sensor\_settings()}{publish\_sensor\_settings()}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+publish\+\_\+sensor\+\_\+settings (\begin{DoxyParamCaption}\item[{}]{sensor }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Publishes the updated settings for a sensor to the MQTT broker as a retained message.
+
+Parameters:
+    sensor (SensorUnit): The sensor instance whose settings need to be published.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacemqtt__communication_ac9cad31497d77df9bf8118862487ca39}\label{namespacemqtt__communication_ac9cad31497d77df9bf8118862487ca39} 
+\index{mqtt\_communication@{mqtt\_communication}!ca\_certs@{ca\_certs}}
+\index{ca\_certs@{ca\_certs}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{ca\_certs}{ca\_certs}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+ca\+\_\+certs}
+
+\Hypertarget{namespacemqtt__communication_a1d219e1c3890f8784591a410aa02acd4}\label{namespacemqtt__communication_a1d219e1c3890f8784591a410aa02acd4} 
+\index{mqtt\_communication@{mqtt\_communication}!ca\_path@{ca\_path}}
+\index{ca\_path@{ca\_path}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{ca\_path}{ca\_path}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+ca\+\_\+path = "{}/etc/mosquitto/certs/ca.\+crt"{}}
+
+\Hypertarget{namespacemqtt__communication_a8a15d755a1a95fcec91a552b1b4a50cb}\label{namespacemqtt__communication_a8a15d755a1a95fcec91a552b1b4a50cb} 
+\index{mqtt\_communication@{mqtt\_communication}!certfile@{certfile}}
+\index{certfile@{certfile}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{certfile}{certfile}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+certfile}
+
+\Hypertarget{namespacemqtt__communication_afb60fb281688e3697dfad362a5e5a262}\label{namespacemqtt__communication_afb60fb281688e3697dfad362a5e5a262} 
+\index{mqtt\_communication@{mqtt\_communication}!certfile\_path@{certfile\_path}}
+\index{certfile\_path@{certfile\_path}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{certfile\_path}{certfile\_path}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+certfile\+\_\+path = "{}/etc/mosquitto/certs/client.\+crt"{}}
+
+\Hypertarget{namespacemqtt__communication_a76c8ce74e1eff8f71b2ee84e20685ad1}\label{namespacemqtt__communication_a76c8ce74e1eff8f71b2ee84e20685ad1} 
+\index{mqtt\_communication@{mqtt\_communication}!client@{client}}
+\index{client@{client}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+client = mqtt.\+Client()}
+
+\Hypertarget{namespacemqtt__communication_ade4e9974cbb52018e3dd114800956597}\label{namespacemqtt__communication_ade4e9974cbb52018e3dd114800956597} 
+\index{mqtt\_communication@{mqtt\_communication}!force@{force}}
+\index{force@{force}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{force}{force}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+force}
+
+\Hypertarget{namespacemqtt__communication_a57bb9361a8f2f10719fbf174d505689c}\label{namespacemqtt__communication_a57bb9361a8f2f10719fbf174d505689c} 
+\index{mqtt\_communication@{mqtt\_communication}!format@{format}}
+\index{format@{format}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{format}{format}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+format}
+
+\Hypertarget{namespacemqtt__communication_a2bda5b704ce0498c16258fd6446016a5}\label{namespacemqtt__communication_a2bda5b704ce0498c16258fd6446016a5} 
+\index{mqtt\_communication@{mqtt\_communication}!handler@{handler}}
+\index{handler@{handler}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{handler}{handler}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+handler = logging.\+Stream\+Handler(sys.\+stdout)}
+
+\Hypertarget{namespacemqtt__communication_a97233af3673466750a1f6d8780d07bf0}\label{namespacemqtt__communication_a97233af3673466750a1f6d8780d07bf0} 
+\index{mqtt\_communication@{mqtt\_communication}!keyfile@{keyfile}}
+\index{keyfile@{keyfile}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{keyfile}{keyfile}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+keyfile}
+
+\Hypertarget{namespacemqtt__communication_a3b59a9a67fc7a95aac19b9fffe017d82}\label{namespacemqtt__communication_a3b59a9a67fc7a95aac19b9fffe017d82} 
+\index{mqtt\_communication@{mqtt\_communication}!keyfile\_path@{keyfile\_path}}
+\index{keyfile\_path@{keyfile\_path}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{keyfile\_path}{keyfile\_path}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+keyfile\+\_\+path = "{}/etc/mosquitto/certs/client.\+key"{}}
+
+\Hypertarget{namespacemqtt__communication_a74b11705c6901621a6362a3542daf66b}\label{namespacemqtt__communication_a74b11705c6901621a6362a3542daf66b} 
+\index{mqtt\_communication@{mqtt\_communication}!level@{level}}
+\index{level@{level}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+level}
+
+\Hypertarget{namespacemqtt__communication_ad203670c4eac7916c79a26bda33749f3}\label{namespacemqtt__communication_ad203670c4eac7916c79a26bda33749f3} 
+\index{mqtt\_communication@{mqtt\_communication}!logger@{logger}}
+\index{logger@{logger}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+logger = logging.\+get\+Logger("{}smart\+\_\+greenhouse"{})}
+
+\Hypertarget{namespacemqtt__communication_a5ddcc67d8b04ab98e8e85bb3a0a1153f}\label{namespacemqtt__communication_a5ddcc67d8b04ab98e8e85bb3a0a1153f} 
+\index{mqtt\_communication@{mqtt\_communication}!MQTT\_HOST@{MQTT\_HOST}}
+\index{MQTT\_HOST@{MQTT\_HOST}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{MQTT\_HOST}{MQTT\_HOST}}
+{\footnotesize\ttfamily str mqtt\+\_\+communication.\+MQTT\+\_\+\+HOST = \textquotesingle{}10.\+42.\+0.\+1\textquotesingle{}}
+
+\Hypertarget{namespacemqtt__communication_aaecf2ccb6312d8e4895485f00937c167}\label{namespacemqtt__communication_aaecf2ccb6312d8e4895485f00937c167} 
+\index{mqtt\_communication@{mqtt\_communication}!MQTT\_PORT@{MQTT\_PORT}}
+\index{MQTT\_PORT@{MQTT\_PORT}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{MQTT\_PORT}{MQTT\_PORT}}
+{\footnotesize\ttfamily int mqtt\+\_\+communication.\+MQTT\+\_\+\+PORT = 8883}
+
+\Hypertarget{namespacemqtt__communication_ac1de5f53eb03ad9d5679511012e3243e}\label{namespacemqtt__communication_ac1de5f53eb03ad9d5679511012e3243e} 
+\index{mqtt\_communication@{mqtt\_communication}!on\_connect@{on\_connect}}
+\index{on\_connect@{on\_connect}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{on\_connect}{on\_connect}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+on\+\_\+connect}
+
+\Hypertarget{namespacemqtt__communication_aed992da148c19ec67ab7522704e9d2d1}\label{namespacemqtt__communication_aed992da148c19ec67ab7522704e9d2d1} 
+\index{mqtt\_communication@{mqtt\_communication}!on\_message@{on\_message}}
+\index{on\_message@{on\_message}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{on\_message}{on\_message}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+on\+\_\+message}
+
+\Hypertarget{namespacemqtt__communication_aaa9670047b4d76630336f0f9e5bfc104}\label{namespacemqtt__communication_aaa9670047b4d76630336f0f9e5bfc104} 
+\index{mqtt\_communication@{mqtt\_communication}!pending\_confirmations@{pending\_confirmations}}
+\index{pending\_confirmations@{pending\_confirmations}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{pending\_confirmations}{pending\_confirmations}}
+{\footnotesize\ttfamily dict mqtt\+\_\+communication.\+pending\+\_\+confirmations = \{\}}
+
+\Hypertarget{namespacemqtt__communication_a4f9b7f1c0ed53664a11823c02c9f7bbb}\label{namespacemqtt__communication_a4f9b7f1c0ed53664a11823c02c9f7bbb} 
+\index{mqtt\_communication@{mqtt\_communication}!propagate@{propagate}}
+\index{propagate@{propagate}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{propagate}{propagate}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+propagate}
+
+\Hypertarget{namespacemqtt__communication_ae2d9e6ad7b7109fb4179d4687226881d}\label{namespacemqtt__communication_ae2d9e6ad7b7109fb4179d4687226881d} 
+\index{mqtt\_communication@{mqtt\_communication}!SENSOR\_CHECK\_TOPIC@{SENSOR\_CHECK\_TOPIC}}
+\index{SENSOR\_CHECK\_TOPIC@{SENSOR\_CHECK\_TOPIC}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_CHECK\_TOPIC}{SENSOR\_CHECK\_TOPIC}}
+{\footnotesize\ttfamily str mqtt\+\_\+communication.\+SENSOR\+\_\+\+CHECK\+\_\+\+TOPIC = \textquotesingle{}sensor/check/\#\textquotesingle{}}
+
+\Hypertarget{namespacemqtt__communication_a8b9e5315253339aa547b743e85f419a1}\label{namespacemqtt__communication_a8b9e5315253339aa547b743e85f419a1} 
+\index{mqtt\_communication@{mqtt\_communication}!SENSOR\_DATA\_TOPIC@{SENSOR\_DATA\_TOPIC}}
+\index{SENSOR\_DATA\_TOPIC@{SENSOR\_DATA\_TOPIC}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_DATA\_TOPIC}{SENSOR\_DATA\_TOPIC}}
+{\footnotesize\ttfamily str mqtt\+\_\+communication.\+SENSOR\+\_\+\+DATA\+\_\+\+TOPIC = \textquotesingle{}sensor/data/\#\textquotesingle{}}
+
+\Hypertarget{namespacemqtt__communication_a4c3fd97568d363d4eff6d357d5aef06f}\label{namespacemqtt__communication_a4c3fd97568d363d4eff6d357d5aef06f} 
+\index{mqtt\_communication@{mqtt\_communication}!SENSOR\_REGISTER\_TOPIC@{SENSOR\_REGISTER\_TOPIC}}
+\index{SENSOR\_REGISTER\_TOPIC@{SENSOR\_REGISTER\_TOPIC}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_REGISTER\_TOPIC}{SENSOR\_REGISTER\_TOPIC}}
+{\footnotesize\ttfamily str mqtt\+\_\+communication.\+SENSOR\+\_\+\+REGISTER\+\_\+\+TOPIC = \textquotesingle{}sensor/register/\#\textquotesingle{}}
+
+\Hypertarget{namespacemqtt__communication_a358319eb5a4672697c16032a5a0bdc16}\label{namespacemqtt__communication_a358319eb5a4672697c16032a5a0bdc16} 
+\index{mqtt\_communication@{mqtt\_communication}!SENSOR\_SETTINGS\_TOPIC@{SENSOR\_SETTINGS\_TOPIC}}
+\index{SENSOR\_SETTINGS\_TOPIC@{SENSOR\_SETTINGS\_TOPIC}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_SETTINGS\_TOPIC}{SENSOR\_SETTINGS\_TOPIC}}
+{\footnotesize\ttfamily str mqtt\+\_\+communication.\+SENSOR\+\_\+\+SETTINGS\+\_\+\+TOPIC = \textquotesingle{}sensor/settings/request/\#\textquotesingle{}}
+
+\Hypertarget{namespacemqtt__communication_a14d74242087b5c4bb0b09cf3770df1a5}\label{namespacemqtt__communication_a14d74242087b5c4bb0b09cf3770df1a5} 
+\index{mqtt\_communication@{mqtt\_communication}!stream@{stream}}
+\index{stream@{stream}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{stream}{stream}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+stream}
+
+\Hypertarget{namespacemqtt__communication_ae6fdd323b4e9ee8c3e0062b67672c06b}\label{namespacemqtt__communication_ae6fdd323b4e9ee8c3e0062b67672c06b} 
+\index{mqtt\_communication@{mqtt\_communication}!SYSTEM\_CONTROL\_COMMAND@{SYSTEM\_CONTROL\_COMMAND}}
+\index{SYSTEM\_CONTROL\_COMMAND@{SYSTEM\_CONTROL\_COMMAND}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{SYSTEM\_CONTROL\_COMMAND}{SYSTEM\_CONTROL\_COMMAND}}
+{\footnotesize\ttfamily str mqtt\+\_\+communication.\+SYSTEM\+\_\+\+CONTROL\+\_\+\+COMMAND = \textquotesingle{}system/control/command/\#\textquotesingle{}}
+
+\Hypertarget{namespacemqtt__communication_ad1418a6aaa8083950d816ff4083ffaef}\label{namespacemqtt__communication_ad1418a6aaa8083950d816ff4083ffaef} 
+\index{mqtt\_communication@{mqtt\_communication}!SYSTEM\_CONTROL\_RESPONSE@{SYSTEM\_CONTROL\_RESPONSE}}
+\index{SYSTEM\_CONTROL\_RESPONSE@{SYSTEM\_CONTROL\_RESPONSE}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{SYSTEM\_CONTROL\_RESPONSE}{SYSTEM\_CONTROL\_RESPONSE}}
+{\footnotesize\ttfamily str mqtt\+\_\+communication.\+SYSTEM\+\_\+\+CONTROL\+\_\+\+RESPONSE = \textquotesingle{}system/control/response/\#\textquotesingle{}}
+
+\Hypertarget{namespacemqtt__communication_ae5448408cf28f203c87318dbe771e850}\label{namespacemqtt__communication_ae5448408cf28f203c87318dbe771e850} 
+\index{mqtt\_communication@{mqtt\_communication}!tls\_version@{tls\_version}}
+\index{tls\_version@{tls\_version}!mqtt\_communication@{mqtt\_communication}}
+\doxysubsubsection{\texorpdfstring{tls\_version}{tls\_version}}
+{\footnotesize\ttfamily mqtt\+\_\+communication.\+tls\+\_\+version}
+

@@ -1,0 +1,7 @@
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+inquire_registration view has been called.
+Request body: {"unique_identifier": "d83add5db74e"}
+Received inquire_registration for unique_identifier: d83add5db74e
+Sensor d83add5db74e is registered.
+/home/admin/smart_greenhouse/smart_greenhouse/settings.py changed, reloading.

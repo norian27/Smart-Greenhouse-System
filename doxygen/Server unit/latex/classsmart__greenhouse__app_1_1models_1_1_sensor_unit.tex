@@ -1,0 +1,220 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit}{}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit}\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmart__greenhouse__app_1_1models_1_1_sensor_unit}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a8fb5c4c79aced73952a9fcff1a45854a}{update\+\_\+sensor\+\_\+data}} (self, data)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_af84e838342e1188d87e7711fd0c1c6ca}{handle\+\_\+thresholds}} (self, data)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a706649aa2f9bb54642640da31d6ac499}{check\+\_\+and\+\_\+handle\+\_\+alert}} (self, data\+\_\+type, value, alert\+\_\+low, alert\+\_\+high)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a0982810b4dc280c18285eab846187408}{get\+\_\+last\+\_\+data}} (self)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a5c8e57437d9b4bd663cea5abf4bdaf66}{is\+\_\+online}} (self)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a3a33c7e6a64ee2835feb1e0010286c86}{update\+\_\+settings}} (self, \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a36b50eb66204318c18655a6ace40d987}{data\+\_\+frequency}}=None)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_acab5807df903f9b8f979204fbe734a66}{save}} (self, \texorpdfstring{$\ast$}{*}args, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}kwargs)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_aaffec029f6c772f0ec8d900481e90d33}{manage\+\_\+thresholds}} (self)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_af0240b5ebb689a4e97269f10664a5134}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a56cbb16d611e94fb58710787617bd4e8}{greenhouse}} = models.\+Foreign\+Key(\textquotesingle{}\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse}{Greenhouse}}\textquotesingle{}, on\+\_\+delete=models.\+CASCADE, related\+\_\+name=\textquotesingle{}sensors\textquotesingle{})
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a1785f34caf22f1f9fadcfdb993fc7835}{unique\+\_\+identifier}} = models.\+Char\+Field(max\+\_\+length=255, unique=True, db\+\_\+index=True)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_afad8c4d420f191f52abdec58eb6e62fe}{identifier}} = models.\+Char\+Field(max\+\_\+length=100)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a73b9865886a65e8539b651675305716a}{last\+\_\+check\+\_\+in}} = models.\+Date\+Time\+Field(null=True, blank=True)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a585811f6f2d065461b51906d6be1f7c7}{last\+\_\+data}} = models.\+Text\+Field(blank=True, null=True)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a36b50eb66204318c18655a6ace40d987}{data\+\_\+frequency}} = models.\+Integer\+Field(default=300, help\+\_\+text="{}Frequency in seconds for data transmission."{})
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a4085b417133aa949c6041cb74d9bcf5d}{settings\+\_\+updated}} = models.\+Boolean\+Field(default=False, help\+\_\+text="{}Flag to indicate if settings are updated and pending to be picked up by the sensor."{})
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a80deef61afcbb7835db2e929ffbee22e}{sensor\+\_\+type}} = models.\+Char\+Field(max\+\_\+length=255, blank=True, help\+\_\+text="{}Dynamic sensor type based on data keys."{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Represents a sensor unit in the greenhouse.
+
+Attributes:
+    greenhouse (ForeignKey): The greenhouse to which the sensor belongs.
+    unique_identifier (str): The unique identifier of the sensor.
+    identifier (str): The identifier of the sensor.
+    last_check_in (DateTimeField): The timestamp of the last check-in.
+    last_data (TextField): The last data received from the sensor.
+    data_frequency (IntegerField): Frequency in seconds for data transmission.
+    settings_updated (BooleanField): Flag to indicate if settings are updated and pending to be picked up by the sensor.
+    sensor_type (str): The type of sensor.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_af0240b5ebb689a4e97269f10664a5134}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_af0240b5ebb689a4e97269f10664a5134} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the string representation of the sensor.
+
+Returns:
+    str: The string representation.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a706649aa2f9bb54642640da31d6ac499}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a706649aa2f9bb54642640da31d6ac499} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!check\_and\_handle\_alert@{check\_and\_handle\_alert}}
+\index{check\_and\_handle\_alert@{check\_and\_handle\_alert}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{check\_and\_handle\_alert()}{check\_and\_handle\_alert()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+check\+\_\+and\+\_\+handle\+\_\+alert (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data\+\_\+type,  }\item[{}]{value,  }\item[{}]{alert\+\_\+low,  }\item[{}]{alert\+\_\+high }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checks and handles alerts based on sensor thresholds.
+
+Args:
+    data_type (str): The type of data.
+    value (float): The value of the data.
+    alert_low (float): The low threshold for the alert.
+    alert_high (float): The high threshold for the alert.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a0982810b4dc280c18285eab846187408}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a0982810b4dc280c18285eab846187408} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!get\_last\_data@{get\_last\_data}}
+\index{get\_last\_data@{get\_last\_data}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{get\_last\_data()}{get\_last\_data()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+get\+\_\+last\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieves the last sensor data.
+
+Returns:
+    dict: The last sensor data.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_af84e838342e1188d87e7711fd0c1c6ca}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_af84e838342e1188d87e7711fd0c1c6ca} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!handle\_thresholds@{handle\_thresholds}}
+\index{handle\_thresholds@{handle\_thresholds}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{handle\_thresholds()}{handle\_thresholds()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+handle\+\_\+thresholds (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles sensor thresholds.
+
+Args:
+    data (dict): The sensor data.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a5c8e57437d9b4bd663cea5abf4bdaf66}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a5c8e57437d9b4bd663cea5abf4bdaf66} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!is\_online@{is\_online}}
+\index{is\_online@{is\_online}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{is\_online()}{is\_online()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+is\+\_\+online (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checks if the sensor is online.
+
+Returns:
+    bool: True if the sensor is online, False otherwise.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_aaffec029f6c772f0ec8d900481e90d33}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_aaffec029f6c772f0ec8d900481e90d33} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!manage\_thresholds@{manage\_thresholds}}
+\index{manage\_thresholds@{manage\_thresholds}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{manage\_thresholds()}{manage\_thresholds()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+manage\+\_\+thresholds (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Manages sensor thresholds.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_acab5807df903f9b8f979204fbe734a66}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_acab5807df903f9b8f979204fbe734a66} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!save@{save}}
+\index{save@{save}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+save (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\texorpdfstring{$\ast$}{*}}]{args,  }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Saves the sensor instance.
+
+Args:
+    *args: Variable length argument list.
+    **kwargs: Arbitrary keyword arguments.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a8fb5c4c79aced73952a9fcff1a45854a}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a8fb5c4c79aced73952a9fcff1a45854a} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!update\_sensor\_data@{update\_sensor\_data}}
+\index{update\_sensor\_data@{update\_sensor\_data}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{update\_sensor\_data()}{update\_sensor\_data()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+update\+\_\+sensor\+\_\+data (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Updates the sensor data.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a3a33c7e6a64ee2835feb1e0010286c86}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a3a33c7e6a64ee2835feb1e0010286c86} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!update\_settings@{update\_settings}}
+\index{update\_settings@{update\_settings}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{update\_settings()}{update\_settings()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+update\+\_\+settings (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data\+\_\+frequency = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Updates sensor settings and ensures the changes are reflected in the database.
+
+Args:
+    data_frequency (int, optional): The new data frequency to set.
+    other_settings (dict, optional): Additional settings to update.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a36b50eb66204318c18655a6ace40d987}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a36b50eb66204318c18655a6ace40d987} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!data\_frequency@{data\_frequency}}
+\index{data\_frequency@{data\_frequency}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{data\_frequency}{data\_frequency}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+data\+\_\+frequency = models.\+Integer\+Field(default=300, help\+\_\+text="{}Frequency in seconds for data transmission."{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a56cbb16d611e94fb58710787617bd4e8}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a56cbb16d611e94fb58710787617bd4e8} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!greenhouse@{greenhouse}}
+\index{greenhouse@{greenhouse}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{greenhouse}{greenhouse}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+greenhouse = models.\+Foreign\+Key(\textquotesingle{}\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse}{Greenhouse}}\textquotesingle{}, on\+\_\+delete=models.\+CASCADE, related\+\_\+name=\textquotesingle{}sensors\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_afad8c4d420f191f52abdec58eb6e62fe}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_afad8c4d420f191f52abdec58eb6e62fe} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!identifier@{identifier}}
+\index{identifier@{identifier}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{identifier}{identifier}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+identifier = models.\+Char\+Field(max\+\_\+length=100)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a73b9865886a65e8539b651675305716a}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a73b9865886a65e8539b651675305716a} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!last\_check\_in@{last\_check\_in}}
+\index{last\_check\_in@{last\_check\_in}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{last\_check\_in}{last\_check\_in}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+last\+\_\+check\+\_\+in = models.\+Date\+Time\+Field(null=True, blank=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a585811f6f2d065461b51906d6be1f7c7}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a585811f6f2d065461b51906d6be1f7c7} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!last\_data@{last\_data}}
+\index{last\_data@{last\_data}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{last\_data}{last\_data}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+last\+\_\+data = models.\+Text\+Field(blank=True, null=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a80deef61afcbb7835db2e929ffbee22e}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a80deef61afcbb7835db2e929ffbee22e} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!sensor\_type@{sensor\_type}}
+\index{sensor\_type@{sensor\_type}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{sensor\_type}{sensor\_type}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+sensor\+\_\+type = models.\+Char\+Field(max\+\_\+length=255, blank=True, help\+\_\+text="{}Dynamic sensor type based on data keys."{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a4085b417133aa949c6041cb74d9bcf5d}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a4085b417133aa949c6041cb74d9bcf5d} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!settings\_updated@{settings\_updated}}
+\index{settings\_updated@{settings\_updated}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{settings\_updated}{settings\_updated}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+settings\+\_\+updated = models.\+Boolean\+Field(default=False, help\+\_\+text="{}Flag to indicate if settings are updated and pending to be picked up by the sensor."{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a1785f34caf22f1f9fadcfdb993fc7835}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_unit_a1785f34caf22f1f9fadcfdb993fc7835} 
+\index{smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}!unique\_identifier@{unique\_identifier}}
+\index{unique\_identifier@{unique\_identifier}!smart\_greenhouse\_app.models.SensorUnit@{smart\_greenhouse\_app.models.SensorUnit}}
+\doxysubsubsection{\texorpdfstring{unique\_identifier}{unique\_identifier}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Unit.\+unique\+\_\+identifier = models.\+Char\+Field(max\+\_\+length=255, unique=True, db\+\_\+index=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/\mbox{\hyperlink{models_8py}{models.\+py}}\end{DoxyCompactItemize}

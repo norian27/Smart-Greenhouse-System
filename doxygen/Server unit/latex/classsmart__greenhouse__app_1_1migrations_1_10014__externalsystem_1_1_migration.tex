@@ -1,0 +1,62 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+migrations.0014\+\_\+externalsystem.\+Migration Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1migrations_1_10014__externalsystem_1_1_migration}{}\label{classsmart__greenhouse__app_1_1migrations_1_10014__externalsystem_1_1_migration}\index{smart\_greenhouse\_app.migrations.0014\_externalsystem.Migration@{smart\_greenhouse\_app.migrations.0014\_externalsystem.Migration}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+migrations.0014\+\_\+externalsystem.\+Migration\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmart__greenhouse__app_1_1migrations_1_10014__externalsystem_1_1_migration}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classsmart__greenhouse__app_1_1migrations_1_10014__externalsystem_1_1_migration_a757d12907cb503ddd09c0868b36b12c8}{dependencies}}
+\item 
+list \mbox{\hyperlink{classsmart__greenhouse__app_1_1migrations_1_10014__externalsystem_1_1_migration_adf2ce323608618d0b0b96b9e5e49f3b9}{operations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1migrations_1_10014__externalsystem_1_1_migration_a757d12907cb503ddd09c0868b36b12c8}\label{classsmart__greenhouse__app_1_1migrations_1_10014__externalsystem_1_1_migration_a757d12907cb503ddd09c0868b36b12c8} 
+\index{smart\_greenhouse\_app.migrations.0014\_externalsystem.Migration@{smart\_greenhouse\_app.migrations.0014\_externalsystem.Migration}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!smart\_greenhouse\_app.migrations.0014\_externalsystem.Migration@{smart\_greenhouse\_app.migrations.0014\_externalsystem.Migration}}
+\doxysubsubsection{\texorpdfstring{dependencies}{dependencies}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+migrations.\+0014\+\_\+externalsystem.\+Migration.\+dependencies\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'smart\_greenhouse\_app'},\ \textcolor{stringliteral}{'0013\_sensorunit\_sensor\_type'}),}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+\Hypertarget{classsmart__greenhouse__app_1_1migrations_1_10014__externalsystem_1_1_migration_adf2ce323608618d0b0b96b9e5e49f3b9}\label{classsmart__greenhouse__app_1_1migrations_1_10014__externalsystem_1_1_migration_adf2ce323608618d0b0b96b9e5e49f3b9} 
+\index{smart\_greenhouse\_app.migrations.0014\_externalsystem.Migration@{smart\_greenhouse\_app.migrations.0014\_externalsystem.Migration}!operations@{operations}}
+\index{operations@{operations}!smart\_greenhouse\_app.migrations.0014\_externalsystem.Migration@{smart\_greenhouse\_app.migrations.0014\_externalsystem.Migration}}
+\doxysubsubsection{\texorpdfstring{operations}{operations}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+migrations.\+0014\+\_\+externalsystem.\+Migration.\+operations\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.CreateModel(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'ExternalSystem'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ fields=[}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'id'},\ models.BigAutoField(auto\_created=\textcolor{keyword}{True},\ primary\_key=\textcolor{keyword}{True},\ serialize=\textcolor{keyword}{False},\ verbose\_name=\textcolor{stringliteral}{'ID'})),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'name'},\ models.CharField(max\_length=100)),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'system\_type'},\ models.CharField(max\_length=50)),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'base\_url'},\ models.URLField(blank=\textcolor{keyword}{True})),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'api\_key'},\ models.CharField(blank=\textcolor{keyword}{True},\ max\_length=200)),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'start\_endpoint'},\ models.CharField(blank=\textcolor{keyword}{True},\ max\_length=200)),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'stop\_endpoint'},\ models.CharField(blank=\textcolor{keyword}{True},\ max\_length=200)),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'status\_endpoint'},\ models.CharField(blank=\textcolor{keyword}{True},\ max\_length=200)),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'greenhouse'},\ models.ForeignKey(on\_delete=django.db.models.deletion.CASCADE,\ related\_name=\textcolor{stringliteral}{'external\_systems'},\ to=\textcolor{stringliteral}{'smart\_greenhouse\_app.greenhouse'})),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/migrations/\mbox{\hyperlink{0014__externalsystem_8py}{0014\+\_\+externalsystem.\+py}}\end{DoxyCompactItemize}

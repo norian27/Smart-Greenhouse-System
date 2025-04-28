@@ -1,0 +1,98 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Env\+System\+Consumer Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer}{}\label{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer}\index{smart\_greenhouse\_app.consumers.EnvSystemConsumer@{smart\_greenhouse\_app.consumers.EnvSystemConsumer}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Env\+System\+Consumer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a5cac3e7820110cf1bb23db60e17f094d}{connect}} (self)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a4594f938a9201c18726060101040e111}{disconnect}} (self, close\+\_\+code)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a0a03689713df7dacbb8c6ba1f3c5f223}{status\+\_\+update}} (self, event)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a35adfb5290c2cd68825bca2828d8ea09}{system\+\_\+id}}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a7c54ba14fb7f62056d48fc43a6dc5739}{room\+\_\+group\+\_\+name}}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a678da7f4f5a5c0ea58f82ffbd82c8e81}{channel\+\_\+name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Consumer for broadcasting real-time environmental system status updates.
+
+Attributes:
+    system_id (str): The ID of the environmental system.
+    room_group_name (str): The WebSocket group name for broadcasting status updates.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a5cac3e7820110cf1bb23db60e17f094d}\label{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a5cac3e7820110cf1bb23db60e17f094d} 
+\index{smart\_greenhouse\_app.consumers.EnvSystemConsumer@{smart\_greenhouse\_app.consumers.EnvSystemConsumer}!connect@{connect}}
+\index{connect@{connect}!smart\_greenhouse\_app.consumers.EnvSystemConsumer@{smart\_greenhouse\_app.consumers.EnvSystemConsumer}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Env\+System\+Consumer.\+connect (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles the WebSocket connection establishment for an environmental system.
+
+Adds the WebSocket connection to the specific system's status update group.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a4594f938a9201c18726060101040e111}\label{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a4594f938a9201c18726060101040e111} 
+\index{smart\_greenhouse\_app.consumers.EnvSystemConsumer@{smart\_greenhouse\_app.consumers.EnvSystemConsumer}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!smart\_greenhouse\_app.consumers.EnvSystemConsumer@{smart\_greenhouse\_app.consumers.EnvSystemConsumer}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Env\+System\+Consumer.\+disconnect (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{close\+\_\+code }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles the WebSocket disconnection for an environmental system.
+
+Removes the WebSocket connection from the specific system's status group.
+
+Parameters:
+    close_code (int): WebSocket close code.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a0a03689713df7dacbb8c6ba1f3c5f223}\label{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a0a03689713df7dacbb8c6ba1f3c5f223} 
+\index{smart\_greenhouse\_app.consumers.EnvSystemConsumer@{smart\_greenhouse\_app.consumers.EnvSystemConsumer}!status\_update@{status\_update}}
+\index{status\_update@{status\_update}!smart\_greenhouse\_app.consumers.EnvSystemConsumer@{smart\_greenhouse\_app.consumers.EnvSystemConsumer}}
+\doxysubsubsection{\texorpdfstring{status\_update()}{status\_update()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Env\+System\+Consumer.\+status\+\_\+update (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{event }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sends a status update for an environmental system to the WebSocket client.
+
+Parameters:
+    event (dict): Event data containing system ID, active state, and status string.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a678da7f4f5a5c0ea58f82ffbd82c8e81}\label{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a678da7f4f5a5c0ea58f82ffbd82c8e81} 
+\index{smart\_greenhouse\_app.consumers.EnvSystemConsumer@{smart\_greenhouse\_app.consumers.EnvSystemConsumer}!channel\_name@{channel\_name}}
+\index{channel\_name@{channel\_name}!smart\_greenhouse\_app.consumers.EnvSystemConsumer@{smart\_greenhouse\_app.consumers.EnvSystemConsumer}}
+\doxysubsubsection{\texorpdfstring{channel\_name}{channel\_name}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Env\+System\+Consumer.\+channel\+\_\+name}
+
+\Hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a7c54ba14fb7f62056d48fc43a6dc5739}\label{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a7c54ba14fb7f62056d48fc43a6dc5739} 
+\index{smart\_greenhouse\_app.consumers.EnvSystemConsumer@{smart\_greenhouse\_app.consumers.EnvSystemConsumer}!room\_group\_name@{room\_group\_name}}
+\index{room\_group\_name@{room\_group\_name}!smart\_greenhouse\_app.consumers.EnvSystemConsumer@{smart\_greenhouse\_app.consumers.EnvSystemConsumer}}
+\doxysubsubsection{\texorpdfstring{room\_group\_name}{room\_group\_name}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Env\+System\+Consumer.\+room\+\_\+group\+\_\+name}
+
+\Hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a35adfb5290c2cd68825bca2828d8ea09}\label{classsmart__greenhouse__app_1_1consumers_1_1_env_system_consumer_a35adfb5290c2cd68825bca2828d8ea09} 
+\index{smart\_greenhouse\_app.consumers.EnvSystemConsumer@{smart\_greenhouse\_app.consumers.EnvSystemConsumer}!system\_id@{system\_id}}
+\index{system\_id@{system\_id}!smart\_greenhouse\_app.consumers.EnvSystemConsumer@{smart\_greenhouse\_app.consumers.EnvSystemConsumer}}
+\doxysubsubsection{\texorpdfstring{system\_id}{system\_id}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Env\+System\+Consumer.\+system\+\_\+id}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/\mbox{\hyperlink{consumers_8py}{consumers.\+py}}\end{DoxyCompactItemize}

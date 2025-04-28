@@ -1,0 +1,147 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+models.\+Greenhouse.\+Greenhouse\+Control Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control}{}\label{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control}\index{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_ac915f7c36d0ad12a04ab40c4b2f06cb7}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a455c1b166676bda67ae5a2bc5e5f5160}{greenhouse}})
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a3aa1f11b07bd4291bacbb162c256cb26}{adjust\+\_\+environmental\+\_\+systems}} (self)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a767293717fed245df8a93b32b3a5e64a}{get\+\_\+control\+\_\+details}} (self, sensor\+\_\+type\+\_\+json)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_ac68e9dad721fcb8754bd1653998b2a20}{evaluate\+\_\+and\+\_\+act}} (self, env\+\_\+system, sensor, sensor\+\_\+data, data\+\_\+key)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a35ef291f28f0314453c462b45824e51b}{determine\+\_\+action}} (self, env\+\_\+system, current\+\_\+value, target\+\_\+value)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a08e701006957e7d51dc2178458b603dc}{toggle\+\_\+environmental\+\_\+system}} (self, env\+\_\+system, action)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a455c1b166676bda67ae5a2bc5e5f5160}{greenhouse}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_ac15a1f51adf4fc9a8fdf3bf7df690202}{CONTROL\+\_\+\+MAP}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Used for autonomic control of the greenhouse's environmental systems.s
+
+Attributes:
+    CONTROL_MAP (dict): A dictionary mapping control codes to their descriptions.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_ac915f7c36d0ad12a04ab40c4b2f06cb7}\label{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_ac915f7c36d0ad12a04ab40c4b2f06cb7} 
+\index{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Greenhouse.\+Greenhouse\+Control.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{greenhouse }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initializes the GreenhouseControl instance.
+
+Args:
+    greenhouse (Greenhouse): The greenhouse instance to control.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a3aa1f11b07bd4291bacbb162c256cb26}\label{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a3aa1f11b07bd4291bacbb162c256cb26} 
+\index{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}!adjust\_environmental\_systems@{adjust\_environmental\_systems}}
+\index{adjust\_environmental\_systems@{adjust\_environmental\_systems}!smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}}
+\doxysubsubsection{\texorpdfstring{adjust\_environmental\_systems()}{adjust\_environmental\_systems()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Greenhouse.\+Greenhouse\+Control.\+adjust\+\_\+environmental\+\_\+systems (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adjusts the environmental systems of the greenhouse based on active alerts.\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a35ef291f28f0314453c462b45824e51b}\label{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a35ef291f28f0314453c462b45824e51b} 
+\index{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}!determine\_action@{determine\_action}}
+\index{determine\_action@{determine\_action}!smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}}
+\doxysubsubsection{\texorpdfstring{determine\_action()}{determine\_action()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Greenhouse.\+Greenhouse\+Control.\+determine\+\_\+action (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{env\+\_\+system,  }\item[{}]{current\+\_\+value,  }\item[{}]{target\+\_\+value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Determines the action needed based on the current and target values.
+
+Args:
+    env_system (EnvironmentalSystem): The environmental system.
+    current_value (float): The current value.
+    target_value (float): The target value.
+
+Returns:
+    str: The action needed ('activate', 'deactivate', or None).
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_ac68e9dad721fcb8754bd1653998b2a20}\label{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_ac68e9dad721fcb8754bd1653998b2a20} 
+\index{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}!evaluate\_and\_act@{evaluate\_and\_act}}
+\index{evaluate\_and\_act@{evaluate\_and\_act}!smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}}
+\doxysubsubsection{\texorpdfstring{evaluate\_and\_act()}{evaluate\_and\_act()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Greenhouse.\+Greenhouse\+Control.\+evaluate\+\_\+and\+\_\+act (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{env\+\_\+system,  }\item[{}]{sensor,  }\item[{}]{sensor\+\_\+data,  }\item[{}]{data\+\_\+key }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Evaluates environmental system state and triggers actions if needed based on sensor data.
+
+Args:
+    env_system (EnvironmentalSystem): The environmental system to evaluate (e.g., Cooling, Sprinkler).
+    sensor (SensorUnit): The sensor providing the data.
+    sensor_data (dict): The latest sensor readings.
+    data_key (str): The key from the sensor data to evaluate.
+
+Returns:
+    None
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a767293717fed245df8a93b32b3a5e64a}\label{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a767293717fed245df8a93b32b3a5e64a} 
+\index{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}!get\_control\_details@{get\_control\_details}}
+\index{get\_control\_details@{get\_control\_details}!smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}}
+\doxysubsubsection{\texorpdfstring{get\_control\_details()}{get\_control\_details()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Greenhouse.\+Greenhouse\+Control.\+get\+\_\+control\+\_\+details (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{sensor\+\_\+type\+\_\+json }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieves applicable environmental controls and data keys for a given sensor type.
+
+Args:
+    sensor_type_json (str): JSON string describing the sensor's data types.
+
+Returns:
+    tuple: A tuple containing a list of applicable control types and a list of used sensor data keys.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a08e701006957e7d51dc2178458b603dc}\label{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a08e701006957e7d51dc2178458b603dc} 
+\index{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}!toggle\_environmental\_system@{toggle\_environmental\_system}}
+\index{toggle\_environmental\_system@{toggle\_environmental\_system}!smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}}
+\doxysubsubsection{\texorpdfstring{toggle\_environmental\_system()}{toggle\_environmental\_system()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Greenhouse.\+Greenhouse\+Control.\+toggle\+\_\+environmental\+\_\+system (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{env\+\_\+system,  }\item[{}]{action }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Toggles the environmental system.
+
+Args:
+    env_system (EnvironmentalSystem): The environmental system.
+    action (str): The action to perform ('activate' or 'deactivate').
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_ac15a1f51adf4fc9a8fdf3bf7df690202}\label{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_ac15a1f51adf4fc9a8fdf3bf7df690202} 
+\index{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}!CONTROL\_MAP@{CONTROL\_MAP}}
+\index{CONTROL\_MAP@{CONTROL\_MAP}!smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}}
+\doxysubsubsection{\texorpdfstring{CONTROL\_MAP}{CONTROL\_MAP}}
+{\footnotesize\ttfamily dict smart\+\_\+greenhouse\+\_\+app.\+models.\+Greenhouse.\+Greenhouse\+Control.\+CONTROL\+\_\+\+MAP\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'HU'}:\ (\textcolor{stringliteral}{'humidity'},\ \textcolor{stringliteral}{'Humidity'}),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'TE'}:\ (\textcolor{stringliteral}{'temperature'},\ \textcolor{stringliteral}{'Cooling'},\ \textcolor{stringliteral}{'Heating'},\ \textcolor{stringliteral}{'Window'}),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{'SM'}:\ (\textcolor{stringliteral}{'soil\_moisture'},\ \textcolor{stringliteral}{'Sprinkler'}),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a455c1b166676bda67ae5a2bc5e5f5160}\label{classsmart__greenhouse__app_1_1models_1_1_greenhouse_1_1_greenhouse_control_a455c1b166676bda67ae5a2bc5e5f5160} 
+\index{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}!greenhouse@{greenhouse}}
+\index{greenhouse@{greenhouse}!smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl@{smart\_greenhouse\_app.models.Greenhouse.GreenhouseControl}}
+\doxysubsubsection{\texorpdfstring{greenhouse}{greenhouse}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Greenhouse.\+Greenhouse\+Control.\+greenhouse}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/\mbox{\hyperlink{models_8py}{models.\+py}}\end{DoxyCompactItemize}

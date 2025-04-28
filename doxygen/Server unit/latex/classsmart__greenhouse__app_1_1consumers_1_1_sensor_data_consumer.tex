@@ -1,0 +1,104 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Sensor\+Data\+Consumer Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer}{}\label{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer}\index{smart\_greenhouse\_app.consumers.SensorDataConsumer@{smart\_greenhouse\_app.consumers.SensorDataConsumer}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Sensor\+Data\+Consumer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_a304a2aefaf93c2eb6ccdbd1313e1b321}{connect}} (self)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_ab93d386063e3f3113b2c0ad4799ae4f3}{disconnect}} (self, close\+\_\+code)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_a5aa938a6d0d2e80acff2e5b3945a5866}{receive}} (self, text\+\_\+data)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_aaff09f5652932d19e7182c9c93050b14}{sensor\+\_\+data\+\_\+update}} (self, event)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_afa73ce9c31566e3962a91479c8b5867e}{group\+\_\+name}}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_a2d6676cdda8d3ae91d171e73287f991a}{channel\+\_\+name}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Consumer for broadcasting real-time sensor data updates to connected WebSocket clients.
+
+Attributes:
+    group_name (str): The WebSocket group name for broadcasting sensor updates.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_a304a2aefaf93c2eb6ccdbd1313e1b321}\label{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_a304a2aefaf93c2eb6ccdbd1313e1b321} 
+\index{smart\_greenhouse\_app.consumers.SensorDataConsumer@{smart\_greenhouse\_app.consumers.SensorDataConsumer}!connect@{connect}}
+\index{connect@{connect}!smart\_greenhouse\_app.consumers.SensorDataConsumer@{smart\_greenhouse\_app.consumers.SensorDataConsumer}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Sensor\+Data\+Consumer.\+connect (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles the WebSocket connection establishment.
+
+Adds the WebSocket connection to the sensor updates group and accepts the connection.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_ab93d386063e3f3113b2c0ad4799ae4f3}\label{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_ab93d386063e3f3113b2c0ad4799ae4f3} 
+\index{smart\_greenhouse\_app.consumers.SensorDataConsumer@{smart\_greenhouse\_app.consumers.SensorDataConsumer}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!smart\_greenhouse\_app.consumers.SensorDataConsumer@{smart\_greenhouse\_app.consumers.SensorDataConsumer}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Sensor\+Data\+Consumer.\+disconnect (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{close\+\_\+code }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles the WebSocket disconnection.
+
+Removes the WebSocket connection from the sensor updates group.
+
+Parameters:
+    close_code (int): WebSocket close code.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_a5aa938a6d0d2e80acff2e5b3945a5866}\label{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_a5aa938a6d0d2e80acff2e5b3945a5866} 
+\index{smart\_greenhouse\_app.consumers.SensorDataConsumer@{smart\_greenhouse\_app.consumers.SensorDataConsumer}!receive@{receive}}
+\index{receive@{receive}!smart\_greenhouse\_app.consumers.SensorDataConsumer@{smart\_greenhouse\_app.consumers.SensorDataConsumer}}
+\doxysubsubsection{\texorpdfstring{receive()}{receive()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Sensor\+Data\+Consumer.\+receive (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{text\+\_\+data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Receives data from WebSocket clients.
+
+Not used in this consumer as the server only sends data.
+
+Parameters:
+    text_data (str): Text data received from the WebSocket client.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_aaff09f5652932d19e7182c9c93050b14}\label{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_aaff09f5652932d19e7182c9c93050b14} 
+\index{smart\_greenhouse\_app.consumers.SensorDataConsumer@{smart\_greenhouse\_app.consumers.SensorDataConsumer}!sensor\_data\_update@{sensor\_data\_update}}
+\index{sensor\_data\_update@{sensor\_data\_update}!smart\_greenhouse\_app.consumers.SensorDataConsumer@{smart\_greenhouse\_app.consumers.SensorDataConsumer}}
+\doxysubsubsection{\texorpdfstring{sensor\_data\_update()}{sensor\_data\_update()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Sensor\+Data\+Consumer.\+sensor\+\_\+data\+\_\+update (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{event }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sends a sensor data update to the WebSocket client.
+
+Parameters:
+    event (dict): Event data containing the sensor ID.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_a2d6676cdda8d3ae91d171e73287f991a}\label{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_a2d6676cdda8d3ae91d171e73287f991a} 
+\index{smart\_greenhouse\_app.consumers.SensorDataConsumer@{smart\_greenhouse\_app.consumers.SensorDataConsumer}!channel\_name@{channel\_name}}
+\index{channel\_name@{channel\_name}!smart\_greenhouse\_app.consumers.SensorDataConsumer@{smart\_greenhouse\_app.consumers.SensorDataConsumer}}
+\doxysubsubsection{\texorpdfstring{channel\_name}{channel\_name}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Sensor\+Data\+Consumer.\+channel\+\_\+name}
+
+\Hypertarget{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_afa73ce9c31566e3962a91479c8b5867e}\label{classsmart__greenhouse__app_1_1consumers_1_1_sensor_data_consumer_afa73ce9c31566e3962a91479c8b5867e} 
+\index{smart\_greenhouse\_app.consumers.SensorDataConsumer@{smart\_greenhouse\_app.consumers.SensorDataConsumer}!group\_name@{group\_name}}
+\index{group\_name@{group\_name}!smart\_greenhouse\_app.consumers.SensorDataConsumer@{smart\_greenhouse\_app.consumers.SensorDataConsumer}}
+\doxysubsubsection{\texorpdfstring{group\_name}{group\_name}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+consumers.\+Sensor\+Data\+Consumer.\+group\+\_\+name}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/\mbox{\hyperlink{consumers_8py}{consumers.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+migrations.0006\+\_\+alert.\+Migration Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1migrations_1_10006__alert_1_1_migration}{}\label{classsmart__greenhouse__app_1_1migrations_1_10006__alert_1_1_migration}\index{smart\_greenhouse\_app.migrations.0006\_alert.Migration@{smart\_greenhouse\_app.migrations.0006\_alert.Migration}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+migrations.0006\+\_\+alert.\+Migration\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmart__greenhouse__app_1_1migrations_1_10006__alert_1_1_migration}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classsmart__greenhouse__app_1_1migrations_1_10006__alert_1_1_migration_a20e8a5314aa1c9063dfb60c2b1fe9ac1}{dependencies}}
+\item 
+list \mbox{\hyperlink{classsmart__greenhouse__app_1_1migrations_1_10006__alert_1_1_migration_a3281fd73fecb0912a43b482921646071}{operations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1migrations_1_10006__alert_1_1_migration_a20e8a5314aa1c9063dfb60c2b1fe9ac1}\label{classsmart__greenhouse__app_1_1migrations_1_10006__alert_1_1_migration_a20e8a5314aa1c9063dfb60c2b1fe9ac1} 
+\index{smart\_greenhouse\_app.migrations.0006\_alert.Migration@{smart\_greenhouse\_app.migrations.0006\_alert.Migration}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!smart\_greenhouse\_app.migrations.0006\_alert.Migration@{smart\_greenhouse\_app.migrations.0006\_alert.Migration}}
+\doxysubsubsection{\texorpdfstring{dependencies}{dependencies}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+migrations.\+0006\+\_\+alert.\+Migration.\+dependencies\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'smart\_greenhouse\_app'},\ \textcolor{stringliteral}{'0005\_sensorunit\_alert\_value\_high\_and\_more'}),}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+\Hypertarget{classsmart__greenhouse__app_1_1migrations_1_10006__alert_1_1_migration_a3281fd73fecb0912a43b482921646071}\label{classsmart__greenhouse__app_1_1migrations_1_10006__alert_1_1_migration_a3281fd73fecb0912a43b482921646071} 
+\index{smart\_greenhouse\_app.migrations.0006\_alert.Migration@{smart\_greenhouse\_app.migrations.0006\_alert.Migration}!operations@{operations}}
+\index{operations@{operations}!smart\_greenhouse\_app.migrations.0006\_alert.Migration@{smart\_greenhouse\_app.migrations.0006\_alert.Migration}}
+\doxysubsubsection{\texorpdfstring{operations}{operations}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+migrations.\+0006\+\_\+alert.\+Migration.\+operations\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.CreateModel(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'Alert'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ fields=[}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'id'},\ models.BigAutoField(auto\_created=\textcolor{keyword}{True},\ primary\_key=\textcolor{keyword}{True},\ serialize=\textcolor{keyword}{False},\ verbose\_name=\textcolor{stringliteral}{'ID'})),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'timestamp'},\ models.DateTimeField(auto\_now\_add=\textcolor{keyword}{True})),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'message'},\ models.TextField()),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'value'},\ models.FloatField()),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'sensor'},\ models.ForeignKey(on\_delete=django.db.models.deletion.CASCADE,\ related\_name=\textcolor{stringliteral}{'alerts'},\ to=\textcolor{stringliteral}{'smart\_greenhouse\_app.sensorunit'})),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/migrations/\mbox{\hyperlink{0006__alert_8py}{0006\+\_\+alert.\+py}}\end{DoxyCompactItemize}

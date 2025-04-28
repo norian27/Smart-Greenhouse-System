@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Pending Sensor Registrations</h2>
+
+{% if pending_registrations %}
+    <ul>
+    {% for registration in pending_registrations %}
+        <li>
+            {{ registration.unique_identifier }} - 
+            <a href="{% url 'confirm_registration' registration.id %}">Confirm Registration</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No pending sensor registrations.</p>
+{% endif %}
+{% endblock %}

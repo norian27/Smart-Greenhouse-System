@@ -1,0 +1,34 @@
+\doxysection{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+network\+\_\+module Namespace Reference}
+\hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1network__module}{}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1network__module}\index{BP2025\_ESP32\_CODE.network\_module@{BP2025\_ESP32\_CODE.network\_module}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1network__module_a12c9cd0692c5b85ec54a2e47effe3dcd}{connect\+\_\+to\+\_\+wifi}} (retries=3, delay=5)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Network utilities for connecting to Wi-Fi.
+
+This module provides functions to establish a Wi-Fi connection
+using credentials defined in the configuration file.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1network__module_a12c9cd0692c5b85ec54a2e47effe3dcd}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1network__module_a12c9cd0692c5b85ec54a2e47effe3dcd} 
+\index{BP2025\_ESP32\_CODE.network\_module@{BP2025\_ESP32\_CODE.network\_module}!connect\_to\_wifi@{connect\_to\_wifi}}
+\index{connect\_to\_wifi@{connect\_to\_wifi}!BP2025\_ESP32\_CODE.network\_module@{BP2025\_ESP32\_CODE.network\_module}}
+\doxysubsubsection{\texorpdfstring{connect\_to\_wifi()}{connect\_to\_wifi()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+network\+\_\+module.\+connect\+\_\+to\+\_\+wifi (\begin{DoxyParamCaption}\item[{}]{retries = {\ttfamily 3},  }\item[{}]{delay = {\ttfamily 5} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Connects the device to Wi-Fi using configured network credentials.
+
+Parameters:
+    retries (int): Number of retry attempts.
+    delay (int): Delay between retries in seconds.
+
+Raises:
+    OSError: If unable to connect after all retries.
+\end{DoxyVerb}
+ 

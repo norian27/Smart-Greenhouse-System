@@ -1,0 +1,25 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+routing Namespace Reference}
+\hypertarget{namespacesmart__greenhouse__app_1_1routing}{}\label{namespacesmart__greenhouse__app_1_1routing}\index{smart\_greenhouse\_app.routing@{smart\_greenhouse\_app.routing}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{namespacesmart__greenhouse__app_1_1routing_a9e8d5dc7d84b5a6947dbb7355eb982c2}{websocket\+\_\+urlpatterns}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacesmart__greenhouse__app_1_1routing_a9e8d5dc7d84b5a6947dbb7355eb982c2}\label{namespacesmart__greenhouse__app_1_1routing_a9e8d5dc7d84b5a6947dbb7355eb982c2} 
+\index{smart\_greenhouse\_app.routing@{smart\_greenhouse\_app.routing}!websocket\_urlpatterns@{websocket\_urlpatterns}}
+\index{websocket\_urlpatterns@{websocket\_urlpatterns}!smart\_greenhouse\_app.routing@{smart\_greenhouse\_app.routing}}
+\doxysubsubsection{\texorpdfstring{websocket\_urlpatterns}{websocket\_urlpatterns}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+routing.\+websocket\+\_\+urlpatterns}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ [}
+\DoxyCodeLine{00002\ \ \ \ \ re\_path(\textcolor{stringliteral}{r"{}ws/env\_system/(?P<system\_id>[\(\backslash\)w:-\/]+)/\$"{}},\ EnvSystemConsumer.as\_asgi()),}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ re\_path(\textcolor{stringliteral}{r'ws/sensors/\$'},\ SensorDataConsumer.as\_asgi()),}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ ]}
+
+\end{DoxyCode}

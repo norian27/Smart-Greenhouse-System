@@ -1,0 +1,167 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form}{}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form}\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a82b7562a983faf69b8ae057dfb414950}{clean}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_ae52f4f540d13f2d3ef0a6e881f75a564}{REGISTRATION\+\_\+\+TYPE\+\_\+\+CHOICES}}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a056b861b48cec879fee2134612804a1a}{registration\+\_\+type}} = forms.\+Choice\+Field(choices=\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_ae52f4f540d13f2d3ef0a6e881f75a564}{REGISTRATION\+\_\+\+TYPE\+\_\+\+CHOICES}}, required=True, widget=forms.\+Select(attrs=\{\textquotesingle{}class\textquotesingle{}\+: \textquotesingle{}form-\/control\textquotesingle{}\}))
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a948b978f4b16f4f475ad479ca45f1880}{identifier}} = forms.\+Char\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a38bd21a363711c353dafd6099dbe9f4d}{data\+\_\+frequency}} = forms.\+Integer\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_aaff67bf51f421a72c9f662894a80812c}{sensor\+\_\+type}} = forms.\+Char\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a15faf2f61a9a390ce587575c48ae247c}{temperature\+\_\+threshold\+\_\+low}} = forms.\+Float\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a4c8b748753c7a7a632b0aed5532a082e}{temperature\+\_\+threshold\+\_\+high}} = forms.\+Float\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a52c754bffb57f27d887b25a56cc8ce84}{humidity\+\_\+threshold\+\_\+low}} = forms.\+Float\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a3e34c65e55fdc619a962c417ea044c3d}{humidity\+\_\+threshold\+\_\+high}} = forms.\+Float\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_ac6ac89b6c1f1cc134e9169f6f4667f54}{name}} = forms.\+Char\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a10ebfeb50fbb2cb944c41cc846126e2d}{env\+\_\+type}} = forms.\+Choice\+Field(choices=Environmental\+System.\+System\+Type.\+choices, required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a07920804aefc07d8abd41459ae645253}{target\+\_\+value}} = forms.\+Float\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a67f36c2cb011d7f9b1e7c370a73be5a7}{greenhouse}} = forms.\+Model\+Choice\+Field(queryset=Greenhouse.\+objects.\+all(), required=True)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Form for confirming the registration of a Sensor Unit or an Environmental System.
+
+Fields:
+    registration_type (ChoiceField): Selects the type of registration ('sensor' or 'system').
+    identifier (CharField): Identifier for the sensor unit (required if registering a sensor).
+    data_frequency (IntegerField): Data sending frequency in seconds (required if registering a sensor).
+    sensor_type (CharField): Type of the sensor data (optional).
+    temperature_threshold_low (FloatField): Lower temperature alert threshold (optional).
+    temperature_threshold_high (FloatField): Upper temperature alert threshold (optional).
+    humidity_threshold_low (FloatField): Lower humidity alert threshold (optional).
+    humidity_threshold_high (FloatField): Upper humidity alert threshold (optional).
+    name (CharField): Name of the environmental system (required if registering a system).
+    env_type (ChoiceField): Type of environmental system (required if registering a system).
+    target_value (FloatField): Target value for the environmental system (required if registering a system).
+    greenhouse (ModelChoiceField): The greenhouse associated with the registration.
+
+Methods:
+    clean(): Validates required fields based on the selected registration type.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a82b7562a983faf69b8ae057dfb414950}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a82b7562a983faf69b8ae057dfb414950} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!clean@{clean}}
+\index{clean@{clean}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+clean (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a38bd21a363711c353dafd6099dbe9f4d}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a38bd21a363711c353dafd6099dbe9f4d} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!data\_frequency@{data\_frequency}}
+\index{data\_frequency@{data\_frequency}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{data\_frequency}{data\_frequency}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+data\+\_\+frequency = forms.\+Integer\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a10ebfeb50fbb2cb944c41cc846126e2d}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a10ebfeb50fbb2cb944c41cc846126e2d} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!env\_type@{env\_type}}
+\index{env\_type@{env\_type}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{env\_type}{env\_type}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+env\+\_\+type = forms.\+Choice\+Field(choices=Environmental\+System.\+System\+Type.\+choices, required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a67f36c2cb011d7f9b1e7c370a73be5a7}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a67f36c2cb011d7f9b1e7c370a73be5a7} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!greenhouse@{greenhouse}}
+\index{greenhouse@{greenhouse}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{greenhouse}{greenhouse}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+greenhouse = forms.\+Model\+Choice\+Field(queryset=Greenhouse.\+objects.\+all(), required=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a3e34c65e55fdc619a962c417ea044c3d}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a3e34c65e55fdc619a962c417ea044c3d} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!humidity\_threshold\_high@{humidity\_threshold\_high}}
+\index{humidity\_threshold\_high@{humidity\_threshold\_high}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{humidity\_threshold\_high}{humidity\_threshold\_high}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+humidity\+\_\+threshold\+\_\+high = forms.\+Float\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a52c754bffb57f27d887b25a56cc8ce84}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a52c754bffb57f27d887b25a56cc8ce84} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!humidity\_threshold\_low@{humidity\_threshold\_low}}
+\index{humidity\_threshold\_low@{humidity\_threshold\_low}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{humidity\_threshold\_low}{humidity\_threshold\_low}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+humidity\+\_\+threshold\+\_\+low = forms.\+Float\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a948b978f4b16f4f475ad479ca45f1880}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a948b978f4b16f4f475ad479ca45f1880} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!identifier@{identifier}}
+\index{identifier@{identifier}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{identifier}{identifier}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+identifier = forms.\+Char\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_ac6ac89b6c1f1cc134e9169f6f4667f54}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_ac6ac89b6c1f1cc134e9169f6f4667f54} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!name@{name}}
+\index{name@{name}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+name = forms.\+Char\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a056b861b48cec879fee2134612804a1a}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a056b861b48cec879fee2134612804a1a} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!registration\_type@{registration\_type}}
+\index{registration\_type@{registration\_type}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{registration\_type}{registration\_type}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+registration\+\_\+type = forms.\+Choice\+Field(choices=\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_ae52f4f540d13f2d3ef0a6e881f75a564}{REGISTRATION\+\_\+\+TYPE\+\_\+\+CHOICES}}, required=True, widget=forms.\+Select(attrs=\{\textquotesingle{}class\textquotesingle{}\+: \textquotesingle{}form-\/control\textquotesingle{}\}))\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_ae52f4f540d13f2d3ef0a6e881f75a564}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_ae52f4f540d13f2d3ef0a6e881f75a564} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!REGISTRATION\_TYPE\_CHOICES@{REGISTRATION\_TYPE\_CHOICES}}
+\index{REGISTRATION\_TYPE\_CHOICES@{REGISTRATION\_TYPE\_CHOICES}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{REGISTRATION\_TYPE\_CHOICES}{REGISTRATION\_TYPE\_CHOICES}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+REGISTRATION\+\_\+\+TYPE\+\_\+\+CHOICES\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'sensor'},\ \textcolor{stringliteral}{'Sensor\ Unit'}),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'system'},\ \textcolor{stringliteral}{'Environmental\ System'})}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_aaff67bf51f421a72c9f662894a80812c}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_aaff67bf51f421a72c9f662894a80812c} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!sensor\_type@{sensor\_type}}
+\index{sensor\_type@{sensor\_type}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{sensor\_type}{sensor\_type}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+sensor\+\_\+type = forms.\+Char\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a07920804aefc07d8abd41459ae645253}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a07920804aefc07d8abd41459ae645253} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!target\_value@{target\_value}}
+\index{target\_value@{target\_value}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{target\_value}{target\_value}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+target\+\_\+value = forms.\+Float\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a4c8b748753c7a7a632b0aed5532a082e}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a4c8b748753c7a7a632b0aed5532a082e} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!temperature\_threshold\_high@{temperature\_threshold\_high}}
+\index{temperature\_threshold\_high@{temperature\_threshold\_high}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{temperature\_threshold\_high}{temperature\_threshold\_high}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+temperature\+\_\+threshold\+\_\+high = forms.\+Float\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a15faf2f61a9a390ce587575c48ae247c}\label{classsmart__greenhouse__app_1_1forms_1_1_confirm_registration_form_a15faf2f61a9a390ce587575c48ae247c} 
+\index{smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}!temperature\_threshold\_low@{temperature\_threshold\_low}}
+\index{temperature\_threshold\_low@{temperature\_threshold\_low}!smart\_greenhouse\_app.forms.ConfirmRegistrationForm@{smart\_greenhouse\_app.forms.ConfirmRegistrationForm}}
+\doxysubsubsection{\texorpdfstring{temperature\_threshold\_low}{temperature\_threshold\_low}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Confirm\+Registration\+Form.\+temperature\+\_\+threshold\+\_\+low = forms.\+Float\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/\mbox{\hyperlink{forms_8py}{forms.\+py}}\end{DoxyCompactItemize}

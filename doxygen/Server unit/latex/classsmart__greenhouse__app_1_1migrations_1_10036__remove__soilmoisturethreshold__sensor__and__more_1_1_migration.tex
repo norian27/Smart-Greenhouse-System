@@ -1,0 +1,65 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+migrations.0036\+\_\+remove\+\_\+soilmoisturethreshold\+\_\+sensor\+\_\+and\+\_\+more.\+Migration Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1migrations_1_10036__remove__soilmoisturethreshold__sensor__and__more_1_1_migration}{}\label{classsmart__greenhouse__app_1_1migrations_1_10036__remove__soilmoisturethreshold__sensor__and__more_1_1_migration}\index{smart\_greenhouse\_app.migrations.0036\_remove\_soilmoisturethreshold\_sensor\_and\_more.Migration@{smart\_greenhouse\_app.migrations.0036\_remove\_soilmoisturethreshold\_sensor\_and\_more.Migration}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+migrations.0036\+\_\+remove\+\_\+soilmoisturethreshold\+\_\+sensor\+\_\+and\+\_\+more.\+Migration\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.917808cm]{classsmart__greenhouse__app_1_1migrations_1_10036__remove__soilmoisturethreshold__sensor__and__more_1_1_migration}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classsmart__greenhouse__app_1_1migrations_1_10036__remove__soilmoisturethreshold__sensor__and__more_1_1_migration_af5d4f2c91a62d744c2631e56ea13b1bd}{dependencies}}
+\item 
+list \mbox{\hyperlink{classsmart__greenhouse__app_1_1migrations_1_10036__remove__soilmoisturethreshold__sensor__and__more_1_1_migration_a1c6ab2f88bf3ae66678f3b122e0d4a3e}{operations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1migrations_1_10036__remove__soilmoisturethreshold__sensor__and__more_1_1_migration_af5d4f2c91a62d744c2631e56ea13b1bd}\label{classsmart__greenhouse__app_1_1migrations_1_10036__remove__soilmoisturethreshold__sensor__and__more_1_1_migration_af5d4f2c91a62d744c2631e56ea13b1bd} 
+\index{smart\_greenhouse\_app.migrations.0036\_remove\_soilmoisturethreshold\_sensor\_and\_more.Migration@{smart\_greenhouse\_app.migrations.0036\_remove\_soilmoisturethreshold\_sensor\_and\_more.Migration}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!smart\_greenhouse\_app.migrations.0036\_remove\_soilmoisturethreshold\_sensor\_and\_more.Migration@{smart\_greenhouse\_app.migrations.0036\_remove\_soilmoisturethreshold\_sensor\_and\_more.Migration}}
+\doxysubsubsection{\texorpdfstring{dependencies}{dependencies}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+migrations.\+0036\+\_\+remove\+\_\+soilmoisturethreshold\+\_\+sensor\+\_\+and\+\_\+more.\+Migration.\+dependencies\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'smart\_greenhouse\_app'},\ \textcolor{stringliteral}{'0035\_alter\_environmentalsystem\_env\_type'}),}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+\Hypertarget{classsmart__greenhouse__app_1_1migrations_1_10036__remove__soilmoisturethreshold__sensor__and__more_1_1_migration_a1c6ab2f88bf3ae66678f3b122e0d4a3e}\label{classsmart__greenhouse__app_1_1migrations_1_10036__remove__soilmoisturethreshold__sensor__and__more_1_1_migration_a1c6ab2f88bf3ae66678f3b122e0d4a3e} 
+\index{smart\_greenhouse\_app.migrations.0036\_remove\_soilmoisturethreshold\_sensor\_and\_more.Migration@{smart\_greenhouse\_app.migrations.0036\_remove\_soilmoisturethreshold\_sensor\_and\_more.Migration}!operations@{operations}}
+\index{operations@{operations}!smart\_greenhouse\_app.migrations.0036\_remove\_soilmoisturethreshold\_sensor\_and\_more.Migration@{smart\_greenhouse\_app.migrations.0036\_remove\_soilmoisturethreshold\_sensor\_and\_more.Migration}}
+\doxysubsubsection{\texorpdfstring{operations}{operations}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+migrations.\+0036\+\_\+remove\+\_\+soilmoisturethreshold\+\_\+sensor\+\_\+and\+\_\+more.\+Migration.\+operations\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.RemoveField(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ model\_name=\textcolor{stringliteral}{'soilmoisturethreshold'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'sensor'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.RemoveField(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ model\_name=\textcolor{stringliteral}{'temperaturethreshold'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'sensor'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.DeleteModel(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'HumidityThreshold'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.DeleteModel(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'SoilMoistureThreshold'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.DeleteModel(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'TemperatureThreshold'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/migrations/\mbox{\hyperlink{0036__remove__soilmoisturethreshold__sensor__and__more_8py}{0036\+\_\+remove\+\_\+soilmoisturethreshold\+\_\+sensor\+\_\+and\+\_\+more.\+py}}\end{DoxyCompactItemize}

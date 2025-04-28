@@ -1,0 +1,189 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system}{}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system}\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classsmart__greenhouse__app_1_1models_1_1_environmental_system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_1_1_system_type}{System\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a231807faf3407591bd5e4e03efdf489f}{activate}} (self)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a6239c822415b9e81547b890af55ddae4}{deactivate}} (self)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a71cd7c9d2aa135b02e2e8985edf285df}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a59657febe5c58323fbc62e9a7a0e4398}{name}}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a1a6fd1bbd06333748f89739b8e5e885a}{max\+\_\+length}}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a00ef03a3a77a80fcd9be2b9a3d13ab67}{unique\+\_\+identifier}} = models.\+Char\+Field(\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a1a6fd1bbd06333748f89739b8e5e885a}{max\+\_\+length}}=255, unique=True, db\+\_\+index=True)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a8a081bdad8ad36f09edc9efb41714766}{is\+\_\+active}} = models.\+Boolean\+Field(default=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a51e41fa1e670fa2d21ccf3176664528d}{status}} = models.\+Char\+Field(\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a1a6fd1bbd06333748f89739b8e5e885a}{max\+\_\+length}} = 20, choices=\mbox{[}(\textquotesingle{}idle\textquotesingle{}, \textquotesingle{}Idle\textquotesingle{}), (\textquotesingle{}waiting\textquotesingle{}, \textquotesingle{}Waiting\textquotesingle{}), (\textquotesingle{}unreachable\textquotesingle{}, \textquotesingle{}Unreachable\textquotesingle{})\mbox{]}, default = \textquotesingle{}idle\textquotesingle{})
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_af7fcd69e9ae3a5ff579334fb914d1ed0}{env\+\_\+type}}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a4fb9d971e14169fd2bf787423101580d}{identifier}} = models.\+Char\+Field(\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a1a6fd1bbd06333748f89739b8e5e885a}{max\+\_\+length}}=100)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_ac8995188165aab9e28ccf63f200aaf4b}{greenhouse}} = models.\+Foreign\+Key(\textquotesingle{}\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse}{Greenhouse}}\textquotesingle{}, on\+\_\+delete=models.\+CASCADE, related\+\_\+name=\textquotesingle{}env\+\_\+systems\textquotesingle{})
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a8b1b1eb9dd8df1555c7cbdcefe20b800}{target\+\_\+value}} = models.\+Float\+Field(default=0.\+0)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_aa3dcb565e0b4bdee45361ecb4433e071}{last\+\_\+activated}} = models.\+Date\+Time\+Field(null=True, blank=True)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_acd2d9359512c0e86ed718b80b2f73f96}{data}} = models.\+Text\+Field(blank=True, null= True)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Represents an environmental system in a greenhouse.
+
+Attributes:
+    name (CharField): The name of the environmental system.
+    unique_identifier (CharField): The unique identifier of the environmental system.
+    is_active (BooleanField): Indicates if the environmental system is currently active.
+    env_type (CharField): The type of environmental system ('Cooling', 'Heating', 'Sprinkler').
+    greenhouse (ForeignKey): The greenhouse associated with the environmental system.
+    target_value (FloatField): The target value for the environmental system.
+    last_activated (DateTimeField): The time when the environmental system was last activated.
+    cool_down (IntegerField): The cooldown period for the environmental system.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a71cd7c9d2aa135b02e2e8985edf285df}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a71cd7c9d2aa135b02e2e8985edf285df} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns a string representation of the environmental system.
+
+Returns:
+    str: String representation of the environmental system.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a231807faf3407591bd5e4e03efdf489f}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a231807faf3407591bd5e4e03efdf489f} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!activate@{activate}}
+\index{activate@{activate}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+activate (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Activates the environmental system if it's not already active.
+
+Returns:
+    bool: True if the action was performed, False otherwise.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_window_control_system_abf8c8e463c194f6d0304dff48518c4c5}{smart\+\_\+greenhouse\+\_\+app.\+models.\+Window\+Control\+System}}.
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a6239c822415b9e81547b890af55ddae4}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a6239c822415b9e81547b890af55ddae4} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{deactivate()}{deactivate()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+deactivate (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Deactivates the environmental system.
+
+Returns:
+    bool: True if the action was performed, False otherwise.
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_window_control_system_a3f340db5eb15de287ddf8167d9921017}{smart\+\_\+greenhouse\+\_\+app.\+models.\+Window\+Control\+System}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_acd2d9359512c0e86ed718b80b2f73f96}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_acd2d9359512c0e86ed718b80b2f73f96} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!data@{data}}
+\index{data@{data}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+data = models.\+Text\+Field(blank=True, null= True)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_af7fcd69e9ae3a5ff579334fb914d1ed0}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_af7fcd69e9ae3a5ff579334fb914d1ed0} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!env\_type@{env\_type}}
+\index{env\_type@{env\_type}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{env\_type}{env\_type}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+env\+\_\+type\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ models.CharField(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ max\_length=10,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ choices=SystemType.choices,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ default=SystemType.COOLING}
+\DoxyCodeLine{\ \ \ \ )}
+
+\end{DoxyCode}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_ac8995188165aab9e28ccf63f200aaf4b}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_ac8995188165aab9e28ccf63f200aaf4b} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!greenhouse@{greenhouse}}
+\index{greenhouse@{greenhouse}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{greenhouse}{greenhouse}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+greenhouse = models.\+Foreign\+Key(\textquotesingle{}\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse}{Greenhouse}}\textquotesingle{}, on\+\_\+delete=models.\+CASCADE, related\+\_\+name=\textquotesingle{}env\+\_\+systems\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a4fb9d971e14169fd2bf787423101580d}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a4fb9d971e14169fd2bf787423101580d} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!identifier@{identifier}}
+\index{identifier@{identifier}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{identifier}{identifier}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+identifier = models.\+Char\+Field(\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a1a6fd1bbd06333748f89739b8e5e885a}{max\+\_\+length}}=100)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a8a081bdad8ad36f09edc9efb41714766}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a8a081bdad8ad36f09edc9efb41714766} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!is\_active@{is\_active}}
+\index{is\_active@{is\_active}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{is\_active}{is\_active}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+is\+\_\+active = models.\+Boolean\+Field(default=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_aa3dcb565e0b4bdee45361ecb4433e071}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_aa3dcb565e0b4bdee45361ecb4433e071} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!last\_activated@{last\_activated}}
+\index{last\_activated@{last\_activated}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{last\_activated}{last\_activated}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+last\+\_\+activated = models.\+Date\+Time\+Field(null=True, blank=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a1a6fd1bbd06333748f89739b8e5e885a}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a1a6fd1bbd06333748f89739b8e5e885a} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!max\_length@{max\_length}}
+\index{max\_length@{max\_length}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{max\_length}{max\_length}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+max\+\_\+length\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a59657febe5c58323fbc62e9a7a0e4398}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a59657febe5c58323fbc62e9a7a0e4398} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!name@{name}}
+\index{name@{name}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+name\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a51e41fa1e670fa2d21ccf3176664528d}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a51e41fa1e670fa2d21ccf3176664528d} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!status@{status}}
+\index{status@{status}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+status = models.\+Char\+Field(\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a1a6fd1bbd06333748f89739b8e5e885a}{max\+\_\+length}} = 20, choices=\mbox{[}(\textquotesingle{}idle\textquotesingle{}, \textquotesingle{}Idle\textquotesingle{}), (\textquotesingle{}waiting\textquotesingle{}, \textquotesingle{}Waiting\textquotesingle{}), (\textquotesingle{}unreachable\textquotesingle{}, \textquotesingle{}Unreachable\textquotesingle{})\mbox{]}, default = \textquotesingle{}idle\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a8b1b1eb9dd8df1555c7cbdcefe20b800}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a8b1b1eb9dd8df1555c7cbdcefe20b800} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!target\_value@{target\_value}}
+\index{target\_value@{target\_value}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{target\_value}{target\_value}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+target\+\_\+value = models.\+Float\+Field(default=0.\+0)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a00ef03a3a77a80fcd9be2b9a3d13ab67}\label{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a00ef03a3a77a80fcd9be2b9a3d13ab67} 
+\index{smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}!unique\_identifier@{unique\_identifier}}
+\index{unique\_identifier@{unique\_identifier}!smart\_greenhouse\_app.models.EnvironmentalSystem@{smart\_greenhouse\_app.models.EnvironmentalSystem}}
+\doxysubsubsection{\texorpdfstring{unique\_identifier}{unique\_identifier}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System.\+unique\+\_\+identifier = models.\+Char\+Field(\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a1a6fd1bbd06333748f89739b8e5e885a}{max\+\_\+length}}=255, unique=True, db\+\_\+index=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/\mbox{\hyperlink{models_8py}{models.\+py}}\end{DoxyCompactItemize}

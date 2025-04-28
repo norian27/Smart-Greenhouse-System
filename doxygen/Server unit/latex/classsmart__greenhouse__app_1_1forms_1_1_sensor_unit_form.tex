@@ -1,0 +1,125 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+forms.\+Sensor\+Unit\+Form Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form}{}\label{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form}\index{smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+forms.\+Sensor\+Unit\+Form\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_1_1_meta}{Meta}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a87dbf072ea2d0821f426c6c8374b562b}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \texorpdfstring{$\ast$}{*}args, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}kwargs)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a416c9b1393c99502b822adca643534a7}{save}} (self, commit=True)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a2e473a4693aeaf3c69df8103701be5b0}{temperature\+\_\+threshold\+\_\+low}} = forms.\+Float\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_afa4ceccd752833372c2368c42b7da7a1}{temperature\+\_\+threshold\+\_\+high}} = forms.\+Float\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_ae7da271d0a647810187de81bfa09c73e}{humidity\+\_\+threshold\+\_\+low}} = forms.\+Float\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a3902530dcd6d60475e8aa8048511893e}{humidity\+\_\+threshold\+\_\+high}} = forms.\+Float\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a9432662ab572161eab833bb4b819e76c}{soil\+\_\+moisture\+\_\+threshold\+\_\+low}} = forms.\+Float\+Field(required=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a802673eab74144f5ffc9d369f3722b76}{soil\+\_\+moisture\+\_\+threshold\+\_\+high}} = forms.\+Float\+Field(required=False)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Form for creating or updating a sensor unit.
+
+Allows setting thresholds for humidity, temperature, and soil moisture.
+
+Attributes:
+    Meta (class): Inner class containing metadata for the form.
+        model (Model): The model associated with the form.
+        fields (list): The fields to include in the form.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a87dbf072ea2d0821f426c6c8374b562b}\label{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a87dbf072ea2d0821f426c6c8374b562b} 
+\index{smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Sensor\+Unit\+Form.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{\texorpdfstring{$\ast$}{*}}]{args,  }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{kwargs }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Initializes a new instance of the SensorUnitForm.
+
+Sets initial threshold values based on existing sensor data if available.
+
+Parameters:
+    *args: Variable-length argument list.
+    **kwargs: Arbitrary keyword arguments.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a416c9b1393c99502b822adca643534a7}\label{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a416c9b1393c99502b822adca643534a7} 
+\index{smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}!save@{save}}
+\index{save@{save}!smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Sensor\+Unit\+Form.\+save (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{commit = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Saves the sensor unit instance and updates its thresholds based on form input.
+
+Parameters:
+    commit (bool): Flag indicating whether to immediately save to the database.
+
+Returns:
+    SensorUnit: The saved sensor unit instance.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a3902530dcd6d60475e8aa8048511893e}\label{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a3902530dcd6d60475e8aa8048511893e} 
+\index{smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}!humidity\_threshold\_high@{humidity\_threshold\_high}}
+\index{humidity\_threshold\_high@{humidity\_threshold\_high}!smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}}
+\doxysubsubsection{\texorpdfstring{humidity\_threshold\_high}{humidity\_threshold\_high}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Sensor\+Unit\+Form.\+humidity\+\_\+threshold\+\_\+high = forms.\+Float\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_ae7da271d0a647810187de81bfa09c73e}\label{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_ae7da271d0a647810187de81bfa09c73e} 
+\index{smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}!humidity\_threshold\_low@{humidity\_threshold\_low}}
+\index{humidity\_threshold\_low@{humidity\_threshold\_low}!smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}}
+\doxysubsubsection{\texorpdfstring{humidity\_threshold\_low}{humidity\_threshold\_low}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Sensor\+Unit\+Form.\+humidity\+\_\+threshold\+\_\+low = forms.\+Float\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a802673eab74144f5ffc9d369f3722b76}\label{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a802673eab74144f5ffc9d369f3722b76} 
+\index{smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}!soil\_moisture\_threshold\_high@{soil\_moisture\_threshold\_high}}
+\index{soil\_moisture\_threshold\_high@{soil\_moisture\_threshold\_high}!smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}}
+\doxysubsubsection{\texorpdfstring{soil\_moisture\_threshold\_high}{soil\_moisture\_threshold\_high}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Sensor\+Unit\+Form.\+soil\+\_\+moisture\+\_\+threshold\+\_\+high = forms.\+Float\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a9432662ab572161eab833bb4b819e76c}\label{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a9432662ab572161eab833bb4b819e76c} 
+\index{smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}!soil\_moisture\_threshold\_low@{soil\_moisture\_threshold\_low}}
+\index{soil\_moisture\_threshold\_low@{soil\_moisture\_threshold\_low}!smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}}
+\doxysubsubsection{\texorpdfstring{soil\_moisture\_threshold\_low}{soil\_moisture\_threshold\_low}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Sensor\+Unit\+Form.\+soil\+\_\+moisture\+\_\+threshold\+\_\+low = forms.\+Float\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_afa4ceccd752833372c2368c42b7da7a1}\label{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_afa4ceccd752833372c2368c42b7da7a1} 
+\index{smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}!temperature\_threshold\_high@{temperature\_threshold\_high}}
+\index{temperature\_threshold\_high@{temperature\_threshold\_high}!smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}}
+\doxysubsubsection{\texorpdfstring{temperature\_threshold\_high}{temperature\_threshold\_high}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Sensor\+Unit\+Form.\+temperature\+\_\+threshold\+\_\+high = forms.\+Float\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a2e473a4693aeaf3c69df8103701be5b0}\label{classsmart__greenhouse__app_1_1forms_1_1_sensor_unit_form_a2e473a4693aeaf3c69df8103701be5b0} 
+\index{smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}!temperature\_threshold\_low@{temperature\_threshold\_low}}
+\index{temperature\_threshold\_low@{temperature\_threshold\_low}!smart\_greenhouse\_app.forms.SensorUnitForm@{smart\_greenhouse\_app.forms.SensorUnitForm}}
+\doxysubsubsection{\texorpdfstring{temperature\_threshold\_low}{temperature\_threshold\_low}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+forms.\+Sensor\+Unit\+Form.\+temperature\+\_\+threshold\+\_\+low = forms.\+Float\+Field(required=False)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/\mbox{\hyperlink{forms_8py}{forms.\+py}}\end{DoxyCompactItemize}

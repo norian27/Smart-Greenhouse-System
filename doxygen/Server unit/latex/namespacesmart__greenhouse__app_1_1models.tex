@@ -1,0 +1,66 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+models Namespace Reference}
+\hypertarget{namespacesmart__greenhouse__app_1_1models}{}\label{namespacesmart__greenhouse__app_1_1models}\index{smart\_greenhouse\_app.models@{smart\_greenhouse\_app.models}}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_alert}{Alert}}
+\item 
+class \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system}{Environmental\+System}}
+\item 
+class \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse}{Greenhouse}}
+\item 
+class \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration}{Pending\+Sensor\+Registration}}
+\item 
+class \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold}{Sensor\+Threshold}}
+\item 
+class \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit}{Sensor\+Unit}}
+\item 
+class \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_weather_forecast}{Weather\+Forecast}}
+\item 
+class \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_window_control_system}{Window\+Control\+System}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1models_a45a2e0fc5722090f397d71fcd26d31e5}{sanitize\+\_\+string}} (value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1models_a9a81f37b90a2494b0032e63fb9ffed4b}{logger}} = logging.\+get\+Logger("{}smart\+\_\+greenhouse"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Django models for managing greenhouse data and control systems.
+
+This module defines Django models for representing various aspects of a greenhouse, including sensors,
+environmental systems, alerts, and weather forecasts. These models are used to store data related to
+the greenhouse environment and to control its systems automatically.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacesmart__greenhouse__app_1_1models_a45a2e0fc5722090f397d71fcd26d31e5}\label{namespacesmart__greenhouse__app_1_1models_a45a2e0fc5722090f397d71fcd26d31e5} 
+\index{smart\_greenhouse\_app.models@{smart\_greenhouse\_app.models}!sanitize\_string@{sanitize\_string}}
+\index{sanitize\_string@{sanitize\_string}!smart\_greenhouse\_app.models@{smart\_greenhouse\_app.models}}
+\doxysubsubsection{\texorpdfstring{sanitize\_string()}{sanitize\_string()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+sanitize\+\_\+string (\begin{DoxyParamCaption}\item[{}]{value }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Replaces unsupported Unicode characters in a string.
+
+Args:
+    value (str): The string or object to sanitize.
+
+Returns:
+    str: The sanitized string if input is a string, otherwise the original value.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacesmart__greenhouse__app_1_1models_a9a81f37b90a2494b0032e63fb9ffed4b}\label{namespacesmart__greenhouse__app_1_1models_a9a81f37b90a2494b0032e63fb9ffed4b} 
+\index{smart\_greenhouse\_app.models@{smart\_greenhouse\_app.models}!logger@{logger}}
+\index{logger@{logger}!smart\_greenhouse\_app.models@{smart\_greenhouse\_app.models}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+logger = logging.\+get\+Logger("{}smart\+\_\+greenhouse"{})}
+

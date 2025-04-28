@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load greenhouse_filters %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-white">Greenhouses</h2>
+        <a href="{% url 'add_greenhouse' %}" class="btn btn-secondary">Add New Greenhouse</a>
+    </div>
+    <div class="row">
+        {% for greenhouse in greenhouses %}
+        <div class="col-md-4 mb-4">
+            <div class="card bg-dark border-secondary">
+                <div class="card-body">
+                    <h5 class="card-title text-white">{{ greenhouse.name }}</h5>
+                    <p class="card-text text-light">Location: {{ greenhouse.location }}</p>
+                    <p class="card-text text-light">Number of Sensors: {{ greenhouse.sensor_count }}</p>
+                    <p class="card-text text-light">
+                        Content:
+                        {% with greenhouse.contents|split_string:"," as contents %}
+                            {% if contents %}
+                                {% for content in contents %}
+                                    <span class="badge bg-secondary">{{ content }}</span>
+                                {% endfor %}
+                            {% else %}
+                                <span class="text-light">No contents</span>
+                            {% endif %}
+                        {% endwith %}
+                    </p>
+                    <a href="{% url 'greenhouse_detail' greenhouse.id %}" class="btn btn-secondary">View Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

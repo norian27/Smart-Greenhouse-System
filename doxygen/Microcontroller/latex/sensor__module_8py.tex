@@ -1,0 +1,49 @@
+\doxysection{Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+ESP32\+\_\+\+CODE/sensor\+\_\+module.py File Reference}
+\hypertarget{sensor__module_8py}{}\label{sensor__module_8py}\index{Documents/GitHub/bp2024/smart\_greenhouse\_thesis/BP2025\_ESP32\_CODE/sensor\_module.py@{Documents/GitHub/bp2024/smart\_greenhouse\_thesis/BP2025\_ESP32\_CODE/sensor\_module.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e}{BP2025\+\_\+\+ESP32\+\_\+\+CODE}}
+\item 
+namespace \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a87b6db0bb47fc63c8e2f6622ab61d7b1}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+pulse\+\_\+callback}} (pin)
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a708286c7af6ba1cd5136e6600e36632f}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+read\+\_\+water\+\_\+flow}} ()
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_afdbb83447b0749f02b86db10a6bcdd81}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+control\+\_\+relay}} (turn\+\_\+on)
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_aab3575d9007ddf733230ecf7618c94cb}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+get\+\_\+sensor\+\_\+data}} (pulses\+\_\+used=0)
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a1729c3a68c9d3840caf2c494bf6ae6e4}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+monitor\+\_\+during\+\_\+flow}} (unique\+\_\+id, topic)
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a050629d3498934f817a95368f4996095}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+control\+\_\+env\+\_\+system}} (command)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a328b96b6cf73558d86e2b51b7be064c3}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+FLOW\+\_\+\+SENSOR\+\_\+\+PIN}} = 21
+\item 
+int \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a71ba518b7a04597791f5be5f7e857346}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+RELAY\+\_\+\+PIN}} = 22
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a090148997aee6fa9cc196ecd1034ac0d}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+flow\+\_\+pin}} = Pin(\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a328b96b6cf73558d86e2b51b7be064c3}{FLOW\+\_\+\+SENSOR\+\_\+\+PIN}}, Pin.\+IN)
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_aeec79a589e8f81e570e6a0cdf547e1c0}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+relay}} = Pin(\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a71ba518b7a04597791f5be5f7e857346}{RELAY\+\_\+\+PIN}}, Pin.\+OUT)
+\item 
+int \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_ab0e51f3d2af2daf2e54b818d91f81c82}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+MAX\+\_\+\+WATER\+\_\+\+LEVEL}} = 20000
+\item 
+int \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a89f7b50da0edd096e9bb7414b25f128d}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+pulses\+\_\+per\+\_\+liter}} = 9844
+\item 
+int \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a499965bbe1fd15149cc902b2e740d532}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+pulses}} = 0
+\item 
+int \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a7716b1437dcabbedbd885af235a5b30c}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+last\+\_\+time}} = 0
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_aeb5a1840c111f90a779523fad61bb705}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+trigger}}
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a28dc4864a787b4cf8c32f8aeb39b7e93}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+IRQ\+\_\+\+RISING}}
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a7f0108bd3d1aab77b368a9fb05c94ca4}{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+handler}}
+\end{DoxyCompactItemize}

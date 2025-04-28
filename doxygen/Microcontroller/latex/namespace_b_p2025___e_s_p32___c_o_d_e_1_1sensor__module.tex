@@ -1,0 +1,197 @@
+\doxysection{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module Namespace Reference}
+\hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module}{}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module}\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a87b6db0bb47fc63c8e2f6622ab61d7b1}{pulse\+\_\+callback}} (pin)
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a708286c7af6ba1cd5136e6600e36632f}{read\+\_\+water\+\_\+flow}} ()
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_afdbb83447b0749f02b86db10a6bcdd81}{control\+\_\+relay}} (turn\+\_\+on)
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_aab3575d9007ddf733230ecf7618c94cb}{get\+\_\+sensor\+\_\+data}} (pulses\+\_\+used=0)
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a1729c3a68c9d3840caf2c494bf6ae6e4}{monitor\+\_\+during\+\_\+flow}} (unique\+\_\+id, topic)
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a050629d3498934f817a95368f4996095}{control\+\_\+env\+\_\+system}} (command)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a328b96b6cf73558d86e2b51b7be064c3}{FLOW\+\_\+\+SENSOR\+\_\+\+PIN}} = 21
+\item 
+int \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a71ba518b7a04597791f5be5f7e857346}{RELAY\+\_\+\+PIN}} = 22
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a090148997aee6fa9cc196ecd1034ac0d}{flow\+\_\+pin}} = Pin(\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a328b96b6cf73558d86e2b51b7be064c3}{FLOW\+\_\+\+SENSOR\+\_\+\+PIN}}, Pin.\+IN)
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_aeec79a589e8f81e570e6a0cdf547e1c0}{relay}} = Pin(\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a71ba518b7a04597791f5be5f7e857346}{RELAY\+\_\+\+PIN}}, Pin.\+OUT)
+\item 
+int \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_ab0e51f3d2af2daf2e54b818d91f81c82}{MAX\+\_\+\+WATER\+\_\+\+LEVEL}} = 20000
+\item 
+int \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a89f7b50da0edd096e9bb7414b25f128d}{pulses\+\_\+per\+\_\+liter}} = 9844
+\item 
+int \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a499965bbe1fd15149cc902b2e740d532}{pulses}} = 0
+\item 
+int \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a7716b1437dcabbedbd885af235a5b30c}{last\+\_\+time}} = 0
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_aeb5a1840c111f90a779523fad61bb705}{trigger}}
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a28dc4864a787b4cf8c32f8aeb39b7e93}{IRQ\+\_\+\+RISING}}
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a7f0108bd3d1aab77b368a9fb05c94ca4}{handler}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Sensor reading and control logic for the microcontroller.
+
+This module's code is based on what type of attachments the microcontroller possesses.
+
+It provides functions for reading sensor data (temperature, humidity, soil moisture),
+handling water flow measurement, and controlling relays for environmental systems.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a050629d3498934f817a95368f4996095}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a050629d3498934f817a95368f4996095} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!control\_env\_system@{control\_env\_system}}
+\index{control\_env\_system@{control\_env\_system}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{control\_env\_system()}{control\_env\_system()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+control\+\_\+env\+\_\+system (\begin{DoxyParamCaption}\item[{}]{command }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Processes control commands to activate, deactivate, or reset the environmental system.
+
+Parameters:
+    command (dict): The control command received.
+
+Returns:
+    dict or None: A response payload for MQTT publishing, or None if no response needed.
+\end{DoxyVerb}
+ \Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_afdbb83447b0749f02b86db10a6bcdd81}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_afdbb83447b0749f02b86db10a6bcdd81} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!control\_relay@{control\_relay}}
+\index{control\_relay@{control\_relay}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{control\_relay()}{control\_relay()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+control\+\_\+relay (\begin{DoxyParamCaption}\item[{}]{turn\+\_\+on }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Controls the relay to activate or deactivate the environmental system.
+
+Parameters:
+    turn_on (bool): True to activate, False to deactivate.
+\end{DoxyVerb}
+ \Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_aab3575d9007ddf733230ecf7618c94cb}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_aab3575d9007ddf733230ecf7618c94cb} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!get\_sensor\_data@{get\_sensor\_data}}
+\index{get\_sensor\_data@{get\_sensor\_data}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{get\_sensor\_data()}{get\_sensor\_data()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+get\+\_\+sensor\+\_\+data (\begin{DoxyParamCaption}\item[{}]{pulses\+\_\+used = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Generates water flow sensor data based on pulse count.
+
+Parameters:
+    pulses_used (int): The number of pulses used for calculating water flow.
+
+Returns:
+    list: A list containing a dictionary of water flow measurements.
+\end{DoxyVerb}
+ \Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a1729c3a68c9d3840caf2c494bf6ae6e4}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a1729c3a68c9d3840caf2c494bf6ae6e4} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!monitor\_during\_flow@{monitor\_during\_flow}}
+\index{monitor\_during\_flow@{monitor\_during\_flow}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{monitor\_during\_flow()}{monitor\_during\_flow()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+monitor\+\_\+during\+\_\+flow (\begin{DoxyParamCaption}\item[{}]{unique\+\_\+id,  }\item[{}]{topic }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Monitors the water flow during system activation and auto-deactivates if maximum level is reached.
+
+Parameters:
+    unique_id (str): Unique identifier of the device.
+    topic (str): MQTT topic for publishing auto-deactivation events.
+\end{DoxyVerb}
+ \Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a87b6db0bb47fc63c8e2f6622ab61d7b1}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a87b6db0bb47fc63c8e2f6622ab61d7b1} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!pulse\_callback@{pulse\_callback}}
+\index{pulse\_callback@{pulse\_callback}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{pulse\_callback()}{pulse\_callback()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+pulse\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{pin }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Callback function to count pulses from the flow sensor.
+
+Parameters:
+    pin (Pin): The GPIO pin object triggering the callback.
+\end{DoxyVerb}
+ \Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a708286c7af6ba1cd5136e6600e36632f}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a708286c7af6ba1cd5136e6600e36632f} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!read\_water\_flow@{read\_water\_flow}}
+\index{read\_water\_flow@{read\_water\_flow}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{read\_water\_flow()}{read\_water\_flow()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+read\+\_\+water\+\_\+flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Reads and resets the counted water flow pulses.
+
+Returns:
+    int: The number of pulses detected since the last reading.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a090148997aee6fa9cc196ecd1034ac0d}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a090148997aee6fa9cc196ecd1034ac0d} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!flow\_pin@{flow\_pin}}
+\index{flow\_pin@{flow\_pin}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{flow\_pin}{flow\_pin}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+flow\+\_\+pin = Pin(\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a328b96b6cf73558d86e2b51b7be064c3}{FLOW\+\_\+\+SENSOR\+\_\+\+PIN}}, Pin.\+IN)}
+
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a328b96b6cf73558d86e2b51b7be064c3}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a328b96b6cf73558d86e2b51b7be064c3} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!FLOW\_SENSOR\_PIN@{FLOW\_SENSOR\_PIN}}
+\index{FLOW\_SENSOR\_PIN@{FLOW\_SENSOR\_PIN}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{FLOW\_SENSOR\_PIN}{FLOW\_SENSOR\_PIN}}
+{\footnotesize\ttfamily int BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+FLOW\+\_\+\+SENSOR\+\_\+\+PIN = 21}
+
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a7f0108bd3d1aab77b368a9fb05c94ca4}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a7f0108bd3d1aab77b368a9fb05c94ca4} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!handler@{handler}}
+\index{handler@{handler}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{handler}{handler}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+handler}
+
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a28dc4864a787b4cf8c32f8aeb39b7e93}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a28dc4864a787b4cf8c32f8aeb39b7e93} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!IRQ\_RISING@{IRQ\_RISING}}
+\index{IRQ\_RISING@{IRQ\_RISING}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{IRQ\_RISING}{IRQ\_RISING}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+IRQ\+\_\+\+RISING}
+
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a7716b1437dcabbedbd885af235a5b30c}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a7716b1437dcabbedbd885af235a5b30c} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!last\_time@{last\_time}}
+\index{last\_time@{last\_time}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{last\_time}{last\_time}}
+{\footnotesize\ttfamily int BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+last\+\_\+time = 0}
+
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_ab0e51f3d2af2daf2e54b818d91f81c82}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_ab0e51f3d2af2daf2e54b818d91f81c82} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!MAX\_WATER\_LEVEL@{MAX\_WATER\_LEVEL}}
+\index{MAX\_WATER\_LEVEL@{MAX\_WATER\_LEVEL}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{MAX\_WATER\_LEVEL}{MAX\_WATER\_LEVEL}}
+{\footnotesize\ttfamily int BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+MAX\+\_\+\+WATER\+\_\+\+LEVEL = 20000}
+
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a499965bbe1fd15149cc902b2e740d532}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a499965bbe1fd15149cc902b2e740d532} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!pulses@{pulses}}
+\index{pulses@{pulses}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{pulses}{pulses}}
+{\footnotesize\ttfamily int BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+pulses = 0}
+
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a89f7b50da0edd096e9bb7414b25f128d}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a89f7b50da0edd096e9bb7414b25f128d} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!pulses\_per\_liter@{pulses\_per\_liter}}
+\index{pulses\_per\_liter@{pulses\_per\_liter}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{pulses\_per\_liter}{pulses\_per\_liter}}
+{\footnotesize\ttfamily int BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+pulses\+\_\+per\+\_\+liter = 9844}
+
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_aeec79a589e8f81e570e6a0cdf547e1c0}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_aeec79a589e8f81e570e6a0cdf547e1c0} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!relay@{relay}}
+\index{relay@{relay}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{relay}{relay}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+relay = Pin(\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a71ba518b7a04597791f5be5f7e857346}{RELAY\+\_\+\+PIN}}, Pin.\+OUT)}
+
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a71ba518b7a04597791f5be5f7e857346}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_a71ba518b7a04597791f5be5f7e857346} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!RELAY\_PIN@{RELAY\_PIN}}
+\index{RELAY\_PIN@{RELAY\_PIN}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{RELAY\_PIN}{RELAY\_PIN}}
+{\footnotesize\ttfamily int BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+RELAY\+\_\+\+PIN = 22}
+
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_aeb5a1840c111f90a779523fad61bb705}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1sensor__module_aeb5a1840c111f90a779523fad61bb705} 
+\index{BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}!trigger@{trigger}}
+\index{trigger@{trigger}!BP2025\_ESP32\_CODE.sensor\_module@{BP2025\_ESP32\_CODE.sensor\_module}}
+\doxysubsubsection{\texorpdfstring{trigger}{trigger}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+sensor\+\_\+module.\+trigger}
+

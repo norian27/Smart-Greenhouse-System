@@ -1,0 +1,502 @@
+\doxysection{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient Class Reference}
+\hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client}{}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client}\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a20fc818f699ec0f9ad30b30cc88be7c7}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a30ba7d6fd9f060b06a8b3e964074afb6}{client\+\_\+id}}, \mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a97ccb3c813b7a299dfc679b3a09dd840}{server}}, \mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a51999f83a26b3e0f64e814780ffb2fd5}{port}}=0, \mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a36e676089883cc01749204f369cfe91b}{user}}=None, password=None, \mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a07c57201c8618564e3e397831e618b94}{keepalive}}=0, \mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_aa0c2fd66fea5b64a9012c8df987e8769}{ssl}}=False, \mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a76f7fd0395bcba83cbdf3a28b6a2cfa8}{ssl\+\_\+params}}=None, \mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a6bcd1363870160dd9775033c7d739941}{socket\+\_\+timeout}}=5, \mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a5115f11c90d0d55d073c87023100457a}{message\+\_\+timeout}}=10)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a333c706e13fcdcd6305b6b3ba1890714}{set\+\_\+callback}} (self, f)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a8ce130f50411bb34076581c1ee77851b}{set\+\_\+callback\+\_\+status}} (self, f)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ae06878c1d9d8fdeeb05b01c709c899a7}{set\+\_\+last\+\_\+will}} (self, topic, msg, retain=False, qos=0)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a440fd63a851f3420a344fb73614a8cf7}{connect}} (self, clean\+\_\+session=True)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a21a68146a96b3260d71ab26cad6fb001}{disconnect}} (self)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a4cdbd2ab1a7e4816e51832b29c553140}{ping}} (self)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a37386379c9bd9c09b1829d50e830b668}{publish}} (self, topic, msg, retain=False, qos=0, dup=False)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ac1a10d3bed1b351db5ce0d3e56655a6b}{subscribe}} (self, topic, qos=0)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_af0bfa6767df308e87e88a8dc589088b3}{check\+\_\+msg}} (self)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a58d577039e97e2e7687e8153897993fd}{wait\+\_\+msg}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a30ba7d6fd9f060b06a8b3e964074afb6}{client\+\_\+id}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a05c73254286d5b2993e60534cda90ecb}{sock}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a97f0e53a92a91c19b15283fbb69da729}{poller\+\_\+r}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a4dd959e29540d2b3a048c8146d38d5d7}{poller\+\_\+w}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a97ccb3c813b7a299dfc679b3a09dd840}{server}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a51999f83a26b3e0f64e814780ffb2fd5}{port}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_aa0c2fd66fea5b64a9012c8df987e8769}{ssl}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a76f7fd0395bcba83cbdf3a28b6a2cfa8}{ssl\+\_\+params}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a3254fae23bb7861eec19269be8fb2323}{newpid}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a62205333207ca3ec3afd5729c6692157}{cb}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ac7200fb16ac01376408c0881df92c7c0}{cbstat}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a36e676089883cc01749204f369cfe91b}{user}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ad7b789f65acf4b2bcb796c78da157c4b}{pswd}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a07c57201c8618564e3e397831e618b94}{keepalive}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_aaa56349051d6d2d3a6dc428ab028399e}{lw\+\_\+topic}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a77b4f8936fca36c3e78e44995e4cf9d7}{lw\+\_\+msg}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a7a22e7c775e4cbdc34c1b38ea88cabc0}{lw\+\_\+qos}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ac120e155cb62b3fca38da9bbea2d19a9}{lw\+\_\+retain}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a3b2710fff96e1e40b06d172ec2ebd8f1}{rcv\+\_\+pids}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a315a1d1d964100fb626dce240798e1fa}{last\+\_\+ping}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a6e656b159026eb1ea89cc97f8e54f467}{last\+\_\+cpacket}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a6bcd1363870160dd9775033c7d739941}{socket\+\_\+timeout}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a5115f11c90d0d55d073c87023100457a}{message\+\_\+timeout}}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a936b4b9e2f797b7f191d88fccd497563}{sock\+\_\+raw}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_acbebbefd4e93d88015be8f5b1c23c3ed}{\+\_\+read}} (self, n)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a2a1c38ce7aed690de6c379ff1df4f25c}{\+\_\+write}} (self, bytes\+\_\+wr, length=-\/1)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a5767d0e0ab5d01a716b906e329fe1795}{\+\_\+send\+\_\+str}} (self, s)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a23cd2a16998821b6718aa526d2150754}{\+\_\+recv\+\_\+len}} (self)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_aa64c96626dc528df4f44e895e05da3c9}{\+\_\+varlen\+\_\+encode}} (self, value, buf, offset=0)
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a29a836ff5c76dd8aa8f75bb1efc0991d}{\+\_\+sock\+\_\+timeout}} (self, poller, \mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a6bcd1363870160dd9775033c7d739941}{socket\+\_\+timeout}})
+\item 
+\mbox{\hyperlink{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a4e6734c656b9342ddbf4f77417ded307}{\+\_\+message\+\_\+timeout}} (self)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a20fc818f699ec0f9ad30b30cc88be7c7}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a20fc818f699ec0f9ad30b30cc88be7c7} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{client\+\_\+id,  }\item[{}]{server,  }\item[{}]{port = {\ttfamily 0},  }\item[{}]{user = {\ttfamily None},  }\item[{}]{password = {\ttfamily None},  }\item[{}]{keepalive = {\ttfamily 0},  }\item[{}]{ssl = {\ttfamily False},  }\item[{}]{ssl\+\_\+params = {\ttfamily None},  }\item[{}]{socket\+\_\+timeout = {\ttfamily 5},  }\item[{}]{message\+\_\+timeout = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Default constructor, initializes MQTTClient object.
+
+:param client_id:  Unique MQTT ID attached to client.
+:type client_id: str
+:param server: MQTT host address.
+:type server str
+:param port: MQTT Port, typically 1883. If unset, the port number will default to 1883 of 8883 base on ssl.
+:type port: int
+:param user: Username if your server requires it.
+:type user: str
+:param password: Password if your server requires it.
+:type password: str
+:param keepalive: The Keep Alive is a time interval measured in seconds since the last
+                  correct control packet was received.
+:type keepalive: int
+:param ssl: Require SSL for the connection.
+:type ssl: bool
+:param ssl_params: Required SSL parameters. Kwargs from function ssl.wrap_socket.
+                   See documentation: https://docs.micropython.org/en/latest/library/ssl.html#ssl.ssl.wrap_socket
+                   For esp8266, please refer to the capabilities of the axTLS library applied to the micropython port.
+                   https://axtls.sourceforge.net
+:type ssl_params: dict
+:param socket_timeout: The time in seconds after which the socket interrupts the connection to the server when
+                       no data exchange takes place. None - socket blocking, positive number - seconds to wait.
+:type socket_timeout: int
+:param message_timeout: The time in seconds after which the library recognizes that a message with QoS=1
+                        or topic subscription has not been received by the server.
+:type message_timeout: int
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a4e6734c656b9342ddbf4f77417ded307}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a4e6734c656b9342ddbf4f77417ded307} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!\_message\_timeout@{\_message\_timeout}}
+\index{\_message\_timeout@{\_message\_timeout}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{\_message\_timeout()}{\_message\_timeout()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+\_\+message\+\_\+timeout (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_acbebbefd4e93d88015be8f5b1c23c3ed}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_acbebbefd4e93d88015be8f5b1c23c3ed} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!\_read@{\_read}}
+\index{\_read@{\_read}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{\_read()}{\_read()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+\_\+read (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Private class method.
+
+:param n: Expected length of read bytes
+:type n: int
+:return:
+
+Notes:
+Current usocket implementation returns None on .read from
+non-blocking socket with no data. However, OSError
+EAGAIN is checked for in case this ever changes.
+\end{DoxyVerb}
+ \Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a23cd2a16998821b6718aa526d2150754}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a23cd2a16998821b6718aa526d2150754} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!\_recv\_len@{\_recv\_len}}
+\index{\_recv\_len@{\_recv\_len}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{\_recv\_len()}{\_recv\_len()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+\_\+recv\+\_\+len (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Private class method.
+:return:
+:rtype int
+\end{DoxyVerb}
+ \Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a5767d0e0ab5d01a716b906e329fe1795}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a5767d0e0ab5d01a716b906e329fe1795} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!\_send\_str@{\_send\_str}}
+\index{\_send\_str@{\_send\_str}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{\_send\_str()}{\_send\_str()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+\_\+send\+\_\+str (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Private class method.
+:param s:
+:type s: byte
+:return: None
+\end{DoxyVerb}
+ \Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a29a836ff5c76dd8aa8f75bb1efc0991d}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a29a836ff5c76dd8aa8f75bb1efc0991d} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!\_sock\_timeout@{\_sock\_timeout}}
+\index{\_sock\_timeout@{\_sock\_timeout}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{\_sock\_timeout()}{\_sock\_timeout()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+\_\+sock\+\_\+timeout (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{poller,  }\item[{}]{socket\+\_\+timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_aa64c96626dc528df4f44e895e05da3c9}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_aa64c96626dc528df4f44e895e05da3c9} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!\_varlen\_encode@{\_varlen\_encode}}
+\index{\_varlen\_encode@{\_varlen\_encode}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{\_varlen\_encode()}{\_varlen\_encode()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+\_\+varlen\+\_\+encode (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{value,  }\item[{}]{buf,  }\item[{}]{offset = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a2a1c38ce7aed690de6c379ff1df4f25c}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a2a1c38ce7aed690de6c379ff1df4f25c} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!\_write@{\_write}}
+\index{\_write@{\_write}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{\_write()}{\_write()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+\_\+write (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{bytes\+\_\+wr,  }\item[{}]{length = {\ttfamily -\/1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyVerb}Private class method.
+
+:param bytes_wr: Bytes sequence for writing
+:type bytes_wr: bytes
+:param length: Expected length of write bytes
+:type length: int
+:return:
+\end{DoxyVerb}
+ \Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_af0bfa6767df308e87e88a8dc589088b3}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_af0bfa6767df308e87e88a8dc589088b3} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!check\_msg@{check\_msg}}
+\index{check\_msg@{check\_msg}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{check\_msg()}{check\_msg()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+check\+\_\+msg (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checks whether a pending message from server is available.
+
+If socket_timeout=None, this is the socket lock mode. That is, it waits until the data can be read.
+
+Otherwise it will return None, after the time set in the socket_timeout.
+
+It processes such messages:
+- response to PING
+- messages from subscribed topics that are processed by functions set by the set_callback method.
+- reply from the server that he received a QoS=1 message or subscribed to a topic
+
+:return: None
+\end{DoxyVerb}
+ \Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a440fd63a851f3420a344fb73614a8cf7}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a440fd63a851f3420a344fb73614a8cf7} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!connect@{connect}}
+\index{connect@{connect}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+connect (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{clean\+\_\+session = {\ttfamily True} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Establishes connection with the MQTT server.
+
+:param clean_session: Starts new session on true, resumes past session if false.
+:type clean_session: bool
+:return: Existing persistent session of the client from previous interactions.
+:rtype: bool
+\end{DoxyVerb}
+ \Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a21a68146a96b3260d71ab26cad6fb001}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a21a68146a96b3260d71ab26cad6fb001} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+disconnect (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Disconnects from the MQTT server.
+:return: None
+\end{DoxyVerb}
+ \Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a4cdbd2ab1a7e4816e51832b29c553140}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a4cdbd2ab1a7e4816e51832b29c553140} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!ping@{ping}}
+\index{ping@{ping}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{ping()}{ping()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+ping (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Pings the MQTT server.
+:return: None
+\end{DoxyVerb}
+ \Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a37386379c9bd9c09b1829d50e830b668}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a37386379c9bd9c09b1829d50e830b668} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!publish@{publish}}
+\index{publish@{publish}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{publish()}{publish()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+publish (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{topic,  }\item[{}]{msg,  }\item[{}]{retain = {\ttfamily False},  }\item[{}]{qos = {\ttfamily 0},  }\item[{}]{dup = {\ttfamily False} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Publishes a message to a specified topic.
+
+:param topic: Topic you wish to publish to. Takes the form "path/to/topic"
+:type topic: byte
+:param msg: Message to publish to topic.
+:type msg: byte
+:param retain: Have the MQTT broker retain the message.
+:type retain: bool
+:param qos: Sets quality of service level. Accepts values 0 to 2. PLEASE NOTE qos=2 is not actually supported.
+:type qos: int
+:param dup: Duplicate delivery of a PUBLISH Control Packet
+:type dup: bool
+:return: None
+\end{DoxyVerb}
+ \Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a333c706e13fcdcd6305b6b3ba1890714}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a333c706e13fcdcd6305b6b3ba1890714} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!set\_callback@{set\_callback}}
+\index{set\_callback@{set\_callback}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{set\_callback()}{set\_callback()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+set\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{f }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set callback for received subscription messages.
+
+:param f: callable(topic, msg, retained, duplicate)
+\end{DoxyVerb}
+ \Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a8ce130f50411bb34076581c1ee77851b}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a8ce130f50411bb34076581c1ee77851b} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!set\_callback\_status@{set\_callback\_status}}
+\index{set\_callback\_status@{set\_callback\_status}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{set\_callback\_status()}{set\_callback\_status()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+set\+\_\+callback\+\_\+status (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{f }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Set the callback for information about whether the sent packet (QoS=1)
+or subscription was received or not by the server.
+
+:param f: callable(pid, status)
+
+Where:
+    status = 0 - timeout
+    status = 1 - successfully delivered
+    status = 2 - Unknown PID. It is also possible that the PID is outdated,
+                 i.e. it came out of the message timeout.
+\end{DoxyVerb}
+ \Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ae06878c1d9d8fdeeb05b01c709c899a7}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ae06878c1d9d8fdeeb05b01c709c899a7} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!set\_last\_will@{set\_last\_will}}
+\index{set\_last\_will@{set\_last\_will}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{set\_last\_will()}{set\_last\_will()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+set\+\_\+last\+\_\+will (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{topic,  }\item[{}]{msg,  }\item[{}]{retain = {\ttfamily False},  }\item[{}]{qos = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sets the last will and testament of the client. This is used to perform an action by the broker
+in the event that the client "dies".
+Learn more at https://www.hivemq.com/blog/mqtt-essentials-part-9-last-will-and-testament/
+
+:param topic: Topic of LWT. Takes the from "path/to/topic"
+:type topic: byte
+:param msg: Message to be published to LWT topic.
+:type msg: byte
+:param retain: Have the MQTT broker retain the message.
+:type retain: bool
+:param qos: Sets quality of service level. Accepts values 0 to 2. PLEASE NOTE qos=2 is not actually supported.
+:type qos: int
+:return: None
+\end{DoxyVerb}
+ \Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ac1a10d3bed1b351db5ce0d3e56655a6b}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ac1a10d3bed1b351db5ce0d3e56655a6b} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!subscribe@{subscribe}}
+\index{subscribe@{subscribe}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{subscribe()}{subscribe()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+subscribe (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{topic,  }\item[{}]{qos = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Subscribes to a given topic.
+
+:param topic: Topic you wish to publish to. Takes the form "path/to/topic"
+:type topic: byte
+:param qos: Sets quality of service level. Accepts values 0 to 1. This gives the maximum QoS level at which
+            the Server can send Application Messages to the Client.
+:type qos: int
+:return: None
+\end{DoxyVerb}
+ \Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a58d577039e97e2e7687e8153897993fd}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a58d577039e97e2e7687e8153897993fd} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!wait\_msg@{wait\_msg}}
+\index{wait\_msg@{wait\_msg}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{wait\_msg()}{wait\_msg()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+wait\+\_\+msg (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This method waits for a message from the server.
+
+Compatibility with previous versions.
+
+It is recommended not to use this method. Set socket_time=None instead.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a62205333207ca3ec3afd5729c6692157}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a62205333207ca3ec3afd5729c6692157} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!cb@{cb}}
+\index{cb@{cb}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{cb}{cb}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+cb}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ac7200fb16ac01376408c0881df92c7c0}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ac7200fb16ac01376408c0881df92c7c0} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!cbstat@{cbstat}}
+\index{cbstat@{cbstat}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{cbstat}{cbstat}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+cbstat}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a30ba7d6fd9f060b06a8b3e964074afb6}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a30ba7d6fd9f060b06a8b3e964074afb6} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!client\_id@{client\_id}}
+\index{client\_id@{client\_id}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{client\_id}{client\_id}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+client\+\_\+id}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a07c57201c8618564e3e397831e618b94}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a07c57201c8618564e3e397831e618b94} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!keepalive@{keepalive}}
+\index{keepalive@{keepalive}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{keepalive}{keepalive}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+keepalive}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a6e656b159026eb1ea89cc97f8e54f467}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a6e656b159026eb1ea89cc97f8e54f467} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!last\_cpacket@{last\_cpacket}}
+\index{last\_cpacket@{last\_cpacket}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{last\_cpacket}{last\_cpacket}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+last\+\_\+cpacket}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a315a1d1d964100fb626dce240798e1fa}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a315a1d1d964100fb626dce240798e1fa} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!last\_ping@{last\_ping}}
+\index{last\_ping@{last\_ping}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{last\_ping}{last\_ping}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+last\+\_\+ping}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a77b4f8936fca36c3e78e44995e4cf9d7}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a77b4f8936fca36c3e78e44995e4cf9d7} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!lw\_msg@{lw\_msg}}
+\index{lw\_msg@{lw\_msg}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{lw\_msg}{lw\_msg}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+lw\+\_\+msg}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a7a22e7c775e4cbdc34c1b38ea88cabc0}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a7a22e7c775e4cbdc34c1b38ea88cabc0} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!lw\_qos@{lw\_qos}}
+\index{lw\_qos@{lw\_qos}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{lw\_qos}{lw\_qos}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+lw\+\_\+qos}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ac120e155cb62b3fca38da9bbea2d19a9}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ac120e155cb62b3fca38da9bbea2d19a9} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!lw\_retain@{lw\_retain}}
+\index{lw\_retain@{lw\_retain}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{lw\_retain}{lw\_retain}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+lw\+\_\+retain}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_aaa56349051d6d2d3a6dc428ab028399e}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_aaa56349051d6d2d3a6dc428ab028399e} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!lw\_topic@{lw\_topic}}
+\index{lw\_topic@{lw\_topic}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{lw\_topic}{lw\_topic}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+lw\+\_\+topic}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a5115f11c90d0d55d073c87023100457a}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a5115f11c90d0d55d073c87023100457a} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!message\_timeout@{message\_timeout}}
+\index{message\_timeout@{message\_timeout}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{message\_timeout}{message\_timeout}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+message\+\_\+timeout}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a3254fae23bb7861eec19269be8fb2323}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a3254fae23bb7861eec19269be8fb2323} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!newpid@{newpid}}
+\index{newpid@{newpid}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{newpid}{newpid}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+newpid}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a97f0e53a92a91c19b15283fbb69da729}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a97f0e53a92a91c19b15283fbb69da729} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!poller\_r@{poller\_r}}
+\index{poller\_r@{poller\_r}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{poller\_r}{poller\_r}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+poller\+\_\+r}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a4dd959e29540d2b3a048c8146d38d5d7}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a4dd959e29540d2b3a048c8146d38d5d7} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!poller\_w@{poller\_w}}
+\index{poller\_w@{poller\_w}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{poller\_w}{poller\_w}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+poller\+\_\+w}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a51999f83a26b3e0f64e814780ffb2fd5}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a51999f83a26b3e0f64e814780ffb2fd5} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!port@{port}}
+\index{port@{port}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+port}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ad7b789f65acf4b2bcb796c78da157c4b}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_ad7b789f65acf4b2bcb796c78da157c4b} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!pswd@{pswd}}
+\index{pswd@{pswd}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{pswd}{pswd}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+pswd}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a3b2710fff96e1e40b06d172ec2ebd8f1}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a3b2710fff96e1e40b06d172ec2ebd8f1} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!rcv\_pids@{rcv\_pids}}
+\index{rcv\_pids@{rcv\_pids}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{rcv\_pids}{rcv\_pids}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+rcv\+\_\+pids}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a97ccb3c813b7a299dfc679b3a09dd840}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a97ccb3c813b7a299dfc679b3a09dd840} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!server@{server}}
+\index{server@{server}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{server}{server}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+server}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a05c73254286d5b2993e60534cda90ecb}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a05c73254286d5b2993e60534cda90ecb} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!sock@{sock}}
+\index{sock@{sock}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{sock}{sock}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+sock}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a936b4b9e2f797b7f191d88fccd497563}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a936b4b9e2f797b7f191d88fccd497563} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!sock\_raw@{sock\_raw}}
+\index{sock\_raw@{sock\_raw}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{sock\_raw}{sock\_raw}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+sock\+\_\+raw}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a6bcd1363870160dd9775033c7d739941}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a6bcd1363870160dd9775033c7d739941} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!socket\_timeout@{socket\_timeout}}
+\index{socket\_timeout@{socket\_timeout}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{socket\_timeout}{socket\_timeout}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+socket\+\_\+timeout}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_aa0c2fd66fea5b64a9012c8df987e8769}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_aa0c2fd66fea5b64a9012c8df987e8769} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!ssl@{ssl}}
+\index{ssl@{ssl}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{ssl}{ssl}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+ssl}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a76f7fd0395bcba83cbdf3a28b6a2cfa8}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a76f7fd0395bcba83cbdf3a28b6a2cfa8} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!ssl\_params@{ssl\_params}}
+\index{ssl\_params@{ssl\_params}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{ssl\_params}{ssl\_params}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+ssl\+\_\+params}
+
+\Hypertarget{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a36e676089883cc01749204f369cfe91b}\label{class_b_p2025___e_s_p32___c_o_d_e_1_1simple2_1_1_m_q_t_t_client_a36e676089883cc01749204f369cfe91b} 
+\index{BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}!user@{user}}
+\index{user@{user}!BP2025\_ESP32\_CODE.simple2.MQTTClient@{BP2025\_ESP32\_CODE.simple2.MQTTClient}}
+\doxysubsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+simple2.\+MQTTClient.\+user}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+ESP32\+\_\+\+CODE/\mbox{\hyperlink{simple2_8py}{simple2.\+py}}\end{DoxyCompactItemize}

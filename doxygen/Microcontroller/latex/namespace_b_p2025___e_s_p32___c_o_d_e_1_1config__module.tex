@@ -1,0 +1,87 @@
+\doxysection{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+config\+\_\+module Namespace Reference}
+\hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module}{}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module}\index{BP2025\_ESP32\_CODE.config\_module@{BP2025\_ESP32\_CODE.config\_module}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_a029c1c6a916536349c579ddef8e53a65}{reload\+\_\+config}} ()
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_a0b07c6ebeda8ea9f1c7c84647c71a2c2}{load\+\_\+config}} (file\+\_\+path)
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_a0f829e0996940dfc932164f27ed8f8cb}{edit\+\_\+config}} (file\+\_\+path, new\+\_\+data)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_ad2c8f8286538a854e30564227184e1f7}{cfg}} = \{\}
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_a3f3e518568cf3bdc6b9798bb0b41ad10}{last\+\_\+mod\+\_\+time}} = os.\+stat(\textquotesingle{}config.\+json\textquotesingle{})\mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Configuration management for the smart greenhouse system.
+
+This module provides functions for loading, editing, and reloading configuration settings
+from a JSON file used across the microcontroller.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_a0f829e0996940dfc932164f27ed8f8cb}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_a0f829e0996940dfc932164f27ed8f8cb} 
+\index{BP2025\_ESP32\_CODE.config\_module@{BP2025\_ESP32\_CODE.config\_module}!edit\_config@{edit\_config}}
+\index{edit\_config@{edit\_config}!BP2025\_ESP32\_CODE.config\_module@{BP2025\_ESP32\_CODE.config\_module}}
+\doxysubsubsection{\texorpdfstring{edit\_config()}{edit\_config()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+config\+\_\+module.\+edit\+\_\+config (\begin{DoxyParamCaption}\item[{}]{file\+\_\+path,  }\item[{}]{new\+\_\+data }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Edits a JSON configuration file by updating specific keys without overwriting the entire file.
+
+Parameters:
+    file_path (str): Path to the JSON configuration file.
+    new_data (dict): Dictionary containing new data to update in the configuration.
+
+Raises:
+    Exception: If the file cannot be edited or saved.
+\end{DoxyVerb}
+ \Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_a0b07c6ebeda8ea9f1c7c84647c71a2c2}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_a0b07c6ebeda8ea9f1c7c84647c71a2c2} 
+\index{BP2025\_ESP32\_CODE.config\_module@{BP2025\_ESP32\_CODE.config\_module}!load\_config@{load\_config}}
+\index{load\_config@{load\_config}!BP2025\_ESP32\_CODE.config\_module@{BP2025\_ESP32\_CODE.config\_module}}
+\doxysubsubsection{\texorpdfstring{load\_config()}{load\_config()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+config\+\_\+module.\+load\+\_\+config (\begin{DoxyParamCaption}\item[{}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Loads a JSON configuration file.
+
+Parameters:
+    file_path (str): Path to the JSON configuration file.
+
+Returns:
+    dict: The loaded configuration as a dictionary.
+
+Raises:
+    Exception: If the file cannot be loaded.
+\end{DoxyVerb}
+ \Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_a029c1c6a916536349c579ddef8e53a65}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_a029c1c6a916536349c579ddef8e53a65} 
+\index{BP2025\_ESP32\_CODE.config\_module@{BP2025\_ESP32\_CODE.config\_module}!reload\_config@{reload\_config}}
+\index{reload\_config@{reload\_config}!BP2025\_ESP32\_CODE.config\_module@{BP2025\_ESP32\_CODE.config\_module}}
+\doxysubsubsection{\texorpdfstring{reload\_config()}{reload\_config()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+config\+\_\+module.\+reload\+\_\+config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Reloads the configuration file if it has been modified.
+
+This function checks the last modification time of 'config.json' and reloads the configuration
+if a change is detected.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_ad2c8f8286538a854e30564227184e1f7}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_ad2c8f8286538a854e30564227184e1f7} 
+\index{BP2025\_ESP32\_CODE.config\_module@{BP2025\_ESP32\_CODE.config\_module}!cfg@{cfg}}
+\index{cfg@{cfg}!BP2025\_ESP32\_CODE.config\_module@{BP2025\_ESP32\_CODE.config\_module}}
+\doxysubsubsection{\texorpdfstring{cfg}{cfg}}
+{\footnotesize\ttfamily dict BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+config\+\_\+module.\+cfg = \{\}}
+
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_a3f3e518568cf3bdc6b9798bb0b41ad10}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1config__module_a3f3e518568cf3bdc6b9798bb0b41ad10} 
+\index{BP2025\_ESP32\_CODE.config\_module@{BP2025\_ESP32\_CODE.config\_module}!last\_mod\_time@{last\_mod\_time}}
+\index{last\_mod\_time@{last\_mod\_time}!BP2025\_ESP32\_CODE.config\_module@{BP2025\_ESP32\_CODE.config\_module}}
+\doxysubsubsection{\texorpdfstring{last\_mod\_time}{last\_mod\_time}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+config\+\_\+module.\+last\+\_\+mod\+\_\+time = os.\+stat(\textquotesingle{}config.\+json\textquotesingle{})\mbox{[}8\mbox{]}}
+

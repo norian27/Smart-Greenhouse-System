@@ -1,0 +1,110 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+models.\+Window\+Control\+System Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1models_1_1_window_control_system}{}\label{classsmart__greenhouse__app_1_1models_1_1_window_control_system}\index{smart\_greenhouse\_app.models.WindowControlSystem@{smart\_greenhouse\_app.models.WindowControlSystem}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+models.\+Window\+Control\+System\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classsmart__greenhouse__app_1_1models_1_1_window_control_system}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_window_control_system_afb0a82aab918f496143210fe91103d2c}{adjust\+\_\+angle}} (self, new\+\_\+angle)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_window_control_system_abf8c8e463c194f6d0304dff48518c4c5}{activate}} (self)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_window_control_system_a3f340db5eb15de287ddf8167d9921017}{deactivate}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system}{smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a71cd7c9d2aa135b02e2e8985edf285df}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_window_control_system_ab7bf7af9b59bbcd6087352b04bc23b7b}{current\+\_\+angle}} = models.\+Float\+Field(default=0.\+0, help\+\_\+text="{}Current angle of the window system."{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes inherited from \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system}{smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a59657febe5c58323fbc62e9a7a0e4398}{name}}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a1a6fd1bbd06333748f89739b8e5e885a}{max\+\_\+length}}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a00ef03a3a77a80fcd9be2b9a3d13ab67}{unique\+\_\+identifier}} = models.\+Char\+Field(\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a1a6fd1bbd06333748f89739b8e5e885a}{max\+\_\+length}}=255, unique=True, db\+\_\+index=True)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a8a081bdad8ad36f09edc9efb41714766}{is\+\_\+active}} = models.\+Boolean\+Field(default=False)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a51e41fa1e670fa2d21ccf3176664528d}{status}} = models.\+Char\+Field(\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a1a6fd1bbd06333748f89739b8e5e885a}{max\+\_\+length}} = 20, choices=\mbox{[}(\textquotesingle{}idle\textquotesingle{}, \textquotesingle{}Idle\textquotesingle{}), (\textquotesingle{}waiting\textquotesingle{}, \textquotesingle{}Waiting\textquotesingle{}), (\textquotesingle{}unreachable\textquotesingle{}, \textquotesingle{}Unreachable\textquotesingle{})\mbox{]}, default = \textquotesingle{}idle\textquotesingle{})
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_af7fcd69e9ae3a5ff579334fb914d1ed0}{env\+\_\+type}}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a4fb9d971e14169fd2bf787423101580d}{identifier}} = models.\+Char\+Field(\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a1a6fd1bbd06333748f89739b8e5e885a}{max\+\_\+length}}=100)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_ac8995188165aab9e28ccf63f200aaf4b}{greenhouse}} = models.\+Foreign\+Key(\textquotesingle{}\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_greenhouse}{Greenhouse}}\textquotesingle{}, on\+\_\+delete=models.\+CASCADE, related\+\_\+name=\textquotesingle{}env\+\_\+systems\textquotesingle{})
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a8b1b1eb9dd8df1555c7cbdcefe20b800}{target\+\_\+value}} = models.\+Float\+Field(default=0.\+0)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_aa3dcb565e0b4bdee45361ecb4433e071}{last\+\_\+activated}} = models.\+Date\+Time\+Field(null=True, blank=True)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_acd2d9359512c0e86ed718b80b2f73f96}{data}} = models.\+Text\+Field(blank=True, null= True)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_window_control_system_abf8c8e463c194f6d0304dff48518c4c5}\label{classsmart__greenhouse__app_1_1models_1_1_window_control_system_abf8c8e463c194f6d0304dff48518c4c5} 
+\index{smart\_greenhouse\_app.models.WindowControlSystem@{smart\_greenhouse\_app.models.WindowControlSystem}!activate@{activate}}
+\index{activate@{activate}!smart\_greenhouse\_app.models.WindowControlSystem@{smart\_greenhouse\_app.models.WindowControlSystem}}
+\doxysubsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Window\+Control\+System.\+activate (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Opens the window to 90 degrees, if Greenhouse is automaded, and it activates the window control system.
+
+Returns:
+    bool: True if the activation was successful, False otherwise.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a231807faf3407591bd5e4e03efdf489f}{smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System}}.
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_window_control_system_afb0a82aab918f496143210fe91103d2c}\label{classsmart__greenhouse__app_1_1models_1_1_window_control_system_afb0a82aab918f496143210fe91103d2c} 
+\index{smart\_greenhouse\_app.models.WindowControlSystem@{smart\_greenhouse\_app.models.WindowControlSystem}!adjust\_angle@{adjust\_angle}}
+\index{adjust\_angle@{adjust\_angle}!smart\_greenhouse\_app.models.WindowControlSystem@{smart\_greenhouse\_app.models.WindowControlSystem}}
+\doxysubsubsection{\texorpdfstring{adjust\_angle()}{adjust\_angle()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Window\+Control\+System.\+adjust\+\_\+angle (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{new\+\_\+angle }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adjusts the window system to a specified angle.
+
+Args:
+    new_angle (float): The desired window angle in degrees.
+\end{DoxyVerb}
+ \Hypertarget{classsmart__greenhouse__app_1_1models_1_1_window_control_system_a3f340db5eb15de287ddf8167d9921017}\label{classsmart__greenhouse__app_1_1models_1_1_window_control_system_a3f340db5eb15de287ddf8167d9921017} 
+\index{smart\_greenhouse\_app.models.WindowControlSystem@{smart\_greenhouse\_app.models.WindowControlSystem}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!smart\_greenhouse\_app.models.WindowControlSystem@{smart\_greenhouse\_app.models.WindowControlSystem}}
+\doxysubsubsection{\texorpdfstring{deactivate()}{deactivate()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Window\+Control\+System.\+deactivate (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Closes the window to 0 degrees, if Greenhouse is automated, and deactivates the window control system.
+
+Returns:
+    bool: True if the deactivation was successful, False otherwise.
+\end{DoxyVerb}
+ 
+
+Reimplemented from \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_environmental_system_a6239c822415b9e81547b890af55ddae4}{smart\+\_\+greenhouse\+\_\+app.\+models.\+Environmental\+System}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_window_control_system_ab7bf7af9b59bbcd6087352b04bc23b7b}\label{classsmart__greenhouse__app_1_1models_1_1_window_control_system_ab7bf7af9b59bbcd6087352b04bc23b7b} 
+\index{smart\_greenhouse\_app.models.WindowControlSystem@{smart\_greenhouse\_app.models.WindowControlSystem}!current\_angle@{current\_angle}}
+\index{current\_angle@{current\_angle}!smart\_greenhouse\_app.models.WindowControlSystem@{smart\_greenhouse\_app.models.WindowControlSystem}}
+\doxysubsubsection{\texorpdfstring{current\_angle}{current\_angle}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Window\+Control\+System.\+current\+\_\+angle = models.\+Float\+Field(default=0.\+0, help\+\_\+text="{}Current angle of the window system."{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/\mbox{\hyperlink{models_8py}{models.\+py}}\end{DoxyCompactItemize}

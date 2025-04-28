@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+
+{% block content %}
+<form method="post" class="form-horizontal">
+    {% csrf_token %}
+    
+    <div class="form-group">
+        <label for="{{ form.registration_type.id_for_label }}">Registration Type:</label>
+        {{ form.registration_type|add_class:"form-control" }}
+    </div>
+
+    <div id="sensor-fields">
+        <div class="form-group">
+            <label for="{{ form.identifier.id_for_label }}">Identifier:</label>
+            {{ form.identifier|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.data_frequency.id_for_label }}">Data Frequency:</label>
+            {{ form.data_frequency|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.sensor_type.id_for_label }}">Sensor Type:</label>
+            {{ form.sensor_type|add_class:"form-control" }}
+        </div>
+        <div class="form-group temp-field" style="display:none;">
+            <label for="{{ form.temperature_threshold_low.id_for_label }}">Temperature Threshold Low:</label>
+            {{ form.temperature_threshold_low|add_class:"form-control" }}
+            <label for="{{ form.temperature_threshold_high.id_for_label }}">Temperature Threshold High:</label>
+            {{ form.temperature_threshold_high|add_class:"form-control" }}
+        </div>
+        <div class="form-group humidity-field" style="display:none;">
+            <label for="{{ form.humidity_threshold_low.id_for_label }}">Humidity Threshold Low:</label>
+            {{ form.humidity_threshold_low|add_class:"form-control" }}
+            <label for="{{ form.humidity_threshold_high.id_for_label }}">Humidity Threshold High:</label>
+            {{ form.humidity_threshold_high|add_class:"form-control" }}
+        </div>
+    </div>
+
+    <div id="system-fields" style="display:none;">
+        <div class="form-group">
+            <label for="{{ form.name.id_for_label }}">Name:</label>
+            {{ form.name|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.env_type.id_for_label }}">Environment Type:</label>
+            {{ form.env_type|add_class:"form-control" }}
+        </div>
+        <div class="form-group">
+            <label for="{{ form.target_value.id_for_label }}">Target Value:</label>
+            {{ form.target_value|add_class:"form-control" }}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="{{ form.greenhouse.id_for_label }}">Greenhouse:</label>
+        {{ form.greenhouse|add_class:"form-control" }}
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Confirm Registration</button>
+    </div>
+</form>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    function updateFields() {
+        var registrationType = document.getElementById("id_registration_type").value;
+        var sensorFields = document.getElementById("sensor-fields");
+        var systemFields = document.getElementById("system-fields");
+
+        if (registrationType === 'sensor') {
+            sensorFields.style.display = 'block';
+            systemFields.style.display = 'none';
+        } else if (registrationType === 'system') {
+            sensorFields.style.display = 'none';
+            systemFields.style.display = 'block';
+        }
+    }
+
+    document.getElementById("id_registration_type").addEventListener("change", updateFields);
+
+    updateFields();
+});
+</script>
+
+
+{% endblock %}

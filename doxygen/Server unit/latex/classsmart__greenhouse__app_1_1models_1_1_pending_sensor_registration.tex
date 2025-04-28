@@ -1,0 +1,67 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+models.\+Pending\+Sensor\+Registration Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration}{}\label{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration}\index{smart\_greenhouse\_app.models.PendingSensorRegistration@{smart\_greenhouse\_app.models.PendingSensorRegistration}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+models.\+Pending\+Sensor\+Registration\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration_a97174ca23a47a0cf933695f725d6c16c}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration_afc571ea9a554f22e1dd2af32325c4818}{unique\+\_\+identifier}} = models.\+Char\+Field(max\+\_\+length=255, unique=True)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration_a4394aa2fd9707ba6df3f907684708e53}{registration\+\_\+request\+\_\+time}} = models.\+Date\+Time\+Field(auto\+\_\+now\+\_\+add=True)
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration_af8963be6c7613ae987cd517a0fe03e68}{status}} = models.\+Char\+Field(max\+\_\+length=10, choices=\mbox{[}(\textquotesingle{}pending\textquotesingle{}, \textquotesingle{}Pending\textquotesingle{}), (\textquotesingle{}confirmed\textquotesingle{}, \textquotesingle{}Confirmed\textquotesingle{})\mbox{]}, default=\textquotesingle{}pending\textquotesingle{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Represents a pending sensor registration request.
+
+Attributes:
+    unique_identifier (CharField): The unique identifier of the sensor.
+    registration_request_time (DateTimeField): The time when the registration request was made.
+    status (CharField): The status of the registration request ('pending' or 'confirmed').
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration_a97174ca23a47a0cf933695f725d6c16c}\label{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration_a97174ca23a47a0cf933695f725d6c16c} 
+\index{smart\_greenhouse\_app.models.PendingSensorRegistration@{smart\_greenhouse\_app.models.PendingSensorRegistration}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!smart\_greenhouse\_app.models.PendingSensorRegistration@{smart\_greenhouse\_app.models.PendingSensorRegistration}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Pending\+Sensor\+Registration.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration_a4394aa2fd9707ba6df3f907684708e53}\label{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration_a4394aa2fd9707ba6df3f907684708e53} 
+\index{smart\_greenhouse\_app.models.PendingSensorRegistration@{smart\_greenhouse\_app.models.PendingSensorRegistration}!registration\_request\_time@{registration\_request\_time}}
+\index{registration\_request\_time@{registration\_request\_time}!smart\_greenhouse\_app.models.PendingSensorRegistration@{smart\_greenhouse\_app.models.PendingSensorRegistration}}
+\doxysubsubsection{\texorpdfstring{registration\_request\_time}{registration\_request\_time}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Pending\+Sensor\+Registration.\+registration\+\_\+request\+\_\+time = models.\+Date\+Time\+Field(auto\+\_\+now\+\_\+add=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration_af8963be6c7613ae987cd517a0fe03e68}\label{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration_af8963be6c7613ae987cd517a0fe03e68} 
+\index{smart\_greenhouse\_app.models.PendingSensorRegistration@{smart\_greenhouse\_app.models.PendingSensorRegistration}!status@{status}}
+\index{status@{status}!smart\_greenhouse\_app.models.PendingSensorRegistration@{smart\_greenhouse\_app.models.PendingSensorRegistration}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Pending\+Sensor\+Registration.\+status = models.\+Char\+Field(max\+\_\+length=10, choices=\mbox{[}(\textquotesingle{}pending\textquotesingle{}, \textquotesingle{}Pending\textquotesingle{}), (\textquotesingle{}confirmed\textquotesingle{}, \textquotesingle{}Confirmed\textquotesingle{})\mbox{]}, default=\textquotesingle{}pending\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration_afc571ea9a554f22e1dd2af32325c4818}\label{classsmart__greenhouse__app_1_1models_1_1_pending_sensor_registration_afc571ea9a554f22e1dd2af32325c4818} 
+\index{smart\_greenhouse\_app.models.PendingSensorRegistration@{smart\_greenhouse\_app.models.PendingSensorRegistration}!unique\_identifier@{unique\_identifier}}
+\index{unique\_identifier@{unique\_identifier}!smart\_greenhouse\_app.models.PendingSensorRegistration@{smart\_greenhouse\_app.models.PendingSensorRegistration}}
+\doxysubsubsection{\texorpdfstring{unique\_identifier}{unique\_identifier}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Pending\+Sensor\+Registration.\+unique\+\_\+identifier = models.\+Char\+Field(max\+\_\+length=255, unique=True)\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/\mbox{\hyperlink{models_8py}{models.\+py}}\end{DoxyCompactItemize}

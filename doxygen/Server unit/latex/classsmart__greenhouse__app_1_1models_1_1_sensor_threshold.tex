@@ -1,0 +1,81 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Threshold Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold}{}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold}\index{smart\_greenhouse\_app.models.SensorThreshold@{smart\_greenhouse\_app.models.SensorThreshold}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Threshold\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_1_1_meta}{Meta}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a805c20622a53f8dc2fc26c268b886beb}{\+\_\+\+\_\+str\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a8e0760e61f9d9d8719884991fa6583b3}{sensor}} = models.\+Foreign\+Key(\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit}{Sensor\+Unit}}, on\+\_\+delete=models.\+CASCADE, related\+\_\+name=\textquotesingle{}thresholds\textquotesingle{})
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a577d6595ca99fbddaec2d68e4c2ece34}{key}} = models.\+Char\+Field(max\+\_\+length=50, help\+\_\+text="{}Data key (e.\+g., temperature, humidity)."{})
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a78a288de11cfc78cfb3d77bc693592bc}{threshold\+\_\+low}} = models.\+Float\+Field(default=0.\+0, help\+\_\+text="{}Lower threshold."{})
+\item 
+\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a7edc5f9df00eed09d807a61049db1fc1}{threshold\+\_\+high}} = models.\+Float\+Field(default=100.\+0, help\+\_\+text="{}Upper threshold."{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Represents thresholds for a sensor unit.
+
+Attributes:
+    sensor (ForeignKey): The sensor associated with the thresholds.
+    key (CharField): The data key (e.g., temperature, humidity).
+    threshold_low (FloatField): The lower threshold for this key.
+    threshold_high (FloatField): The upper threshold for this key.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a805c20622a53f8dc2fc26c268b886beb}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a805c20622a53f8dc2fc26c268b886beb} 
+\index{smart\_greenhouse\_app.models.SensorThreshold@{smart\_greenhouse\_app.models.SensorThreshold}!\_\_str\_\_@{\_\_str\_\_}}
+\index{\_\_str\_\_@{\_\_str\_\_}!smart\_greenhouse\_app.models.SensorThreshold@{smart\_greenhouse\_app.models.SensorThreshold}}
+\doxysubsubsection{\texorpdfstring{\_\_str\_\_()}{\_\_str\_\_()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Threshold.\+\_\+\+\_\+str\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a577d6595ca99fbddaec2d68e4c2ece34}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a577d6595ca99fbddaec2d68e4c2ece34} 
+\index{smart\_greenhouse\_app.models.SensorThreshold@{smart\_greenhouse\_app.models.SensorThreshold}!key@{key}}
+\index{key@{key}!smart\_greenhouse\_app.models.SensorThreshold@{smart\_greenhouse\_app.models.SensorThreshold}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Threshold.\+key = models.\+Char\+Field(max\+\_\+length=50, help\+\_\+text="{}Data key (e.\+g., temperature, humidity)."{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a8e0760e61f9d9d8719884991fa6583b3}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a8e0760e61f9d9d8719884991fa6583b3} 
+\index{smart\_greenhouse\_app.models.SensorThreshold@{smart\_greenhouse\_app.models.SensorThreshold}!sensor@{sensor}}
+\index{sensor@{sensor}!smart\_greenhouse\_app.models.SensorThreshold@{smart\_greenhouse\_app.models.SensorThreshold}}
+\doxysubsubsection{\texorpdfstring{sensor}{sensor}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Threshold.\+sensor = models.\+Foreign\+Key(\mbox{\hyperlink{classsmart__greenhouse__app_1_1models_1_1_sensor_unit}{Sensor\+Unit}}, on\+\_\+delete=models.\+CASCADE, related\+\_\+name=\textquotesingle{}thresholds\textquotesingle{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a7edc5f9df00eed09d807a61049db1fc1}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a7edc5f9df00eed09d807a61049db1fc1} 
+\index{smart\_greenhouse\_app.models.SensorThreshold@{smart\_greenhouse\_app.models.SensorThreshold}!threshold\_high@{threshold\_high}}
+\index{threshold\_high@{threshold\_high}!smart\_greenhouse\_app.models.SensorThreshold@{smart\_greenhouse\_app.models.SensorThreshold}}
+\doxysubsubsection{\texorpdfstring{threshold\_high}{threshold\_high}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Threshold.\+threshold\+\_\+high = models.\+Float\+Field(default=100.\+0, help\+\_\+text="{}Upper threshold."{})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a78a288de11cfc78cfb3d77bc693592bc}\label{classsmart__greenhouse__app_1_1models_1_1_sensor_threshold_a78a288de11cfc78cfb3d77bc693592bc} 
+\index{smart\_greenhouse\_app.models.SensorThreshold@{smart\_greenhouse\_app.models.SensorThreshold}!threshold\_low@{threshold\_low}}
+\index{threshold\_low@{threshold\_low}!smart\_greenhouse\_app.models.SensorThreshold@{smart\_greenhouse\_app.models.SensorThreshold}}
+\doxysubsubsection{\texorpdfstring{threshold\_low}{threshold\_low}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+models.\+Sensor\+Threshold.\+threshold\+\_\+low = models.\+Float\+Field(default=0.\+0, help\+\_\+text="{}Lower threshold."{})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/\mbox{\hyperlink{models_8py}{models.\+py}}\end{DoxyCompactItemize}

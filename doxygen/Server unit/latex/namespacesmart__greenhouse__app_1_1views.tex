@@ -1,0 +1,382 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+views Namespace Reference}
+\hypertarget{namespacesmart__greenhouse__app_1_1views}{}\label{namespacesmart__greenhouse__app_1_1views}\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a80aca087d08aff1cbfd224558d60602d}{get\+\_\+sensor\+\_\+data}} (request)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_ad68223b07af0f94527d6746359f062a5}{pending\+\_\+registrations}} (request)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a89ebed911c7998d80889672495e5b9dd}{confirm\+\_\+registration}} (request, id)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_aa2af99ab397cd7dbcf7d7a490cb1752c}{list\+\_\+greenhouses}} (request)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_aa085f3f795add778c6e290b15dc68c54}{greenhouse\+\_\+detail}} (request, pk)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a02039c345e885a8fdd1e4e29aabd488e}{add\+\_\+greenhouse}} (request)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a21bedff2e7f86e898b450a0de1d7aa62}{add\+\_\+sensor\+\_\+unit}} (request)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a31621a823e1bd4a46e73f20f1a77a21c}{add\+\_\+environmental\+\_\+system}} (request)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a696f60144042abf3f9b4987737570c3d}{toggle\+\_\+automation}} (request, pk)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a5f26f5f335ed44adf92e6e9674e64df0}{edit\+\_\+environmental\+\_\+system}} (request, system\+\_\+id)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_affe7df4af6a59ea58055670f5a60b921}{toggle\+\_\+environmental\+\_\+system}} (request, system\+\_\+id)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a98b5430393300176330aa6944ccd4480}{reset\+\_\+sprinkler}} (request, pk)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_afd242969bd5f76f7c8f748de212603ee}{delete\+\_\+environmental\+\_\+system}} (request, system\+\_\+id)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a2c7b6dfcd49e22546364bb66180ee9e8}{index}} (request)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a79103a3a9e85b6ef53c00a37457d0516}{delete\+\_\+sensor\+\_\+unit}} (request, sensor\+\_\+id)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_aa2810ea07ae07cd5a7a353883ecc5273}{edit\+\_\+sensor\+\_\+unit}} (request, sensor\+\_\+id)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a33c49ac5e61f77ff3cb6a966d84ef4ad}{resolve\+\_\+alert}} (request, alert\+\_\+id)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a226b9ece312785def762dc6f38022690}{sensor\+\_\+alerts\+\_\+log}} (request, sensor\+\_\+id)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_ad01515f7767ac1cfddbc8ba73dc3c4d1}{edit\+\_\+greenhouse}} (request, pk)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a82e3a039abdf880452c832641e6b344d}{delete\+\_\+greenhouse}} (request, pk)
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a2244ac0779fe421ab88ed82a9ce93572}{adjust\+\_\+window\+\_\+angle}} (request, pk)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1views_a868920cdb7070fef48730231324917bb}{logger}} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Django views for managing sensor units, greenhouses, and environmental systems.
+
+This module includes views that handle HTTP requests to manage sensor units, greenhouses,
+and environmental systems.
+
+Each view interacts with the model via Django's ORM to retrieve, update, or delete data, and then returns HTTP responses or renders templates with context data.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacesmart__greenhouse__app_1_1views_a31621a823e1bd4a46e73f20f1a77a21c}\label{namespacesmart__greenhouse__app_1_1views_a31621a823e1bd4a46e73f20f1a77a21c} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!add\_environmental\_system@{add\_environmental\_system}}
+\index{add\_environmental\_system@{add\_environmental\_system}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{add\_environmental\_system()}{add\_environmental\_system()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+add\+\_\+environmental\+\_\+system (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adds a new environmental system to the database via a form submission, validating and saving the system if the form is valid.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+
+Returns:
+    HttpResponse: Redirects to list of greenhouses after successful addition or renders the form again if necessary.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_a02039c345e885a8fdd1e4e29aabd488e}\label{namespacesmart__greenhouse__app_1_1views_a02039c345e885a8fdd1e4e29aabd488e} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!add\_greenhouse@{add\_greenhouse}}
+\index{add\_greenhouse@{add\_greenhouse}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{add\_greenhouse()}{add\_greenhouse()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+add\+\_\+greenhouse (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adds a new greenhouse using a form submission. If the form is valid, the greenhouse is saved and the user is redirected to the list of greenhouses.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+
+Returns:
+    HttpResponse: Redirects to list of greenhouses after successful submission or renders the form again if validation fails.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_a21bedff2e7f86e898b450a0de1d7aa62}\label{namespacesmart__greenhouse__app_1_1views_a21bedff2e7f86e898b450a0de1d7aa62} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!add\_sensor\_unit@{add\_sensor\_unit}}
+\index{add\_sensor\_unit@{add\_sensor\_unit}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{add\_sensor\_unit()}{add\_sensor\_unit()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+add\+\_\+sensor\+\_\+unit (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adds a new sensor unit to a greenhouse via a form submission. Validates and saves the sensor unit if the form is valid.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+
+Returns:
+    HttpResponse: Redirects to the list of greenhouses after saving or renders the form again for corrections.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_a2244ac0779fe421ab88ed82a9ce93572}\label{namespacesmart__greenhouse__app_1_1views_a2244ac0779fe421ab88ed82a9ce93572} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!adjust\_window\_angle@{adjust\_window\_angle}}
+\index{adjust\_window\_angle@{adjust\_window\_angle}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{adjust\_window\_angle()}{adjust\_window\_angle()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+adjust\+\_\+window\+\_\+angle (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{pk }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adjusts the angle of a window control system.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    pk (int): Primary key of the window control system.
+
+Returns:
+    JsonResponse: Indicates the success or failure of the angle adjustment.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_a89ebed911c7998d80889672495e5b9dd}\label{namespacesmart__greenhouse__app_1_1views_a89ebed911c7998d80889672495e5b9dd} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!confirm\_registration@{confirm\_registration}}
+\index{confirm\_registration@{confirm\_registration}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{confirm\_registration()}{confirm\_registration()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+confirm\+\_\+registration (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Confirms a pending registration as either a Sensor Unit or an Environmental System.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    id (int): The ID of the PendingSensorRegistration to confirm.
+
+Returns:
+    HttpResponse: Renders the confirmation form for GET requests, or redirects to the pending registrations page upon successful POST.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_afd242969bd5f76f7c8f748de212603ee}\label{namespacesmart__greenhouse__app_1_1views_afd242969bd5f76f7c8f748de212603ee} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!delete\_environmental\_system@{delete\_environmental\_system}}
+\index{delete\_environmental\_system@{delete\_environmental\_system}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{delete\_environmental\_system()}{delete\_environmental\_system()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+delete\+\_\+environmental\+\_\+system (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{system\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Deletes an environmental system from the database.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    system_id (int): Primary key of the environmental system to delete.
+
+Returns:
+    HttpResponse: Redirects to the greenhouse detail view after successfully removing the system.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_a82e3a039abdf880452c832641e6b344d}\label{namespacesmart__greenhouse__app_1_1views_a82e3a039abdf880452c832641e6b344d} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!delete\_greenhouse@{delete\_greenhouse}}
+\index{delete\_greenhouse@{delete\_greenhouse}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{delete\_greenhouse()}{delete\_greenhouse()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+delete\+\_\+greenhouse (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{pk }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Deletes a greenhouse from the database.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    pk (int): Primary key of the greenhouse to delete.
+
+Returns:
+    HttpResponse: Redirects to the list of greenhouses after successful deletion.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_a79103a3a9e85b6ef53c00a37457d0516}\label{namespacesmart__greenhouse__app_1_1views_a79103a3a9e85b6ef53c00a37457d0516} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!delete\_sensor\_unit@{delete\_sensor\_unit}}
+\index{delete\_sensor\_unit@{delete\_sensor\_unit}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{delete\_sensor\_unit()}{delete\_sensor\_unit()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+delete\+\_\+sensor\+\_\+unit (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{sensor\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Deletes a sensor unit from the database.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    sensor_id (int): ID of the sensor unit to delete.
+
+Returns:
+    HttpResponse: Redirects to the list of greenhouses after the sensor is deleted.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_a5f26f5f335ed44adf92e6e9674e64df0}\label{namespacesmart__greenhouse__app_1_1views_a5f26f5f335ed44adf92e6e9674e64df0} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!edit\_environmental\_system@{edit\_environmental\_system}}
+\index{edit\_environmental\_system@{edit\_environmental\_system}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{edit\_environmental\_system()}{edit\_environmental\_system()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+edit\+\_\+environmental\+\_\+system (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{system\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Edits an environmental system's settings via a form submission.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    system_id (int): Primary key of the environmental system to edit.
+
+Returns:
+    HttpResponse: Redirects to the greenhouse detail view after successful update or renders the form again with errors.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_ad01515f7767ac1cfddbc8ba73dc3c4d1}\label{namespacesmart__greenhouse__app_1_1views_ad01515f7767ac1cfddbc8ba73dc3c4d1} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!edit\_greenhouse@{edit\_greenhouse}}
+\index{edit\_greenhouse@{edit\_greenhouse}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{edit\_greenhouse()}{edit\_greenhouse()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+edit\+\_\+greenhouse (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{pk }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Edits details of a greenhouse via a form submission.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    pk (int): Primary key of the greenhouse to edit.
+
+Returns:
+    HttpResponse: Redirects to the greenhouse detail view after successful update or renders the form again with errors.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_aa2810ea07ae07cd5a7a353883ecc5273}\label{namespacesmart__greenhouse__app_1_1views_aa2810ea07ae07cd5a7a353883ecc5273} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!edit\_sensor\_unit@{edit\_sensor\_unit}}
+\index{edit\_sensor\_unit@{edit\_sensor\_unit}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{edit\_sensor\_unit()}{edit\_sensor\_unit()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+edit\+\_\+sensor\+\_\+unit (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{sensor\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Edits a sensor unit's details via a form submission.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    sensor_id (int): ID of the sensor unit to edit.
+
+Returns:
+    HttpResponse: Redirects to the greenhouse detail view after successful update or renders the form again with errors.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_a80aca087d08aff1cbfd224558d60602d}\label{namespacesmart__greenhouse__app_1_1views_a80aca087d08aff1cbfd224558d60602d} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!get\_sensor\_data@{get\_sensor\_data}}
+\index{get\_sensor\_data@{get\_sensor\_data}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{get\_sensor\_data()}{get\_sensor\_data()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+get\+\_\+sensor\+\_\+data (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Retrieves data for all sensor units and returns it in JSON format.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+
+Returns:
+    JsonResponse: Contains sensor data including identifiers, online status, and last recorded data.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_aa085f3f795add778c6e290b15dc68c54}\label{namespacesmart__greenhouse__app_1_1views_aa085f3f795add778c6e290b15dc68c54} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!greenhouse\_detail@{greenhouse\_detail}}
+\index{greenhouse\_detail@{greenhouse\_detail}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{greenhouse\_detail()}{greenhouse\_detail()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+greenhouse\+\_\+detail (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{pk }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Provides the details of a specific greenhouse, allows update to environmental systems' target values through POST requests.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    pk (int): Primary key of the greenhouse to display.
+
+Returns:
+    HttpResponse: Redirects after updates or renders details of a specific greenhouse.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_a2c7b6dfcd49e22546364bb66180ee9e8}\label{namespacesmart__greenhouse__app_1_1views_a2c7b6dfcd49e22546364bb66180ee9e8} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!index@{index}}
+\index{index@{index}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+index (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Displays the index page showing recent alerts and forecasts.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+
+Returns:
+    HttpResponse: Renders the index page with lists of recent alerts and weather forecasts.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_aa2af99ab397cd7dbcf7d7a490cb1752c}\label{namespacesmart__greenhouse__app_1_1views_aa2af99ab397cd7dbcf7d7a490cb1752c} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!list\_greenhouses@{list\_greenhouses}}
+\index{list\_greenhouses@{list\_greenhouses}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{list\_greenhouses()}{list\_greenhouses()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+list\+\_\+greenhouses (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Displays a list of all greenhouses registered in the system.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+
+Returns:
+    HttpResponse: Renders the list of greenhouses to the user.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_ad68223b07af0f94527d6746359f062a5}\label{namespacesmart__greenhouse__app_1_1views_ad68223b07af0f94527d6746359f062a5} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!pending\_registrations@{pending\_registrations}}
+\index{pending\_registrations@{pending\_registrations}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{pending\_registrations()}{pending\_registrations()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+pending\+\_\+registrations (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Displays a list of pending sensor unit registrations.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+
+Returns:
+    HttpResponse: Renders the pending registrations page with the list of registrations.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_a98b5430393300176330aa6944ccd4480}\label{namespacesmart__greenhouse__app_1_1views_a98b5430393300176330aa6944ccd4480} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!reset\_sprinkler@{reset\_sprinkler}}
+\index{reset\_sprinkler@{reset\_sprinkler}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{reset\_sprinkler()}{reset\_sprinkler()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+reset\+\_\+sprinkler (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{pk }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sends a reset command to a sprinkler system via MQTT.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    pk (int): Primary key of the sprinkler environmental system to reset.
+
+Returns:
+    JsonResponse: Status of the reset operation.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_a33c49ac5e61f77ff3cb6a966d84ef4ad}\label{namespacesmart__greenhouse__app_1_1views_a33c49ac5e61f77ff3cb6a966d84ef4ad} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!resolve\_alert@{resolve\_alert}}
+\index{resolve\_alert@{resolve\_alert}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{resolve\_alert()}{resolve\_alert()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+resolve\+\_\+alert (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{alert\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Marks an alert as resolved.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    alert_id (int): ID of the alert to resolve.
+
+Returns:
+    HttpResponse: Redirects to the sensor alerts log page after the alert is marked as resolved.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_a226b9ece312785def762dc6f38022690}\label{namespacesmart__greenhouse__app_1_1views_a226b9ece312785def762dc6f38022690} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!sensor\_alerts\_log@{sensor\_alerts\_log}}
+\index{sensor\_alerts\_log@{sensor\_alerts\_log}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{sensor\_alerts\_log()}{sensor\_alerts\_log()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+sensor\+\_\+alerts\+\_\+log (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{sensor\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Displays a log of all alerts for a particular sensor.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    sensor_id (int): ID of the sensor whose alerts are to be displayed.
+
+Returns:
+    HttpResponse: Renders the sensor alerts log page with the list of alerts.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_a696f60144042abf3f9b4987737570c3d}\label{namespacesmart__greenhouse__app_1_1views_a696f60144042abf3f9b4987737570c3d} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!toggle\_automation@{toggle\_automation}}
+\index{toggle\_automation@{toggle\_automation}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{toggle\_automation()}{toggle\_automation()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+toggle\+\_\+automation (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{pk }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Toggles the automation status of a greenhouse.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    pk (int): Primary key of the greenhouse for which to toggle automation.
+
+Returns:
+    HttpResponse: Redirects to the greenhouse detail view after changing the automation status.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1views_affe7df4af6a59ea58055670f5a60b921}\label{namespacesmart__greenhouse__app_1_1views_affe7df4af6a59ea58055670f5a60b921} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!toggle\_environmental\_system@{toggle\_environmental\_system}}
+\index{toggle\_environmental\_system@{toggle\_environmental\_system}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{toggle\_environmental\_system()}{toggle\_environmental\_system()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+toggle\+\_\+environmental\+\_\+system (\begin{DoxyParamCaption}\item[{}]{request,  }\item[{}]{system\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Toggles the active state of an environmental system via MQTT and updates the system's status in the database.
+
+Parameters:
+    request (HttpRequest): The HTTP request object.
+    system_id (int): Primary key of the environmental system to toggle.
+
+Returns:
+    JsonResponse: Indicates the success or failure of the operation along with the new state of the system.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacesmart__greenhouse__app_1_1views_a868920cdb7070fef48730231324917bb}\label{namespacesmart__greenhouse__app_1_1views_a868920cdb7070fef48730231324917bb} 
+\index{smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}!logger@{logger}}
+\index{logger@{logger}!smart\_greenhouse\_app.views@{smart\_greenhouse\_app.views}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+views.\+logger = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)}
+

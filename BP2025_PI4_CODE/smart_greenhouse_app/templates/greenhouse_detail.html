@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load greenhouse_filters %}
+{% load static %}
+
+
+{% block extra_head %}
+<style>
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .card {
+        flex: 1 0 48%;
+        margin-bottom: 1rem;
+        border-left: 5px solid;
+        padding: 15px;
+        background-color: #343a40;
+        color: #adb5bd;
+        border-color: #454d55;
+    }
+    .sensor-card {
+        flex: 1 0 48%;
+        margin-bottom: 1rem;
+        padding: 15px;
+    }
+    .card-container .card.env-system-card {
+        background-color: #204060 !important;
+        color: #ffffff !important;
+        border-color: #31708f !important;
+    }
+
+
+    .online {
+        border-color: #28a745; 
+    }
+    .offline {
+        border-color: #dc3545;
+    }
+    .alert-highlight {
+        background-color: #561919;
+        color: #f8d7da;
+        border-width: 4px;
+    }
+
+    .alert {
+        background-color: #343a40;
+        border-color: #454d55;
+        color: #adb5bd;
+    }
+    .btn-secondary, .btn-info, .btn-light {
+        border-color: #454d55;
+    }
+    .btn-light {
+        background-color: #6c757d;
+        color: #ffffff;
+    }
+    .data-label {
+        font-weight: bold;
+    }
+    .sensor-data {
+        margin-bottom: 0.5rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-white">Greenhouse Details</h2>
+    <div class="mb-3 text-light">
+        <h3>{{ greenhouse.name }}</h3>
+        <p class="card-text text-light">
+            {% with greenhouse.contents|split_string:"," as contents %}
+                {% if contents %}
+                    {% for content in contents %}
+                        <span class="badge bg-secondary">{{ content }}</span>
+                    {% endfor %}
+                {% else %}
+                    <span class="text-light">No contents</span>
+                {% endif %}
+            {% endwith %}
+        </p>
+        <a href="{% url 'edit_greenhouse' greenhouse.id %}" class="btn btn-secondary">Edit Greenhouse Details</a>
+    </div>
+
+    <form action="{% url 'toggle_automation' greenhouse.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn {% if greenhouse.automated %}btn-success{% else %}btn-danger{% endif %}">
+            {% if greenhouse.automated %}Disable Automation{% else %}Enable Automation{% endif %}
+        </button>
+        
+    </form>
+    
+
+    <h3 class="text-white">Sensors</h3>
+    <div class="card-container">
+        {% for sensor in sensors %}
+        <div id="sensor-{{ sensor.id }}" class="card mb-3 sensor-card {% if sensor.is_online %}online{% else %}offline{% endif %}{% if sensor.has_active_alerts %} alert-highlight{% endif %}">
+            <div class="card-body bg-dark">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="card-title mb-0">{{ sensor.identifier }} - 
+                        <span class="sensor-status {% if sensor.is_online %}text-success{% else %}text-danger{% endif %}">
+                            {{ sensor.is_online|yesno:"Online,Offline" }}
+                        </span>                        
+                    </h5>
+                    <div>
+                        <a href="{% url 'edit_sensor_unit' sensor.id %}" class="btn btn-secondary">Edit Sensor Details</a>
+                        <a href="{% url 'sensor_alerts_log' sensor.id %}" class="btn btn-info">View All Alerts</a>
+                    </div>
+                </div>
+                {% for alert in sensor.active_alerts %}
+                <div class="alert mt-2" role="alert">
+                    <strong>Alert:</strong> {{ alert.message|safe }} - {{ alert.timestamp|date:"N j, Y, P" }}
+                    <form action="{% url 'resolve_alert' alert.id %}" method="post" class="d-inline-block">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-light btn-sm">Mark as Resolved</button>
+                    </form>
+                </div>
+                {% endfor %}
+                <div class="sensor-data">
+                    <p class="data-label">Last Data:</p>
+                    <div class="sensor-last-data">
+                        {% with sensor.get_last_data as last_data %}
+                            {% if last_data %}
+                                <div>
+                                    {% for key, value in last_data.items %}
+                                        {% if key != "value" %}
+                                            <span class="data-label">{{ key|capfirst }}:</span> {{ value }}{% if not forloop.last %}, {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                <p>No data available</p>
+                            {% endif %}
+                        {% endwith %}
+                    </div>
+                </div>
+                
+                
+
+            </div>
+        </div>
+        {% empty %}
+        <p>No sensors here.</p>
+        {% endfor %}
+    </div>
+    <h3 class="text-white">Environmental Systems</h3>
+    <div class="card-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 10px;">
+        {% for system in greenhouse.env_systems.all %}
+        <div class="card env-system-card mb-3" style="background-color: #204060; color: #ffffff; border-color: #31708f; flex: 1 0 30%; margin-bottom: 10px; padding: 10px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <h5>{{ system.name }} ({{ system.get_env_type_display }})</h5>
+                <p class="status-text" id="status-text-{{ system.unique_identifier }}">
+                    Activity: <span class="activity-status">{{ system.is_active|yesno:"Active,Inactive" }}</span><br>
+                    System Status: 
+                    <span class="system-status-span 
+                        {% if system.status == 'waiting' %}text-warning
+                        {% elif system.status == 'unreachable' %}text-danger
+                        {% elif system.status == 'active' %}text-success
+                        {% else %}text-light
+                        {% endif %}
+                    ">
+                        {{ system.get_status_display }}
+                    </span>
+                </p>
+                {% with system.data|parse_json as parsed_data %}
+                <div class="data-text">
+                    {% if parsed_data.data %}
+                        <p class="mb-1"><strong>Status:</strong> {{ parsed_data.status|default:"Unknown" }}</p>
+                        {% if parsed_data.data.0 %}
+                            {% for item in parsed_data.data %}
+                                <ul class="mb-2">
+                                    {% for key, val in item.items %}
+                                        <li><strong>{{ key|capfirst }}:</strong> {{ val }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endfor %}
+                        {% else %}
+                            <ul class="mb-2">
+                                {% for key, val in parsed_data.data.items %}
+                                    <li><strong>{{ key|capfirst }}:</strong> {{ val }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% else %}
+                        <p><strong>Status:</strong> {{ parsed_data.status|default:"Unknown" }}</p>
+                    {% endif %}
+                </div>
+            {% endwith %}
+            
+                {% if system.env_type == 'Window' %}
+                <div class="window-controls">
+                    <label for="window-slider-{{ system.pk }}">Window Angle:</label>
+                    <span id="angle-display-{{ system.pk }}">{{ system.windowcontrolsystem.current_angle }}</span>°
+                    <input type="range" id="window-slider-{{ system.pk }}" name="angle" min="0" max="90" value="{{ system.windowcontrolsystem.current_angle }}" onchange="updateWindowAngle(this.value, '{{ system.pk }}')">
+                </div>
+                {% endif %}
+                <form method="post" class="toggle-system-form" action="{% url 'toggle_environmental_system' system.pk %}">
+                    {% csrf_token %}
+                    {% if system.is_active %}
+                    <button id="toggle-button-{{ system.unique_identifier }}" type="button" class="btn btn-warning toggle-button" data-action="false">Deactivate</button>
+                    {% else %}
+                    <button id="toggle-button-{{ system.unique_identifier }}" type="button" class="btn btn-success toggle-button" data-action="true">Activate</button>
+                    {% endif %}
+                </form>
+            </div>
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+                <a href="{% url 'edit_environmental_system' system.pk %}" class="btn btn-secondary">Edit</a>
+                <a href="{% url 'delete_environmental_system' system.pk %}" class="btn btn-danger" style="margin-left: auto;">Delete</a>
+            </div>
+        </div>
+        {% empty %}
+        <p>No environmental systems configured.</p>
+        {% endfor %}
+        
+    </div>
+    
+    
+</div>
+<script>
+    window.greenhouseSystems = [
+        {% for system in greenhouse.env_systems.all %}
+            '{{ system.unique_identifier }}'{% if not forloop.last %},{% endif %}
+        {% endfor %}
+    ];
+
+    window.sensorDataUrl = "{% url 'get_sensor_data' %}";
+</script>
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/greenhouse.js' %}"></script>
+
+
+{% endblock %}

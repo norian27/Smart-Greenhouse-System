@@ -1,0 +1,1 @@
+default_app_config = 'smart_greenhouse_app.apps.SmartGreenhouseAppConfig'

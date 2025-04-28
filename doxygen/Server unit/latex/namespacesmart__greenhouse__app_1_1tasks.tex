@@ -1,0 +1,67 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+tasks Namespace Reference}
+\hypertarget{namespacesmart__greenhouse__app_1_1tasks}{}\label{namespacesmart__greenhouse__app_1_1tasks}\index{smart\_greenhouse\_app.tasks@{smart\_greenhouse\_app.tasks}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1tasks_a96be0963fc2e5f57dfd0aa03974c7ef1}{check\+\_\+sensor\+\_\+statuses}} ()
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1tasks_ada30870de20ce693486484216af5bd22}{fetch\+\_\+and\+\_\+analyze\+\_\+weather\+\_\+task}} ()
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1tasks_a92af077f626b5ca1494b8d49c19c92a5}{adjust\+\_\+systems\+\_\+task}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse__app_1_1tasks_a4d9b72fd70fa6de6f0323af7990c400f}{logger}} = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Celery task definitions for the Django project.
+
+This module contains asynchronous tasks that handle periodic background processes such as sensor status checks,
+weather data fetching and analysis, and environmental system adjustments based on automation settings.
+These tasks are scheduled to run at specific intervals or can be triggered as needed.
+
+Dependencies:
+- Celery: for task queue management.
+- Django: for ORM and email functionalities.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacesmart__greenhouse__app_1_1tasks_a92af077f626b5ca1494b8d49c19c92a5}\label{namespacesmart__greenhouse__app_1_1tasks_a92af077f626b5ca1494b8d49c19c92a5} 
+\index{smart\_greenhouse\_app.tasks@{smart\_greenhouse\_app.tasks}!adjust\_systems\_task@{adjust\_systems\_task}}
+\index{adjust\_systems\_task@{adjust\_systems\_task}!smart\_greenhouse\_app.tasks@{smart\_greenhouse\_app.tasks}}
+\doxysubsubsection{\texorpdfstring{adjust\_systems\_task()}{adjust\_systems\_task()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+tasks.\+adjust\+\_\+systems\+\_\+task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adjusts the environmental systems of all automated greenhouses based on their sensor readings and predefined
+settings. Logs the activity and outcomes of the adjustments.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1tasks_a96be0963fc2e5f57dfd0aa03974c7ef1}\label{namespacesmart__greenhouse__app_1_1tasks_a96be0963fc2e5f57dfd0aa03974c7ef1} 
+\index{smart\_greenhouse\_app.tasks@{smart\_greenhouse\_app.tasks}!check\_sensor\_statuses@{check\_sensor\_statuses}}
+\index{check\_sensor\_statuses@{check\_sensor\_statuses}!smart\_greenhouse\_app.tasks@{smart\_greenhouse\_app.tasks}}
+\doxysubsubsection{\texorpdfstring{check\_sensor\_statuses()}{check\_sensor\_statuses()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+tasks.\+check\+\_\+sensor\+\_\+statuses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Periodically checks the status of all registered sensors and sends an email alert if any sensor is offline.
+\end{DoxyVerb}
+ \Hypertarget{namespacesmart__greenhouse__app_1_1tasks_ada30870de20ce693486484216af5bd22}\label{namespacesmart__greenhouse__app_1_1tasks_ada30870de20ce693486484216af5bd22} 
+\index{smart\_greenhouse\_app.tasks@{smart\_greenhouse\_app.tasks}!fetch\_and\_analyze\_weather\_task@{fetch\_and\_analyze\_weather\_task}}
+\index{fetch\_and\_analyze\_weather\_task@{fetch\_and\_analyze\_weather\_task}!smart\_greenhouse\_app.tasks@{smart\_greenhouse\_app.tasks}}
+\doxysubsubsection{\texorpdfstring{fetch\_and\_analyze\_weather\_task()}{fetch\_and\_analyze\_weather\_task()}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+tasks.\+fetch\+\_\+and\+\_\+analyze\+\_\+weather\+\_\+task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Fetches weather forecast data using latitude and longitude obtained from the utility function and analyzes the
+temperature to detect cold waves. Updates or creates weather forecast records accordingly.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacesmart__greenhouse__app_1_1tasks_a4d9b72fd70fa6de6f0323af7990c400f}\label{namespacesmart__greenhouse__app_1_1tasks_a4d9b72fd70fa6de6f0323af7990c400f} 
+\index{smart\_greenhouse\_app.tasks@{smart\_greenhouse\_app.tasks}!logger@{logger}}
+\index{logger@{logger}!smart\_greenhouse\_app.tasks@{smart\_greenhouse\_app.tasks}}
+\doxysubsubsection{\texorpdfstring{logger}{logger}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse\+\_\+app.\+tasks.\+logger = logging.\+get\+Logger(\+\_\+\+\_\+name\+\_\+\+\_\+)}
+

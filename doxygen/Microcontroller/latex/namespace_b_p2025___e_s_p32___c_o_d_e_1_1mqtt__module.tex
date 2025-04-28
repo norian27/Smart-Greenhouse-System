@@ -1,0 +1,117 @@
+\doxysection{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+mqtt\+\_\+module Namespace Reference}
+\hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module}{}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module}\index{BP2025\_ESP32\_CODE.mqtt\_module@{BP2025\_ESP32\_CODE.mqtt\_module}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_afa3852362329f210e8ad854a3cc5f300}{read\+\_\+data}} (str file\+\_\+name)
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_ab40809e4b5d18e9f2771c6750f218a46}{sub\+\_\+cb}} (topic, msg, retained, duplicate)
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_a4fd7de395f90483040954c2d752c2314}{load\+\_\+ssl\+\_\+params}} ()
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_ac788e78349dd955838a9c78037968db4}{connect\+\_\+to\+\_\+mqtt}} ()
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_a360c5b0b0b9620a6ec3ce9f462e52e66}{request\+\_\+settings}} ()
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_ac3f77513080735b3b6327559d858c34e}{send\+\_\+data}} (client, unique\+\_\+id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}MQTT communication module for the microcontroller.
+
+This module manages connecting to the MQTT broker, subscribing to topics,
+handling incoming messages, and publishing sensor data and settings.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_ac788e78349dd955838a9c78037968db4}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_ac788e78349dd955838a9c78037968db4} 
+\index{BP2025\_ESP32\_CODE.mqtt\_module@{BP2025\_ESP32\_CODE.mqtt\_module}!connect\_to\_mqtt@{connect\_to\_mqtt}}
+\index{connect\_to\_mqtt@{connect\_to\_mqtt}!BP2025\_ESP32\_CODE.mqtt\_module@{BP2025\_ESP32\_CODE.mqtt\_module}}
+\doxysubsubsection{\texorpdfstring{connect\_to\_mqtt()}{connect\_to\_mqtt()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+mqtt\+\_\+module.\+connect\+\_\+to\+\_\+mqtt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Connects to the MQTT broker using SSL/TLS authentication.
+
+Subscribes to required topics after a successful connection.
+
+Returns:
+    MQTTClient: The connected MQTT client instance.
+
+Raises:
+    Exception: If connection to all brokers fails.
+\end{DoxyVerb}
+ \Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_a4fd7de395f90483040954c2d752c2314}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_a4fd7de395f90483040954c2d752c2314} 
+\index{BP2025\_ESP32\_CODE.mqtt\_module@{BP2025\_ESP32\_CODE.mqtt\_module}!load\_ssl\_params@{load\_ssl\_params}}
+\index{load\_ssl\_params@{load\_ssl\_params}!BP2025\_ESP32\_CODE.mqtt\_module@{BP2025\_ESP32\_CODE.mqtt\_module}}
+\doxysubsubsection{\texorpdfstring{load\_ssl\_params()}{load\_ssl\_params()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+mqtt\+\_\+module.\+load\+\_\+ssl\+\_\+params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Loads SSL/TLS certificates required for a secure MQTT connection.
+
+Returns:
+    dict: A dictionary containing SSL parameters (key, cert, CA certificate).
+
+Raises:
+    Exception: If reading certificate files fails.
+\end{DoxyVerb}
+ \Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_afa3852362329f210e8ad854a3cc5f300}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_afa3852362329f210e8ad854a3cc5f300} 
+\index{BP2025\_ESP32\_CODE.mqtt\_module@{BP2025\_ESP32\_CODE.mqtt\_module}!read\_data@{read\_data}}
+\index{read\_data@{read\_data}!BP2025\_ESP32\_CODE.mqtt\_module@{BP2025\_ESP32\_CODE.mqtt\_module}}
+\doxysubsubsection{\texorpdfstring{read\_data()}{read\_data()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+mqtt\+\_\+module.\+read\+\_\+data (\begin{DoxyParamCaption}\item[{str}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Reads the contents of a file.
+
+Parameters:
+    file_name (str): The path to the file to be read.
+
+Returns:
+    bytes: The contents of the file.
+
+Raises:
+    Exception: If the file cannot be opened or read.
+\end{DoxyVerb}
+ \Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_a360c5b0b0b9620a6ec3ce9f462e52e66}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_a360c5b0b0b9620a6ec3ce9f462e52e66} 
+\index{BP2025\_ESP32\_CODE.mqtt\_module@{BP2025\_ESP32\_CODE.mqtt\_module}!request\_settings@{request\_settings}}
+\index{request\_settings@{request\_settings}!BP2025\_ESP32\_CODE.mqtt\_module@{BP2025\_ESP32\_CODE.mqtt\_module}}
+\doxysubsubsection{\texorpdfstring{request\_settings()}{request\_settings()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+mqtt\+\_\+module.\+request\+\_\+settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sends a settings request message to the MQTT broker.
+
+Publishes an empty JSON payload requesting updated settings from the backend.
+\end{DoxyVerb}
+ \Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_ac3f77513080735b3b6327559d858c34e}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_ac3f77513080735b3b6327559d858c34e} 
+\index{BP2025\_ESP32\_CODE.mqtt\_module@{BP2025\_ESP32\_CODE.mqtt\_module}!send\_data@{send\_data}}
+\index{send\_data@{send\_data}!BP2025\_ESP32\_CODE.mqtt\_module@{BP2025\_ESP32\_CODE.mqtt\_module}}
+\doxysubsubsection{\texorpdfstring{send\_data()}{send\_data()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+mqtt\+\_\+module.\+send\+\_\+data (\begin{DoxyParamCaption}\item[{}]{client,  }\item[{}]{unique\+\_\+id }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Sends sensor or environmental system data to the MQTT broker.
+
+Parameters:
+    client (MQTTClient): The connected MQTT client instance.
+    unique_id (str): The unique identifier of the sending device.
+
+Raises:
+    Exception: If an error occurs while sending data.
+\end{DoxyVerb}
+ \Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_ab40809e4b5d18e9f2771c6750f218a46}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1mqtt__module_ab40809e4b5d18e9f2771c6750f218a46} 
+\index{BP2025\_ESP32\_CODE.mqtt\_module@{BP2025\_ESP32\_CODE.mqtt\_module}!sub\_cb@{sub\_cb}}
+\index{sub\_cb@{sub\_cb}!BP2025\_ESP32\_CODE.mqtt\_module@{BP2025\_ESP32\_CODE.mqtt\_module}}
+\doxysubsubsection{\texorpdfstring{sub\_cb()}{sub\_cb()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+mqtt\+\_\+module.\+sub\+\_\+cb (\begin{DoxyParamCaption}\item[{}]{topic,  }\item[{}]{msg,  }\item[{}]{retained,  }\item[{}]{duplicate }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Callback function for handling received MQTT messages.
+
+Parameters:
+    topic (bytes): The topic the message was published on.
+    msg (bytes): The message payload.
+    retained (bool): True if the message is retained.
+    duplicate (bool): True if the message is a duplicate.
+
+Processes settings updates, registration confirmations, or control commands.
+\end{DoxyVerb}
+ 

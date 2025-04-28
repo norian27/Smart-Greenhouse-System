@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jumbotron text-center bg-dark py-5">
+    <h1 class="display-4 text-white">Smart Greenhouse</h1>
+    <hr class="my-4">
+    <a class="btn btn-secondary btn-lg m-1" href="{% url 'list_greenhouses' %}" role="button">View Greenhouses</a>
+    <a class="btn btn-secondary btn-lg m-1" href="{% url 'add_greenhouse' %}" role="button">Add Greenhouse</a>
+</div>
+
+<div class="container">
+    <h3>Weather Forecasts</h3>
+    {% for forecast in recent_forecasts %}
+    <div class="alert alert-info">
+        <strong>{{ forecast.forecast_date }}:</strong> {{ forecast.message }} (Min Temp: {{ forecast.minimum_temperature }}°C)
+    </div>
+    {% empty %}
+    <div class="alert alert-info">
+        <strong>Weather Status:</strong> No significant weather updates.
+    </div>
+    {% endfor %}
+</div>
+
+<div class="container">
+    <div class="col-sm-12">
+        <h3 class="text-light">Recent Alerts</h3>
+        <div class="card bg-dark border-secondary">
+            <div class="card-body py-4">
+                <h5 class="card-title text-white">Alerts</h5>
+                {% if recent_alerts %}
+                    <ul class="list-group list-group-flush">
+                        {% for alert in recent_alerts %}
+                            <li class="list-group-item bg-dark text-white border-secondary">
+                                <strong>{{ alert.sensor.identifier }}</strong>:
+                                {{ alert.message|safe }}
+                                <span class="text-muted">- {{ alert.timestamp|date:"N j, Y, P" }}</span>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="text-muted">No recent alerts.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

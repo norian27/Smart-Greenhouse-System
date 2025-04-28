@@ -1,0 +1,63 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+migrations.0021\+\_\+greenhouse\+\_\+automated\+\_\+environmentalsystem.\+Migration Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1migrations_1_10021__greenhouse__automated__environmentalsystem_1_1_migration}{}\label{classsmart__greenhouse__app_1_1migrations_1_10021__greenhouse__automated__environmentalsystem_1_1_migration}\index{smart\_greenhouse\_app.migrations.0021\_greenhouse\_automated\_environmentalsystem.Migration@{smart\_greenhouse\_app.migrations.0021\_greenhouse\_automated\_environmentalsystem.Migration}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+migrations.0021\+\_\+greenhouse\+\_\+automated\+\_\+environmentalsystem.\+Migration\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.985816cm]{classsmart__greenhouse__app_1_1migrations_1_10021__greenhouse__automated__environmentalsystem_1_1_migration}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classsmart__greenhouse__app_1_1migrations_1_10021__greenhouse__automated__environmentalsystem_1_1_migration_af1f850e35331d0ac6d0262e2802f1145}{dependencies}}
+\item 
+list \mbox{\hyperlink{classsmart__greenhouse__app_1_1migrations_1_10021__greenhouse__automated__environmentalsystem_1_1_migration_abc856a556d62f5a4d75d2079ada0bb57}{operations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1migrations_1_10021__greenhouse__automated__environmentalsystem_1_1_migration_af1f850e35331d0ac6d0262e2802f1145}\label{classsmart__greenhouse__app_1_1migrations_1_10021__greenhouse__automated__environmentalsystem_1_1_migration_af1f850e35331d0ac6d0262e2802f1145} 
+\index{smart\_greenhouse\_app.migrations.0021\_greenhouse\_automated\_environmentalsystem.Migration@{smart\_greenhouse\_app.migrations.0021\_greenhouse\_automated\_environmentalsystem.Migration}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!smart\_greenhouse\_app.migrations.0021\_greenhouse\_automated\_environmentalsystem.Migration@{smart\_greenhouse\_app.migrations.0021\_greenhouse\_automated\_environmentalsystem.Migration}}
+\doxysubsubsection{\texorpdfstring{dependencies}{dependencies}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+migrations.\+0021\+\_\+greenhouse\+\_\+automated\+\_\+environmentalsystem.\+Migration.\+dependencies\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'smart\_greenhouse\_app'},\ \textcolor{stringliteral}{'0020\_alter\_sensorunit\_unique\_identifier'}),}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+\Hypertarget{classsmart__greenhouse__app_1_1migrations_1_10021__greenhouse__automated__environmentalsystem_1_1_migration_abc856a556d62f5a4d75d2079ada0bb57}\label{classsmart__greenhouse__app_1_1migrations_1_10021__greenhouse__automated__environmentalsystem_1_1_migration_abc856a556d62f5a4d75d2079ada0bb57} 
+\index{smart\_greenhouse\_app.migrations.0021\_greenhouse\_automated\_environmentalsystem.Migration@{smart\_greenhouse\_app.migrations.0021\_greenhouse\_automated\_environmentalsystem.Migration}!operations@{operations}}
+\index{operations@{operations}!smart\_greenhouse\_app.migrations.0021\_greenhouse\_automated\_environmentalsystem.Migration@{smart\_greenhouse\_app.migrations.0021\_greenhouse\_automated\_environmentalsystem.Migration}}
+\doxysubsubsection{\texorpdfstring{operations}{operations}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+migrations.\+0021\+\_\+greenhouse\+\_\+automated\+\_\+environmentalsystem.\+Migration.\+operations\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.AddField(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ model\_name=\textcolor{stringliteral}{'greenhouse'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'automated'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ field=models.BooleanField(default=\textcolor{keyword}{False}),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.CreateModel(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'EnvironmentalSystem'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ fields=[}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'id'},\ models.BigAutoField(auto\_created=\textcolor{keyword}{True},\ primary\_key=\textcolor{keyword}{True},\ serialize=\textcolor{keyword}{False},\ verbose\_name=\textcolor{stringliteral}{'ID'})),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'name'},\ models.CharField(max\_length=100)),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'is\_active'},\ models.BooleanField(default=\textcolor{keyword}{False})),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'env\_type'},\ models.CharField(choices=[(\textcolor{stringliteral}{'Cooling'},\ \textcolor{stringliteral}{'Cooling'}),\ (\textcolor{stringliteral}{'Heating'},\ \textcolor{stringliteral}{'Heating'}),\ (\textcolor{stringliteral}{'Sprinkler'},\ \textcolor{stringliteral}{'Sprinkler'})],\ default=\textcolor{stringliteral}{'Cooling'},\ max\_length=10)),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'greenhouse'},\ models.ForeignKey(on\_delete=django.db.models.deletion.CASCADE,\ related\_name=\textcolor{stringliteral}{'env\_systems'},\ to=\textcolor{stringliteral}{'smart\_greenhouse\_app.greenhouse'})),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ ],}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/migrations/\mbox{\hyperlink{0021__greenhouse__automated__environmentalsystem_8py}{0021\+\_\+greenhouse\+\_\+automated\+\_\+environmentalsystem.\+py}}\end{DoxyCompactItemize}

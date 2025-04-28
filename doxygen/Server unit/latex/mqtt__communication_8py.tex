@@ -1,0 +1,85 @@
+\doxysection{Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/mqtt\+\_\+communication.py File Reference}
+\hypertarget{mqtt__communication_8py}{}\label{mqtt__communication_8py}\index{Documents/GitHub/bp2024/smart\_greenhouse\_thesis/BP2025\_PI4\_CODE/mqtt\_communication.py@{Documents/GitHub/bp2024/smart\_greenhouse\_thesis/BP2025\_PI4\_CODE/mqtt\_communication.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacemqtt__communication}{mqtt\+\_\+communication}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a03f3f1c2c59e3d7b8799e58257a29de8}{mqtt\+\_\+communication.\+graceful\+\_\+shutdown}} (signum, frame)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a9f951a8a289e1bc884a9e80897943e2d}{mqtt\+\_\+communication.\+on\+\_\+connect}} (client, userdata, flags, rc)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_adb33b195d122ede3756cd3cb0089bd04}{mqtt\+\_\+communication.\+on\+\_\+message}} (client, userdata, msg)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a08c26941fb306464a1f4d0b9bf83cb73}{mqtt\+\_\+communication.\+handle\+\_\+environmental\+\_\+system}} (unique\+\_\+id, data)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_adaa1033d399bbe0ceb9827189047640c}{mqtt\+\_\+communication.\+publish\+\_\+control\+\_\+command}} (env\+\_\+system, action)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a21a2ebe923117b1c9efc3dcedd16e53b}{mqtt\+\_\+communication.\+handle\+\_\+check\+\_\+request}} (unique\+\_\+id, client)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_af05cf0ae920439c13baf9356d9a913f6}{mqtt\+\_\+communication.\+handle\+\_\+registration}} (unique\+\_\+id)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a64d5cb445c8e98f0a1efa935c722ec9b}{mqtt\+\_\+communication.\+handle\+\_\+sensor\+\_\+data}} (unique\+\_\+id, data)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a46d91dac946dbf5d66c6cb2464cfb2fa}{mqtt\+\_\+communication.\+publish\+\_\+sensor\+\_\+settings}} (sensor)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a1d542146028bee9d31591d3753b8abad}{mqtt\+\_\+communication.\+handle\+\_\+settings\+\_\+request}} (unique\+\_\+id, client)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a74b11705c6901621a6362a3542daf66b}{mqtt\+\_\+communication.\+level}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a57bb9361a8f2f10719fbf174d505689c}{mqtt\+\_\+communication.\+format}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a14d74242087b5c4bb0b09cf3770df1a5}{mqtt\+\_\+communication.\+stream}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_ade4e9974cbb52018e3dd114800956597}{mqtt\+\_\+communication.\+force}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_ad203670c4eac7916c79a26bda33749f3}{mqtt\+\_\+communication.\+logger}} = logging.\+get\+Logger("{}smart\+\_\+greenhouse"{})
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a2bda5b704ce0498c16258fd6446016a5}{mqtt\+\_\+communication.\+handler}} = logging.\+Stream\+Handler(sys.\+stdout)
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a4f9b7f1c0ed53664a11823c02c9f7bbb}{mqtt\+\_\+communication.\+propagate}}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_a5ddcc67d8b04ab98e8e85bb3a0a1153f}{mqtt\+\_\+communication.\+MQTT\+\_\+\+HOST}} = \textquotesingle{}10.\+42.\+0.\+1\textquotesingle{}
+\item 
+int \mbox{\hyperlink{namespacemqtt__communication_aaecf2ccb6312d8e4895485f00937c167}{mqtt\+\_\+communication.\+MQTT\+\_\+\+PORT}} = 8883
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_a8b9e5315253339aa547b743e85f419a1}{mqtt\+\_\+communication.\+SENSOR\+\_\+\+DATA\+\_\+\+TOPIC}} = \textquotesingle{}sensor/data/\#\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_a4c3fd97568d363d4eff6d357d5aef06f}{mqtt\+\_\+communication.\+SENSOR\+\_\+\+REGISTER\+\_\+\+TOPIC}} = \textquotesingle{}sensor/register/\#\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_a358319eb5a4672697c16032a5a0bdc16}{mqtt\+\_\+communication.\+SENSOR\+\_\+\+SETTINGS\+\_\+\+TOPIC}} = \textquotesingle{}sensor/settings/request/\#\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_ae2d9e6ad7b7109fb4179d4687226881d}{mqtt\+\_\+communication.\+SENSOR\+\_\+\+CHECK\+\_\+\+TOPIC}} = \textquotesingle{}sensor/check/\#\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_ae6fdd323b4e9ee8c3e0062b67672c06b}{mqtt\+\_\+communication.\+SYSTEM\+\_\+\+CONTROL\+\_\+\+COMMAND}} = \textquotesingle{}system/control/command/\#\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_ad1418a6aaa8083950d816ff4083ffaef}{mqtt\+\_\+communication.\+SYSTEM\+\_\+\+CONTROL\+\_\+\+RESPONSE}} = \textquotesingle{}system/control/response/\#\textquotesingle{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_a1d219e1c3890f8784591a410aa02acd4}{mqtt\+\_\+communication.\+ca\+\_\+path}} = "{}/etc/mosquitto/certs/ca.\+crt"{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_afb60fb281688e3697dfad362a5e5a262}{mqtt\+\_\+communication.\+certfile\+\_\+path}} = "{}/etc/mosquitto/certs/client.\+crt"{}
+\item 
+str \mbox{\hyperlink{namespacemqtt__communication_a3b59a9a67fc7a95aac19b9fffe017d82}{mqtt\+\_\+communication.\+keyfile\+\_\+path}} = "{}/etc/mosquitto/certs/client.\+key"{}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a76c8ce74e1eff8f71b2ee84e20685ad1}{mqtt\+\_\+communication.\+client}} = mqtt.\+Client()
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_ac9cad31497d77df9bf8118862487ca39}{mqtt\+\_\+communication.\+ca\+\_\+certs}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a8a15d755a1a95fcec91a552b1b4a50cb}{mqtt\+\_\+communication.\+certfile}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_a97233af3673466750a1f6d8780d07bf0}{mqtt\+\_\+communication.\+keyfile}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_ae5448408cf28f203c87318dbe771e850}{mqtt\+\_\+communication.\+tls\+\_\+version}}
+\item 
+dict \mbox{\hyperlink{namespacemqtt__communication_aaa9670047b4d76630336f0f9e5bfc104}{mqtt\+\_\+communication.\+pending\+\_\+confirmations}} = \{\}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_ac1de5f53eb03ad9d5679511012e3243e}{mqtt\+\_\+communication.\+on\+\_\+connect}}
+\item 
+\mbox{\hyperlink{namespacemqtt__communication_aed992da148c19ec67ab7522704e9d2d1}{mqtt\+\_\+communication.\+on\+\_\+message}}
+\end{DoxyCompactItemize}

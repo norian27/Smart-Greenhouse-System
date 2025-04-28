@@ -1,0 +1,38 @@
+\doxysection{smart\+\_\+greenhouse.\+asgi Namespace Reference}
+\hypertarget{namespacesmart__greenhouse_1_1asgi}{}\label{namespacesmart__greenhouse_1_1asgi}\index{smart\_greenhouse.asgi@{smart\_greenhouse.asgi}}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesmart__greenhouse_1_1asgi_a6fae8d5ce89b3de61ceecccb22271b8b}{application}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}ASGI config for the project.
+
+It exposes the ASGI callable as a module-level variable named ``application``.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/4.2/howto/deployment/asgi/
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacesmart__greenhouse_1_1asgi_a6fae8d5ce89b3de61ceecccb22271b8b}\label{namespacesmart__greenhouse_1_1asgi_a6fae8d5ce89b3de61ceecccb22271b8b} 
+\index{smart\_greenhouse.asgi@{smart\_greenhouse.asgi}!application@{application}}
+\index{application@{application}!smart\_greenhouse.asgi@{smart\_greenhouse.asgi}}
+\doxysubsubsection{\texorpdfstring{application}{application}}
+{\footnotesize\ttfamily smart\+\_\+greenhouse.\+asgi.\+application}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ ProtocolTypeRouter(\{}
+\DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{"{}http"{}}:\ get\_asgi\_application(),}
+\DoxyCodeLine{00003\ \ \ \ \ \textcolor{stringliteral}{"{}websocket"{}}:\ AuthMiddlewareStack(}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ URLRouter(}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ smart\_greenhouse\_app.routing.websocket\_urlpatterns}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ )}
+\DoxyCodeLine{00007\ \ \ \ \ ),}
+\DoxyCodeLine{00008\ \})}
+
+\end{DoxyCode}

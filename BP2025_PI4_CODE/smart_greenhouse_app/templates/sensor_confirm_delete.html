@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Confirm Sensor Deletion</h2>
+<p>Are you sure you want to delete the sensor "{{ sensor.identifier }}"?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, delete this sensor</button>
+    <a href="{% url 'greenhouse_detail' sensor.greenhouse.id %}">Cancel</a>
+</form>
+{% endblock %}

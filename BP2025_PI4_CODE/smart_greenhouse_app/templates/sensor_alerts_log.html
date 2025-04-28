@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-3">Alerts Log for Sensor: {{ sensor.identifier }}</h2>
+    <a href="{% url 'greenhouse_detail' sensor.greenhouse.id %}" class="btn btn-primary mt-3">Back to Greenhouse</a>
+    <p class="mb-3"></p>
+    <div class="list-group">
+        {% for alert in alerts %}
+        <div class="list-group-item list-group-item-action flex-column align-items-start {% if not alert.is_active %}list-group-item-secondary{% endif %}">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{% if alert.is_active %}<span class="badge badge-danger">Active</span>{% else %}<span class="badge badge-success">Resolved</span>{% endif %} Alert</h5>
+                <small>{{ alert.timestamp|date:"N j, Y, P" }}</small>
+            </div>
+            <p class="mb-1">{{ alert.message|safe }}</p>
+            {% if alert.is_active %}
+            <form action="{% url 'resolve_alert' alert.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-warning btn-sm">Mark as Resolved</button>
+            </form>
+            {% else %}
+            <small>Resolved on: {{ alert.resolved_timestamp|date:"N j, Y, P" }}</small>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

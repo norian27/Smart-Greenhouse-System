@@ -1,0 +1,59 @@
+\doxysection{BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+main Namespace Reference}
+\hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1main}{}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1main}\index{BP2025\_ESP32\_CODE.main@{BP2025\_ESP32\_CODE.main}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1main_a8ef41ce9a8ccdaf6e64a5c5e6b8ce3f8}{run\+\_\+sensor\+\_\+operations}} ()
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1main_aff262f69deab82d15932a5f330751e1f}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_b_p2025___e_s_p32___c_o_d_e_1_1main_a6323c7a97dac4cc44b007f19b43e5753}{last\+\_\+mod\+\_\+time}} = os.\+stat(\textquotesingle{}config.\+json\textquotesingle{})\mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Main for running sensor operations or environmental system operations on the microcontroller.
+
+This script initializes the device configuration, generates a unique identifier if needed,
+and runs the main loop to send sensor data and handle MQTT communication.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1main_aff262f69deab82d15932a5f330751e1f}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1main_aff262f69deab82d15932a5f330751e1f} 
+\index{BP2025\_ESP32\_CODE.main@{BP2025\_ESP32\_CODE.main}!main@{main}}
+\index{main@{main}!BP2025\_ESP32\_CODE.main@{BP2025\_ESP32\_CODE.main}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+main.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Main initialization function.
+
+Generates a unique identifier for the device, updates the configuration file,
+and starts the main loop.
+\end{DoxyVerb}
+ \Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1main_a8ef41ce9a8ccdaf6e64a5c5e6b8ce3f8}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1main_a8ef41ce9a8ccdaf6e64a5c5e6b8ce3f8} 
+\index{BP2025\_ESP32\_CODE.main@{BP2025\_ESP32\_CODE.main}!run\_sensor\_operations@{run\_sensor\_operations}}
+\index{run\_sensor\_operations@{run\_sensor\_operations}!BP2025\_ESP32\_CODE.main@{BP2025\_ESP32\_CODE.main}}
+\doxysubsubsection{\texorpdfstring{run\_sensor\_operations()}{run\_sensor\_operations()}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+main.\+run\+\_\+sensor\+\_\+operations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Handles the main loop for collecting and sending sensor data via MQTT.
+
+Continuously sends sensor data based on the configured data frequency,
+checks for incoming MQTT messages, and sends sensor readings to the broker.
+
+Raises:
+    Exception: If an error occurs while checking MQTT messages.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_b_p2025___e_s_p32___c_o_d_e_1_1main_a6323c7a97dac4cc44b007f19b43e5753}\label{namespace_b_p2025___e_s_p32___c_o_d_e_1_1main_a6323c7a97dac4cc44b007f19b43e5753} 
+\index{BP2025\_ESP32\_CODE.main@{BP2025\_ESP32\_CODE.main}!last\_mod\_time@{last\_mod\_time}}
+\index{last\_mod\_time@{last\_mod\_time}!BP2025\_ESP32\_CODE.main@{BP2025\_ESP32\_CODE.main}}
+\doxysubsubsection{\texorpdfstring{last\_mod\_time}{last\_mod\_time}}
+{\footnotesize\ttfamily BP2025\+\_\+\+ESP32\+\_\+\+CODE.\+main.\+last\+\_\+mod\+\_\+time = os.\+stat(\textquotesingle{}config.\+json\textquotesingle{})\mbox{[}8\mbox{]}}
+

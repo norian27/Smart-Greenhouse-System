@@ -1,0 +1,67 @@
+\doxysection{smart\+\_\+greenhouse\+\_\+app.\+migrations.0018\+\_\+alter\+\_\+weatherforecast\+\_\+options\+\_\+and\+\_\+more.\+Migration Class Reference}
+\hypertarget{classsmart__greenhouse__app_1_1migrations_1_10018__alter__weatherforecast__options__and__more_1_1_migration}{}\label{classsmart__greenhouse__app_1_1migrations_1_10018__alter__weatherforecast__options__and__more_1_1_migration}\index{smart\_greenhouse\_app.migrations.0018\_alter\_weatherforecast\_options\_and\_more.Migration@{smart\_greenhouse\_app.migrations.0018\_alter\_weatherforecast\_options\_and\_more.Migration}}
+Inheritance diagram for smart\+\_\+greenhouse\+\_\+app.\+migrations.0018\+\_\+alter\+\_\+weatherforecast\+\_\+options\+\_\+and\+\_\+more.\+Migration\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsmart__greenhouse__app_1_1migrations_1_10018__alter__weatherforecast__options__and__more_1_1_migration}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classsmart__greenhouse__app_1_1migrations_1_10018__alter__weatherforecast__options__and__more_1_1_migration_a4a4c671e55ac4de9ed6b8782bcce0df6}{dependencies}}
+\item 
+list \mbox{\hyperlink{classsmart__greenhouse__app_1_1migrations_1_10018__alter__weatherforecast__options__and__more_1_1_migration_aff2555ae5133a5d502c898055f34656d}{operations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsmart__greenhouse__app_1_1migrations_1_10018__alter__weatherforecast__options__and__more_1_1_migration_a4a4c671e55ac4de9ed6b8782bcce0df6}\label{classsmart__greenhouse__app_1_1migrations_1_10018__alter__weatherforecast__options__and__more_1_1_migration_a4a4c671e55ac4de9ed6b8782bcce0df6} 
+\index{smart\_greenhouse\_app.migrations.0018\_alter\_weatherforecast\_options\_and\_more.Migration@{smart\_greenhouse\_app.migrations.0018\_alter\_weatherforecast\_options\_and\_more.Migration}!dependencies@{dependencies}}
+\index{dependencies@{dependencies}!smart\_greenhouse\_app.migrations.0018\_alter\_weatherforecast\_options\_and\_more.Migration@{smart\_greenhouse\_app.migrations.0018\_alter\_weatherforecast\_options\_and\_more.Migration}}
+\doxysubsubsection{\texorpdfstring{dependencies}{dependencies}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+migrations.\+0018\+\_\+alter\+\_\+weatherforecast\+\_\+options\+\_\+and\+\_\+more.\+Migration.\+dependencies\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (\textcolor{stringliteral}{'smart\_greenhouse\_app'},\ \textcolor{stringliteral}{'0017\_weatherforecast'}),}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+\Hypertarget{classsmart__greenhouse__app_1_1migrations_1_10018__alter__weatherforecast__options__and__more_1_1_migration_aff2555ae5133a5d502c898055f34656d}\label{classsmart__greenhouse__app_1_1migrations_1_10018__alter__weatherforecast__options__and__more_1_1_migration_aff2555ae5133a5d502c898055f34656d} 
+\index{smart\_greenhouse\_app.migrations.0018\_alter\_weatherforecast\_options\_and\_more.Migration@{smart\_greenhouse\_app.migrations.0018\_alter\_weatherforecast\_options\_and\_more.Migration}!operations@{operations}}
+\index{operations@{operations}!smart\_greenhouse\_app.migrations.0018\_alter\_weatherforecast\_options\_and\_more.Migration@{smart\_greenhouse\_app.migrations.0018\_alter\_weatherforecast\_options\_and\_more.Migration}}
+\doxysubsubsection{\texorpdfstring{operations}{operations}}
+{\footnotesize\ttfamily list smart\+\_\+greenhouse\+\_\+app.\+migrations.\+0018\+\_\+alter\+\_\+weatherforecast\+\_\+options\+\_\+and\+\_\+more.\+Migration.\+operations\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \ [}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.AlterModelOptions(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'weatherforecast'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ options=\{\},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.RenameField(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ model\_name=\textcolor{stringliteral}{'weatherforecast'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ old\_name=\textcolor{stringliteral}{'created\_at'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ new\_name=\textcolor{stringliteral}{'forecast\_date'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.AddField(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ model\_name=\textcolor{stringliteral}{'weatherforecast'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'forecast\_retrieved'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ field=models.DateTimeField(auto\_now=\textcolor{keyword}{True}),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ migrations.AddField(}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ model\_name=\textcolor{stringliteral}{'weatherforecast'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ name=\textcolor{stringliteral}{'minimum\_temperature'},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ field=models.FloatField(blank=\textcolor{keyword}{True},\ null=\textcolor{keyword}{True}),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ),}
+\DoxyCodeLine{\ \ \ \ ]}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Documents/\+Git\+Hub/bp2024/smart\+\_\+greenhouse\+\_\+thesis/\+BP2025\+\_\+\+PI4\+\_\+\+CODE/smart\+\_\+greenhouse\+\_\+app/migrations/\mbox{\hyperlink{0018__alter__weatherforecast__options__and__more_8py}{0018\+\_\+alter\+\_\+weatherforecast\+\_\+options\+\_\+and\+\_\+more.\+py}}\end{DoxyCompactItemize}
