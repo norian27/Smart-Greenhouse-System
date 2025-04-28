@@ -39,6 +39,7 @@ Setup Instructions
         - Wi-Fi SSID and password
         - MQTT broker address and port
         - TLS settings (client certificate and key)
+    - Change sensor_module.py functions according to attached sensors/systems
 
 3. Boot sequence:
     - `boot.py` will automatically run at startup.
